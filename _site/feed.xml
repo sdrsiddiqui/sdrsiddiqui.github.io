@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-29T16:10:14+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Learning and Sharing</title><subtitle>An amazing website about learning and sharing.</subtitle><author><name>sdrsiddiqui</name></author><entry><title type="html">How to make a blog like this?</title><link href="http://localhost:4000/jekyll/How-to-make-a-blog-like-this/" rel="alternate" type="text/html" title="How to make a blog like this?" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/jekyll/How%20to%20make%20a%20blog%20like%20this</id><content type="html" xml:base="http://localhost:4000/jekyll/How-to-make-a-blog-like-this/">&lt;p&gt;How to make a blog like this?&lt;/p&gt;
+
+&lt;p&gt;The decisions depends mainly on various criteria?&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Why we are creating a website?&lt;/li&gt;
+  &lt;li&gt;resources or expertise on the languages&lt;/li&gt;
+  &lt;li&gt;desire of learning a new language&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For me it was the
+I decided Jekyll because of the following reason.
+The blog is made on Jekyll.  Jekyll transforms plain text into static websites and blogs. It is also known as a static site generator, which means it takes source files and generates a static website.
+It is written in Ruby in 2009 by the co-founder of GitHub. It uses Liquid as templating language, which is also open source.. The input is in the format of Markdown and the out put is in HTML.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Easy to learn: if you are aware of HTML, CSS and Javascript. Only you have to learn a new templating language called Liquid(https://shopify.github.io/liquid/).&lt;/li&gt;
+  &lt;li&gt;Fast : Extremely fast as web server only returns static files. loading static files on server is fast as well. It used Markdown which&lt;/li&gt;
+  &lt;li&gt;Secure : There are only static files and a web server, nothing dynamic which could be exploited.&lt;/li&gt;
+  &lt;li&gt;Big community and well documented.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;There are many themes which are available for the website, which could be found here.
+I prefered …….because of its simplicity. Please check this out&lt;/p&gt;
+
+&lt;p&gt;Procedure :&lt;/p&gt;
+
+&lt;p&gt;We can download the repository by two ways.&lt;/p&gt;
+
+&lt;p&gt;1.
+  a. Click on the link  and  download the repository. Save the file in the desired folder and unzip it.&lt;/p&gt;
+
+&lt;p&gt;b. Open Git bash and clone the repository like this.&lt;/p&gt;
+
+&lt;p&gt;You have to install Ruby for Jekyll. If you don’t have Ruby installed on your pc then download from here.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Go inside the folder. Find the Gemfile and modify it like this&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;source ‘https://rubygems.org’
+gem “minimal-mistakes-jekyll”
+gem ‘jekyll-include-cache’
+gem ‘jekyll-archives’&lt;/p&gt;
+
+&lt;p&gt;Save the file.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Open the file _config.yml&lt;br /&gt;
+search for “plugins” (line - 225) and add the following lines
+ -jekyll-include-cache
+ -jekyll-archives&lt;/p&gt;
+
+    &lt;p&gt;search for jekyll-archives and uncomment the lines from 262 till 270&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Open the bash&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Jekyll" /><category term="Liquid" /><summary type="html">How to make a blog like this?</summary></entry><entry><title type="html">Atom</title><link href="http://localhost:4000/post/Atom-eidtor/" rel="alternate" type="text/html" title="Atom" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/post/Atom-eidtor</id><content type="html" xml:base="http://localhost:4000/post/Atom-eidtor/">&lt;p&gt;Atom&lt;/p&gt;
+
+&lt;p&gt;Atom is a very powerful editor.&lt;/p&gt;
+
+&lt;p&gt;Go to the official webpage of Atom(https://atom.io) and download the Atom for 64 bit installer.&lt;/p&gt;
+
+&lt;p&gt;Install the Atom. Wait until Atom is installed.&lt;/p&gt;
+
+&lt;p&gt;Normally to open Atom, we browse to the program and click on the Atom icon which opens in a random directory.&lt;/p&gt;
+
+&lt;p&gt;Is it cool if we can open the Atom in any directory without changing the directory all the time.&lt;/p&gt;
+
+&lt;p&gt;For this we have to some changes.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Open Atom&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click on File &amp;gt; Settings and Click “System” tab.
+ Check the second and third options.
+   Show in file context menus
+   Show in folder context menus&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Close Atom&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Right click and you will see “open with Atom”.
+Now you can open the Atom anywhere you want to open.&lt;/p&gt;
+
+&lt;p&gt;Make Atom ready for Python&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;File &amp;gt; Settings &amp;gt; Install
+then search “script” and install it.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;it will let the python file to run from the Atom.
+Write a code in python and then use keyboard shortcuts Ctrl + shift + b for windows and unix.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;There are other ways also. Where we can integrate command line in ATOM so that we don’t need other windows for command line.
+  File&amp;gt; Settings&amp;gt;Install
+  “platform-ide-terminal”
+On the left side there will be a “plus” sign. click on it and a new command line window will appear.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you press Ctrl+T or Ctrl+P, the Fuzzy Finder will pop up. This will let you quickly search for any file in your project by typing parts of the path.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;File&amp;gt;Settings&amp;gt;Install another package
+  a. “autocomplete-python”.
+  This will make your life more easy as python developer.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;b. “python-autopep8”
+  this format the python code according to the PEP8 guidelines. more information could be find here https://pypi.org/project/autopep8/&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  1. to use this we need to install autopep8 by using pip install autopep8 in the bash
+  2. Click on the Settings of python-autopep8 and go to the Settings. check the format on Save
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;c. “linter-flake8”&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Flake8 is a Python library that wraps PyFlakes, pycodestyle and Ned Batchelder’s McCabe script. It is a great toolkit for checking your code base against coding style (PEP8), programming errors (like “library imported but unused” and “Undefined name”) and to check cyclomatic complexity.
+https://simpleisbetterthancomplex.com/packages/2016/08/05/flake8.html
+
+1. To use this plugin flake8 will need to be installed on your system.
+  pip install flake8 from the bash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;d. “Browser Plus”
+     Install this. It opens a real browser in ATOM. Which is very handy for debugging and checking the output at the same time.
+     ctrl+shift+p(cmd+shift+p) Browser Plus: Open. It opens the home page(maintained in the settings) or http://www.google.com.
+     ctrl + shift + P to open the browser window.&lt;/p&gt;
+
+&lt;p&gt;e . “file-icons”
+  This put a little icon next to each file, which helps us to identify which kind of file it is. File-specific icons in Atom for improved visual grepping.&lt;/p&gt;</content><author><name>sdrsiddiqui</name></author><category term="Atom" /><category term="editor" /><summary type="html">Atom</summary></entry></feed>

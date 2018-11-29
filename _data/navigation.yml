@@ -1,0 +1,10 @@
+# main links
+main:
+  - title: "Category"
+    url: /categories/
+  - title: "Posts"
+    url: /tags/
+  - title: "About"
+    url: https://sdrsiddiqui.github.io/
+  # - title: "Sitemap"
+  #   url: /sitemap/
