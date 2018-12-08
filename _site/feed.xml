@@ -1,28 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-29T16:10:14+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Learning and Sharing</title><subtitle>An amazing website about learning and sharing.</subtitle><author><name>sdrsiddiqui</name></author><entry><title type="html">How to make a blog like this?</title><link href="http://localhost:4000/jekyll/How-to-make-a-blog-like-this/" rel="alternate" type="text/html" title="How to make a blog like this?" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/jekyll/How%20to%20make%20a%20blog%20like%20this</id><content type="html" xml:base="http://localhost:4000/jekyll/How-to-make-a-blog-like-this/">&lt;p&gt;How to make a blog like this?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-04T01:34:24+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Learning and Sharing</title><subtitle>An amazing website about learning and sharing.</subtitle><author><name>sdrsiddiqui</name></author><entry><title type="html">How to make a blog like this?</title><link href="http://localhost:4000/jekyll/How-to-make-a-blog-like-this/" rel="alternate" type="text/html" title="How to make a blog like this?" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/jekyll/How%20to%20make%20a%20blog%20like%20this</id><content type="html" xml:base="http://localhost:4000/jekyll/How-to-make-a-blog-like-this/">&lt;p&gt;Whenever we hear about blogs we think more often about WordPress or BlogSpot blogs. &lt;a href=&quot;https://wordpress.com/&quot;&gt;WordPress&lt;/a&gt; is more popular once right now. It is an open source online website creation tool, which was written in PHP and MySQL.&lt;/p&gt;
 
-&lt;p&gt;The decisions depends mainly on various criteria?&lt;/p&gt;
+&lt;p&gt;Lots of people complain about their WordPress blog getting infected with malware or hacked, or being slow etc. Let us learn about Jekyll and how it overcomes the problems mentioned above.&lt;/p&gt;
+
+&lt;h2 id=&quot;introducing-jekyll&quot;&gt;Introducing Jekyll&lt;/h2&gt;
+
+&lt;p&gt;Jekyll transforms plain text into static websites. It is a simple static site generator, and takes a source file (written in markup language) for creating a static website.
+It supports all kinds of file formats and is good for quickly creating a blog.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In 2009, Jekyll was written in Ruby, by &lt;a href=&quot;http://tom.preston-werner.com/&quot;&gt;Tom Preston-Werner&lt;/a&gt;, GitHub’s co-founder.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Though it needs some technical background and a good knowledge of &lt;a href=&quot;https://www.markdownguide.org/getting-started&quot;&gt;Markdown&lt;/a&gt; and the &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid&lt;/a&gt; templating language, which is easy to learn if you have some basics of HTML. Ever since it is getting popular and glimpse of Jekyll popularity can be seen on &lt;a href=&quot;https://jekyllrb.com/showcase/&quot;&gt;Showcase&lt;/a&gt; and &lt;a href=&quot;https://github.com/jekyll/jekyll/wiki/sites&quot;&gt;wiki&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For this blog, I preferred &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; because of the following reasons.&lt;/p&gt;
+
 &lt;ol&gt;
-  &lt;li&gt;Why we are creating a website?&lt;/li&gt;
-  &lt;li&gt;resources or expertise on the languages&lt;/li&gt;
-  &lt;li&gt;desire of learning a new language&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Performance:&lt;/strong&gt; Extremely fast as web server only returns static files.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Secure:&lt;/strong&gt; There are only static files which means content is not produced dynamically, so there is no chance for it to get exploited or hacked. Until someone hacked the server.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Less costly:&lt;/strong&gt; It requires less resources which reduces its operative cost.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Easy to learn:&lt;/strong&gt; If you know HTML, CSS and JavaScript then only learning a new templating language called &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid&lt;/a&gt; will suffice.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Low maintenance:&lt;/strong&gt; With first-class support for Markdown, and the Liquid templating language, making a blog is as easy as running two commands. It takes less then five minutes for setting up Jekyll and the maintaining cost is minimum.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Big community:&lt;/strong&gt; Jekyll has big active community and a team of Core maintainers which is working hard to maintain it. They have documented Jekyll very well.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;New Learning Experience:&lt;/strong&gt; Blogging is a the best way to learn and share about new technologies. We learn more by teaching others and while getting your hands dirty with real world problems.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;For me it was the
-I decided Jekyll because of the following reason.
-The blog is made on Jekyll.  Jekyll transforms plain text into static websites and blogs. It is also known as a static site generator, which means it takes source files and generates a static website.
-It is written in Ruby in 2009 by the co-founder of GitHub. It uses Liquid as templating language, which is also open source.. The input is in the format of Markdown and the out put is in HTML.&lt;/p&gt;
-
+&lt;h3 id=&quot;tldr-procedure-for-creating-a-blog-on-jekyll-like-this-one&quot;&gt;TL;DR Procedure for creating a blog on Jekyll like this one:&lt;/h3&gt;
+&lt;hr /&gt;
 &lt;ol&gt;
-  &lt;li&gt;Easy to learn: if you are aware of HTML, CSS and Javascript. Only you have to learn a new templating language called Liquid(https://shopify.github.io/liquid/).&lt;/li&gt;
-  &lt;li&gt;Fast : Extremely fast as web server only returns static files. loading static files on server is fast as well. It used Markdown which&lt;/li&gt;
-  &lt;li&gt;Secure : There are only static files and a web server, nothing dynamic which could be exploited.&lt;/li&gt;
-  &lt;li&gt;Big community and well documented.&lt;/li&gt;
+  &lt;li&gt;Install &lt;a href=&quot;https://rubyinstaller.org/&quot;&gt;Ruby&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Install &lt;a href=&quot;https://jekyllrb.com/docs/installation/&quot;&gt;Jekyll&lt;/a&gt; and &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#bundler&quot;&gt;bundler gems&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Download the &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;theme&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Modify the &lt;strong&gt;GEMFILE&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Modify &lt;strong&gt;_config.yml&lt;/strong&gt; file.&lt;/li&gt;
+  &lt;li&gt;Run the server.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;There are many themes which are available for the website, which could be found here.
-I prefered …….because of its simplicity. Please check this out&lt;/p&gt;
+&lt;p&gt;Jekyll is written in Ruby so we have to install Ruby as well and it is one of the &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gems&quot;&gt;Ruby Gem&lt;/a&gt;.
+This &lt;a href=&quot;https://stackoverflow.com/questions/5233924/what-is-a-ruby-gem&quot;&gt;stackoverflow  answer on Gem&lt;/a&gt; explains very well about Gem.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;RubyGems is a package manager for the Ruby programming language that provides a standard format for distributing Ruby programs and libraries (in a self-contained format called a “gem”), a tool designed to easily manage the installation of gems, and a server for distributing them.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Procedure :&lt;/p&gt;
+&lt;p&gt;We can find the detail installation process on the Jekyll website &lt;a href=&quot;https://jekyllrb.com/docs/installation/&quot;&gt;here&lt;/a&gt; but nevertheless we can find the procedure below as well.&lt;/p&gt;
+
+&lt;p&gt;Since I used Windows(O.S) I will follow&lt;/p&gt;
 
 &lt;p&gt;We can download the repository by two ways.&lt;/p&gt;
 
@@ -37,16 +73,16 @@ I prefered …….because of its simplicity. Please check this out&lt;/p&gt;
   &lt;li&gt;Go inside the folder. Find the Gemfile and modify it like this&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;source ‘https://rubygems.org’
-gem “minimal-mistakes-jekyll”
-gem ‘jekyll-include-cache’
-gem ‘jekyll-archives’&lt;/p&gt;
-
-&lt;p&gt;Save the file.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;source 'https://rubygems.org'
+gem &quot;minimal-mistakes-jekyll&quot;
+gem 'jekyll-include-cache'
+gem 'jekyll-archives'
+&lt;/code&gt;
+  Save the file.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;Open the file _config.yml&lt;br /&gt;
+    &lt;p&gt;Open the file __config.yml&lt;br /&gt;
 search for “plugins” (line - 225) and add the following lines
  -jekyll-include-cache
  -jekyll-archives&lt;/p&gt;
@@ -56,7 +92,22 @@ search for “plugins” (line - 225) and add the following lines
   &lt;li&gt;
     &lt;p&gt;Open the bash&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Jekyll" /><category term="Liquid" /><summary type="html">How to make a blog like this?</summary></entry><entry><title type="html">Atom</title><link href="http://localhost:4000/post/Atom-eidtor/" rel="alternate" type="text/html" title="Atom" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/post/Atom-eidtor</id><content type="html" xml:base="http://localhost:4000/post/Atom-eidtor/">&lt;p&gt;Atom&lt;/p&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;ATOM&lt;/p&gt;
+
+&lt;p&gt;markdown-preview&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h4 id=&quot;references&quot;&gt;REFERENCES&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;https://jekyllrb.com/&lt;/li&gt;
+  &lt;li&gt;https://github.com/jekyll/jekyll/wiki/sites&lt;/li&gt;
+  &lt;li&gt;https://jekyllrb.com/showcase/&lt;/li&gt;
+  &lt;li&gt;https://rubyinstaller.org/&lt;/li&gt;
+  &lt;li&gt;https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#emphasis&lt;/li&gt;
+  &lt;li&gt;https://jekyllrb.com/docs/ruby-101/#gems&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Jekyll" /><category term="Liquid" /><summary type="html">Whenever we hear about blogs we think more often about WordPress or BlogSpot blogs. WordPress is more popular once right now. It is an open source online website creation tool, which was written in PHP and MySQL.</summary></entry><entry><title type="html">Atom</title><link href="http://localhost:4000/post/Atom-eidtor/" rel="alternate" type="text/html" title="Atom" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/post/Atom-eidtor</id><content type="html" xml:base="http://localhost:4000/post/Atom-eidtor/">&lt;p&gt;Atom&lt;/p&gt;
 
 &lt;p&gt;Atom is a very powerful editor.&lt;/p&gt;
 
