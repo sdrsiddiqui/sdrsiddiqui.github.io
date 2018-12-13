@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-04T01:34:24+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Learning and Sharing</title><subtitle>An amazing website about learning and sharing.</subtitle><author><name>sdrsiddiqui</name></author><entry><title type="html">How to make a blog like this?</title><link href="http://localhost:4000/jekyll/How-to-make-a-blog-like-this/" rel="alternate" type="text/html" title="How to make a blog like this?" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/jekyll/How%20to%20make%20a%20blog%20like%20this</id><content type="html" xml:base="http://localhost:4000/jekyll/How-to-make-a-blog-like-this/">&lt;p&gt;Whenever we hear about blogs we think more often about WordPress or BlogSpot blogs. &lt;a href=&quot;https://wordpress.com/&quot;&gt;WordPress&lt;/a&gt; is more popular once right now. It is an open source online website creation tool, which was written in PHP and MySQL.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-13T15:56:07+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Learning and Sharing</title><subtitle>An amazing website about learning and sharing.</subtitle><author><name>sdrsiddiqui</name></author><entry><title type="html">How to make a blog like this?</title><link href="http://localhost:4000/jekyll/How-to-make-a-blog-like-this/" rel="alternate" type="text/html" title="How to make a blog like this?" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/jekyll/How%20to%20make%20a%20blog%20like%20this</id><content type="html" xml:base="http://localhost:4000/jekyll/How-to-make-a-blog-like-this/">&lt;p&gt;Whenever we hear about blogs we think more often about WordPress or BlogSpot blogs. &lt;a href=&quot;https://wordpress.com/&quot;&gt;WordPress&lt;/a&gt; is more popular once right now. It is an open source online website creation tool, which was written in PHP and MySQL.&lt;/p&gt;
 
 &lt;p&gt;Lots of people complain about their WordPress blog getting infected with malware or hacked, or being slow etc. Let us learn about Jekyll and how it overcomes the problems mentioned above.&lt;/p&gt;
 
@@ -11,7 +11,8 @@ It supports all kinds of file formats and is good for quickly creating a blog.&l
   &lt;p&gt;In 2009, Jekyll was written in Ruby, by &lt;a href=&quot;http://tom.preston-werner.com/&quot;&gt;Tom Preston-Werner&lt;/a&gt;, GitHub’s co-founder.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Though it needs some technical background and a good knowledge of &lt;a href=&quot;https://www.markdownguide.org/getting-started&quot;&gt;Markdown&lt;/a&gt; and the &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid&lt;/a&gt; templating language, which is easy to learn if you have some basics of HTML. Ever since it is getting popular and glimpse of Jekyll popularity can be seen on &lt;a href=&quot;https://jekyllrb.com/showcase/&quot;&gt;Showcase&lt;/a&gt; and &lt;a href=&quot;https://github.com/jekyll/jekyll/wiki/sites&quot;&gt;wiki&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Though it needs some technical background and a good knowledge of &lt;a href=&quot;https://www.markdownguide.org/getting-started&quot;&gt;Markdown&lt;/a&gt; and the &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid&lt;/a&gt; templating language, which are easy to learn if you have some basic knowledge of HTML.
+Ever since it is getting popular and glimpse of Jekyll popularity can be seen on &lt;a href=&quot;https://jekyllrb.com/showcase/&quot;&gt;Showcase&lt;/a&gt; and &lt;a href=&quot;https://github.com/jekyll/jekyll/wiki/sites&quot;&gt;wiki&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;For this blog, I preferred &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; because of the following reasons.&lt;/p&gt;
 
@@ -42,61 +43,84 @@ It supports all kinds of file formats and is good for quickly creating a blog.&l
 &lt;h3 id=&quot;tldr-procedure-for-creating-a-blog-on-jekyll-like-this-one&quot;&gt;TL;DR Procedure for creating a blog on Jekyll like this one:&lt;/h3&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-  &lt;li&gt;Install &lt;a href=&quot;https://rubyinstaller.org/&quot;&gt;Ruby&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Install &lt;a href=&quot;https://jekyllrb.com/docs/installation/&quot;&gt;Jekyll&lt;/a&gt; and &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#bundler&quot;&gt;bundler gems&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Install &lt;a href=&quot;https://jekyllrb.com/docs/installation/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/li&gt;
   &lt;li&gt;Download the &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;theme&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Built the site&lt;/li&gt;
   &lt;li&gt;Modify the &lt;strong&gt;GEMFILE&lt;/strong&gt;.&lt;/li&gt;
   &lt;li&gt;Modify &lt;strong&gt;_config.yml&lt;/strong&gt; file.&lt;/li&gt;
   &lt;li&gt;Run the server.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Jekyll is written in Ruby so we have to install Ruby as well and it is one of the &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gems&quot;&gt;Ruby Gem&lt;/a&gt;.
-This &lt;a href=&quot;https://stackoverflow.com/questions/5233924/what-is-a-ruby-gem&quot;&gt;stackoverflow  answer on Gem&lt;/a&gt; explains very well about Gem.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;The above steps are explained below in details.&lt;/p&gt;
+
+&lt;h3 id=&quot;installing-jekyll&quot;&gt;Installing Jekyll&lt;/h3&gt;
+
+&lt;p&gt;Install &lt;a href=&quot;https://jekyllrb.com/docs/installation/windows/&quot;&gt;Jekyll on windows&lt;/a&gt;. Installation procedures are very well documented on Jekyll website.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29/1_Jekyll.png&quot; alt=&quot;Jekyll for windows&quot; /&gt;
+  &lt;figcaption&gt;Jekyll for windows&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;According to the Jekyll official &lt;a href=&quot;https://jekyllrb.com/docs/installation/windows/&quot;&gt;documentation&lt;/a&gt;: The easiest way to run Jekyll is by using the &lt;a href=&quot;https://rubyinstaller.org/&quot;&gt;RubyInstaller&lt;/a&gt; for Windows.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29/2_Ruby_installation.png&quot; alt=&quot;Ruby installation&quot; /&gt;
+  &lt;figcaption&gt;Ruby for windows&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Jekyll is a  &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gems&quot;&gt;Ruby Gem&lt;/a&gt;. On &lt;a href=&quot;https://stackoverflow.com/questions/5233924/what-is-a-ruby-gem&quot;&gt;stackoverflow&lt;/a&gt; Gem is explained.&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;RubyGems is a package manager for the Ruby programming language that provides a standard format for distributing Ruby programs and libraries (in a self-contained format called a “gem”), a tool designed to easily manage the installation of gems, and a server for distributing them.&lt;/p&gt;
+  &lt;p&gt;Gem is a package manager for the Ruby programming language that provides a standard format for distributing Ruby programs and libraries, a tool designed to easily manage the installation of gems, and a server for distributing them.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;We can find the detail installation process on the Jekyll website &lt;a href=&quot;https://jekyllrb.com/docs/installation/&quot;&gt;here&lt;/a&gt; but nevertheless we can find the procedure below as well.&lt;/p&gt;
+&lt;h3 id=&quot;download-the-theme&quot;&gt;Download the theme&lt;/h3&gt;
 
-&lt;p&gt;Since I used Windows(O.S) I will follow&lt;/p&gt;
+&lt;p&gt;I preffered the minimal mistake &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;theme&lt;/a&gt; created by Michael Rose. I find it simple and elegant theme which is very well &lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/&quot;&gt;documented&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;We can download the repository by two ways.&lt;/p&gt;
+&lt;p&gt;We can download the theme directly from the link above and save it. I would recommend using Git. Open &lt;a href=&quot;https://git-scm.com/download/win&quot;&gt;Git bash&lt;/a&gt; and type the following command&lt;/p&gt;
 
-&lt;p&gt;1.
-  a. Click on the link  and  download the repository. Save the file in the desired folder and unzip it.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ git clone https://github.com/mmistakes/minimal-mistakes
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29/3_Git.png&quot; alt=&quot;Git&quot; /&gt;
+  &lt;figcaption&gt;Downloading minimal mistake theme with Git bash&lt;/figcaption&gt;
+&lt;/figure&gt;
 
-&lt;p&gt;b. Open Git bash and clone the repository like this.&lt;/p&gt;
+&lt;p&gt;Change into your new directory. Now, we need to install Bundler in our project folder by the following code.&lt;/p&gt;
 
-&lt;p&gt;You have to install Ruby for Jekyll. If you don’t have Ruby installed on your pc then download from here.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd minimal-mistakes/
+$ bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Go inside the folder. Find the Gemfile and modify it like this&lt;/li&gt;
-&lt;/ol&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29/4_Bundle_install.png&quot; alt=&quot;Install Bundle with the command&quot; /&gt;
+  &lt;figcaption&gt;Installing Bundle with Git bash&lt;/figcaption&gt;
+&lt;/figure&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;source 'https://rubygems.org'
-gem &quot;minimal-mistakes-jekyll&quot;
-gem 'jekyll-include-cache'
-gem 'jekyll-archives'
-&lt;/code&gt;
-  Save the file.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Open the file __config.yml&lt;br /&gt;
-search for “plugins” (line - 225) and add the following lines
- -jekyll-include-cache
- -jekyll-archives&lt;/p&gt;
+&lt;h3 id=&quot;built-the-site&quot;&gt;Built the site&lt;/h3&gt;
 
-    &lt;p&gt;search for jekyll-archives and uncomment the lines from 262 till 270&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Open the bash&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Build the site and make it available on a local server&lt;/p&gt;
 
-&lt;p&gt;ATOM&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;markdown-preview&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29/5_Build_the_site.png&quot; alt=&quot;Built the Jekyll site by simple command&quot; /&gt;
+  &lt;figcaption&gt;Built the Jekyll site &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Now browse to http://localhost:4000 and you will see your sites&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29/6_Localhost_site.png&quot; alt=&quot;Built the Jekyll site by simple command&quot; /&gt;
+  &lt;figcaption&gt;Built the Jekyll site &lt;/figcaption&gt;
+&lt;/figure&gt;
 
 &lt;hr /&gt;
 &lt;h4 id=&quot;references&quot;&gt;REFERENCES&lt;/h4&gt;

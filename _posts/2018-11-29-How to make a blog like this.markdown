@@ -21,7 +21,8 @@ It supports all kinds of file formats and is good for quickly creating a blog.
 
 > In 2009, Jekyll was written in Ruby, by [Tom Preston-Werner](http://tom.preston-werner.com/), GitHub's co-founder.
 
-Though it needs some technical background and a good knowledge of [Markdown](https://www.markdownguide.org/getting-started) and the [Liquid](https://shopify.github.io/liquid/) templating language, which is easy to learn if you have some basics of HTML. Ever since it is getting popular and glimpse of Jekyll popularity can be seen on [Showcase](https://jekyllrb.com/showcase/) and [wiki](https://github.com/jekyll/jekyll/wiki/sites).
+Though it needs some technical background and a good knowledge of [Markdown](https://www.markdownguide.org/getting-started) and the [Liquid](https://shopify.github.io/liquid/) templating language, which are easy to learn if you have some basic knowledge of HTML.
+Ever since it is getting popular and glimpse of Jekyll popularity can be seen on [Showcase](https://jekyllrb.com/showcase/) and [wiki](https://github.com/jekyll/jekyll/wiki/sites).
 
 
 For this blog, I preferred [Jekyll](https://jekyllrb.com/) because of the following reasons.
@@ -46,66 +47,93 @@ For this blog, I preferred [Jekyll](https://jekyllrb.com/) because of the follow
 
 ### TL;DR Procedure for creating a blog on Jekyll like this one:
 ---
-1. Install [Ruby](https://rubyinstaller.org/).
-2. Install [Jekyll](https://jekyllrb.com/docs/installation/) and [bundler gems](https://jekyllrb.com/docs/ruby-101/#bundler).
-3. Download the [theme](https://github.com/mmistakes/minimal-mistakes).
-4. Modify the **GEMFILE**.
-5. Modify **_config.yml** file.
-6. Run the server.
+1. Install [Jekyll](https://jekyllrb.com/docs/installation/).
+2. Download the [theme](https://github.com/mmistakes/minimal-mistakes).
+3. Built the site
+3. Modify the **GEMFILE**.
+4. Modify **_config.yml** file.
+5. Run the server.
+
+---
+
+The above steps are explained below in details.
+
+
+### Installing Jekyll ###
+
+Install [Jekyll on windows](https://jekyllrb.com/docs/installation/windows/). Installation procedures are very well documented on Jekyll website.
+
+<figure>
+  <img src="/assets/images/2018-11-29/1_Jekyll.png" alt="Jekyll for windows">
+  <figcaption>Jekyll for windows</figcaption>
+</figure>
+
+According to the Jekyll official [documentation](https://jekyllrb.com/docs/installation/windows/): The easiest way to run Jekyll is by using the [RubyInstaller](https://rubyinstaller.org/) for Windows.
+<figure>
+  <img src="/assets/images/2018-11-29/2_Ruby_installation.png" alt="Ruby installation">
+  <figcaption>Ruby for windows</figcaption>
+</figure>
+
+Jekyll is a  [Ruby Gem](https://jekyllrb.com/docs/ruby-101/#gems). On [stackoverflow](https://stackoverflow.com/questions/5233924/what-is-a-ruby-gem) Gem is explained.
+> Gem is a package manager for the Ruby programming language that provides a standard format for distributing Ruby programs and libraries, a tool designed to easily manage the installation of gems, and a server for distributing them.
 
 
 
-Jekyll is written in Ruby so we have to install Ruby as well and it is one of the [Ruby Gem](https://jekyllrb.com/docs/ruby-101/#gems).
-This [stackoverflow  answer on Gem](https://stackoverflow.com/questions/5233924/what-is-a-ruby-gem) explains very well about Gem.
->  RubyGems is a package manager for the Ruby programming language that provides a standard format for distributing Ruby programs and libraries (in a self-contained format called a "gem"), a tool designed to easily manage the installation of gems, and a server for distributing them.
+### Download the theme ###
 
-We can find the detail installation process on the Jekyll website [here](https://jekyllrb.com/docs/installation/) but nevertheless we can find the procedure below as well.
+I preffered the minimal mistake [theme](https://github.com/mmistakes/minimal-mistakes) created by Michael Rose. I find it simple and elegant theme which is very well [documented](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/).
 
-Since I used Windows(O.S) I will follow
+We can download the theme directly from the link above and save it. I would recommend using Git. Open [Git bash](https://git-scm.com/download/win) and type the following command
 
-We can download the repository by two ways.
-
-
-1.
-  a. Click on the link  and  download the repository. Save the file in the desired folder and unzip it.
-
-  b. Open Git bash and clone the repository like this.
-
-You have to install Ruby for Jekyll. If you don't have Ruby installed on your pc then download from here.
-
-
-2. Go inside the folder. Find the Gemfile and modify it like this
-
-``` source 'https://rubygems.org'
-gem "minimal-mistakes-jekyll"
-gem 'jekyll-include-cache'
-gem 'jekyll-archives'
+ ```
+ $ git clone https://github.com/mmistakes/minimal-mistakes
 ```
-  Save the file.
+<figure>
+  <img src="/assets/images/2018-11-29/3_Git.png" alt="Git">
+  <figcaption>Downloading minimal mistake theme with Git bash</figcaption>
+</figure>
 
-3. Open the file __config.yml  
-   search for "plugins" (line - 225) and add the following lines
-    -jekyll-include-cache
-    -jekyll-archives
-
-    search for jekyll-archives and uncomment the lines from 262 till 270
+Change into your new directory. Now, we need to install Bundler in our project folder by the following code.
 
 
-4. Open the bash
+ ```
+$ cd minimal-mistakes/
+$ bundle install
+ ```
+
+<figure>
+  <img src="/assets/images/2018-11-29/4_Bundle_install.png" alt="Install Bundle with the command">
+  <figcaption>Installing Bundle with Git bash</figcaption>
+</figure>
+
+> Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.
 
 
+### Built the site  ###
 
-ATOM
+Build the site and make it available on a local server
 
-markdown-preview
+```
+$ bundle exec jekyll serve
+```
 
+<figure>
+  <img src="/assets/images/2018-11-29/5_Build_the_site.png" alt="Built the Jekyll site by simple command">
+  <figcaption>Built the Jekyll site </figcaption>
+</figure>
 
+Now browse to http://localhost:4000 and you will see your sites
+
+<figure>
+  <img src="/assets/images/2018-11-29/6_Localhost_site.png" alt="Built the Jekyll site by simple command">
+  <figcaption>Built the Jekyll site </figcaption>
+</figure>
 
 ---
 #### REFERENCES
 1. https://jekyllrb.com/
-2.  https://github.com/jekyll/jekyll/wiki/sites
-3.  https://jekyllrb.com/showcase/
+2. https://github.com/jekyll/jekyll/wiki/sites
+3. https://jekyllrb.com/showcase/
 4. https://rubyinstaller.org/
-4.  https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#emphasis
+4. https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#emphasis
 5. https://jekyllrb.com/docs/ruby-101/#gems
