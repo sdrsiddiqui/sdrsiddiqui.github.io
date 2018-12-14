@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-13T15:56:07+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Learning and Sharing</title><subtitle>An amazing website about learning and sharing.</subtitle><author><name>sdrsiddiqui</name></author><entry><title type="html">How to make a blog like this?</title><link href="http://localhost:4000/jekyll/How-to-make-a-blog-like-this/" rel="alternate" type="text/html" title="How to make a blog like this?" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/jekyll/How%20to%20make%20a%20blog%20like%20this</id><content type="html" xml:base="http://localhost:4000/jekyll/How-to-make-a-blog-like-this/">&lt;p&gt;Whenever we hear about blogs we think more often about WordPress or BlogSpot blogs. &lt;a href=&quot;https://wordpress.com/&quot;&gt;WordPress&lt;/a&gt; is more popular once right now. It is an open source online website creation tool, which was written in PHP and MySQL.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-14T18:48:03+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Learning and Sharing</title><subtitle>An amazing website about learning and sharing.</subtitle><author><name>sdrsiddiqui</name></author><entry><title type="html">5 steps for making a blog with Jekyll</title><link href="http://localhost:4000/wilt/How-to-make-a-blog-like-this/" rel="alternate" type="text/html" title="5 steps for making a blog with Jekyll" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/wilt/How%20to%20make%20a%20blog%20like%20this</id><content type="html" xml:base="http://localhost:4000/wilt/How-to-make-a-blog-like-this/">&lt;p&gt;Whenever we hear about blogs we think more often about WordPress or BlogSpot blogs. &lt;a href=&quot;https://wordpress.com/&quot;&gt;WordPress&lt;/a&gt; is more popular once right now. It is an open source online website creation tool, which was written in PHP and MySQL.&lt;/p&gt;
 
 &lt;p&gt;Lots of people complain about their WordPress blog getting infected with malware or hacked, or being slow etc. Let us learn about Jekyll and how it overcomes the problems mentioned above.&lt;/p&gt;
 
 &lt;h2 id=&quot;introducing-jekyll&quot;&gt;Introducing Jekyll&lt;/h2&gt;
 
-&lt;p&gt;Jekyll transforms plain text into static websites. It is a simple static site generator, and takes a source file (written in markup language) for creating a static website.
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; transforms plain text into static websites. It is a simple static site generator, and takes a source file (written in markup language) for creating a static website.
 It supports all kinds of file formats and is good for quickly creating a blog.&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -45,10 +45,9 @@ Ever since it is getting popular and glimpse of Jekyll popularity can be seen on
 &lt;ol&gt;
   &lt;li&gt;Install &lt;a href=&quot;https://jekyllrb.com/docs/installation/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/li&gt;
   &lt;li&gt;Download the &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;theme&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Built the site&lt;/li&gt;
-  &lt;li&gt;Modify the &lt;strong&gt;GEMFILE&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;Modify &lt;strong&gt;_config.yml&lt;/strong&gt; file.&lt;/li&gt;
-  &lt;li&gt;Run the server.&lt;/li&gt;
+  &lt;li&gt;Built the site.&lt;/li&gt;
+  &lt;li&gt;Modify the files &lt;strong&gt;Gemfile&lt;/strong&gt; and  &lt;strong&gt;_config.yml&lt;/strong&gt; file.&lt;/li&gt;
+  &lt;li&gt;Built the site and run the server.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;hr /&gt;
@@ -79,7 +78,7 @@ Ever since it is getting popular and glimpse of Jekyll popularity can be seen on
 
 &lt;p&gt;I preffered the minimal mistake &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;theme&lt;/a&gt; created by Michael Rose. I find it simple and elegant theme which is very well &lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/&quot;&gt;documented&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;We can download the theme directly from the link above and save it. I would recommend using Git. Open &lt;a href=&quot;https://git-scm.com/download/win&quot;&gt;Git bash&lt;/a&gt; and type the following command&lt;/p&gt;
+&lt;p&gt;We can download the theme directly from the link above and save it. I would recommend using Git. Open &lt;a href=&quot;https://git-scm.com/download/win&quot;&gt;Git bash&lt;/a&gt; and type the following command:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ git clone https://github.com/mmistakes/minimal-mistakes
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -105,6 +104,92 @@ $ bundle install
 
 &lt;h3 id=&quot;built-the-site&quot;&gt;Built the site&lt;/h3&gt;
 
+&lt;p&gt;Build the site and make it available on a local server by the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29/5_Build_the_site.png&quot; alt=&quot;Built the Jekyll site by simple command&quot; /&gt;
+  &lt;figcaption&gt;Built the Jekyll site &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Now browse to http://localhost:4000 to see your site.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29/6_Localhost_site.png&quot; alt=&quot;Built the Jekyll site by simple command&quot; /&gt;
+  &lt;figcaption&gt;Built the Jekyll site &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;modify-the-files-gemfile-and--_configyml-file&quot;&gt;Modify the files &lt;strong&gt;Gemfile&lt;/strong&gt; and  &lt;strong&gt;_config.yml&lt;/strong&gt; file&lt;/h3&gt;
+
+&lt;p&gt;Modify your &lt;strong&gt;Gemfile&lt;/strong&gt; with the following code&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source 'https://rubygems.org'
+gem &quot;minimal-mistakes-jekyll&quot;
+gem 'jekyll-include-cache'
+gem 'jekyll-archives'
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Modify &lt;strong&gt;_config.yml&lt;/strong&gt; file&lt;/p&gt;
+
+&lt;p&gt;Now we need to modify config.yml file. We need to modify some places.&lt;/p&gt;
+
+&lt;p&gt;We start with modifying plugins. Add the following line&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- jekyll-archives
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;at line 225. So that the final plugins will look like this&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+  - jekyll-archives
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now we will uncomment the jekyll-archives which can be found at line 254. We will uncomment it till line 263. It will look like following:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll-archives:
+  enabled:
+     - categories
+     - tags
+  layouts:
+     category: archive-taxonomy
+     tag: archive-taxonomy
+  permalinks:
+     category: /categories/:name/
+     tag: /tags/:name/
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We will add the following lines at the defaults (line 287)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll-archives:
+  enabled:
+     - categories
+     - tags
+  layouts:
+     category: archive-taxonomy
+     tag: archive-taxonomy
+  permalinks:
+     category: /categories/:name/
+     tag: /tags/:name/
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In Site Settings we will activate breadcrumbs on line 27 by making it true. It will look like as follows:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;breadcrumbs              : true # true, false (default)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can change the title, name and description as we want.&lt;/p&gt;
+
+&lt;p&gt;In the Site Author section we modify the author name, bio, location, links to email, twitter, facebook etc according to our requirements.&lt;/p&gt;
+
+&lt;h3 id=&quot;built-the-site-1&quot;&gt;Built the site&lt;/h3&gt;
+
 &lt;p&gt;Build the site and make it available on a local server&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll serve
@@ -115,23 +200,21 @@ $ bundle install
   &lt;figcaption&gt;Built the Jekyll site &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Now browse to http://localhost:4000 and you will see your sites&lt;/p&gt;
+&lt;p&gt;Now browse to http://localhost:4000 to see your site.&lt;/p&gt;
 
-&lt;figure&gt;
-  &lt;img src=&quot;/assets/images/2018-11-29/6_Localhost_site.png&quot; alt=&quot;Built the Jekyll site by simple command&quot; /&gt;
-  &lt;figcaption&gt;Built the Jekyll site &lt;/figcaption&gt;
-&lt;/figure&gt;
+&lt;p&gt;###Conclusion###&lt;/p&gt;
+
+&lt;p&gt;We have learned about Jekyll, its advantages and also about how to make a blog in just five steps. Jekyll is a very powerful tool which is becoming very powerful for blogging which opens new ways to make a website faster and more secure.&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;h4 id=&quot;references&quot;&gt;REFERENCES&lt;/h4&gt;
 &lt;ol&gt;
-  &lt;li&gt;https://jekyllrb.com/&lt;/li&gt;
-  &lt;li&gt;https://github.com/jekyll/jekyll/wiki/sites&lt;/li&gt;
-  &lt;li&gt;https://jekyllrb.com/showcase/&lt;/li&gt;
-  &lt;li&gt;https://rubyinstaller.org/&lt;/li&gt;
-  &lt;li&gt;https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#emphasis&lt;/li&gt;
-  &lt;li&gt;https://jekyllrb.com/docs/ruby-101/#gems&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Jekyll" /><category term="Liquid" /><summary type="html">Whenever we hear about blogs we think more often about WordPress or BlogSpot blogs. WordPress is more popular once right now. It is an open source online website creation tool, which was written in PHP and MySQL.</summary></entry><entry><title type="html">Atom</title><link href="http://localhost:4000/post/Atom-eidtor/" rel="alternate" type="text/html" title="Atom" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/post/Atom-eidtor</id><content type="html" xml:base="http://localhost:4000/post/Atom-eidtor/">&lt;p&gt;Atom&lt;/p&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll/wiki/sites&quot;&gt;Wiki&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/showcase/&quot;&gt;Showcase&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://rubyinstaller.org/&quot;&gt;RubyInstaller&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gems&quot;&gt;Ruby Gem&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Jekyll" /><category term="Liquid" /><summary type="html">Whenever we hear about blogs we think more often about WordPress or BlogSpot blogs. WordPress is more popular once right now. It is an open source online website creation tool, which was written in PHP and MySQL.</summary></entry><entry><title type="html">Atom</title><link href="http://localhost:4000/wilt/Atom-eidtor/" rel="alternate" type="text/html" title="Atom" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/wilt/Atom-eidtor</id><content type="html" xml:base="http://localhost:4000/wilt/Atom-eidtor/">&lt;p&gt;Atom&lt;/p&gt;
 
 &lt;p&gt;Atom is a very powerful editor.&lt;/p&gt;
 

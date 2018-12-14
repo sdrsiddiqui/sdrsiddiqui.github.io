@@ -141,6 +141,8 @@ footer:
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/"
 
+# production mode (will be overwritten by _config_dev.yml in dev mode)
+environment: prod
 
 # Reading Files
 include:

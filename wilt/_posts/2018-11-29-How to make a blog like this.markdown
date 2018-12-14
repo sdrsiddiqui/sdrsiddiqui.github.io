@@ -1,8 +1,8 @@
 ---
-title:  How to make a blog like this?
+title:  5 steps for making a blog with Jekyll
 description: This post explains how to make a website or blog with Jekyll
 categories:
-  - Jekyll
+  - wilt
 tags:
   - Jekyll
   - Liquid
@@ -16,7 +16,7 @@ Lots of people complain about their WordPress blog getting infected with malware
 
 ##  Introducing Jekyll
 
-Jekyll transforms plain text into static websites. It is a simple static site generator, and takes a source file (written in markup language) for creating a static website.
+[Jekyll](https://jekyllrb.com/) transforms plain text into static websites. It is a simple static site generator, and takes a source file (written in markup language) for creating a static website.
 It supports all kinds of file formats and is good for quickly creating a blog.  
 
 > In 2009, Jekyll was written in Ruby, by [Tom Preston-Werner](http://tom.preston-werner.com/), GitHub's co-founder.
@@ -49,10 +49,9 @@ For this blog, I preferred [Jekyll](https://jekyllrb.com/) because of the follow
 ---
 1. Install [Jekyll](https://jekyllrb.com/docs/installation/).
 2. Download the [theme](https://github.com/mmistakes/minimal-mistakes).
-3. Built the site
-3. Modify the **GEMFILE**.
-4. Modify **_config.yml** file.
-5. Run the server.
+3. Built the site.
+4. Modify the files **Gemfile** and  **_config.yml** file.
+5. Built the site and run the server.
 
 ---
 
@@ -83,7 +82,7 @@ Jekyll is a  [Ruby Gem](https://jekyllrb.com/docs/ruby-101/#gems). On [stackover
 
 I preffered the minimal mistake [theme](https://github.com/mmistakes/minimal-mistakes) created by Michael Rose. I find it simple and elegant theme which is very well [documented](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/).
 
-We can download the theme directly from the link above and save it. I would recommend using Git. Open [Git bash](https://git-scm.com/download/win) and type the following command
+We can download the theme directly from the link above and save it. I would recommend using Git. Open [Git bash](https://git-scm.com/download/win) and type the following command:
 
  ```
  $ git clone https://github.com/mmistakes/minimal-mistakes
@@ -111,6 +110,102 @@ $ bundle install
 
 ### Built the site  ###
 
+Build the site and make it available on a local server by the following command:
+
+```
+$ bundle exec jekyll serve
+```
+
+<figure>
+  <img src="/assets/images/2018-11-29/5_Build_the_site.png" alt="Built the Jekyll site by simple command">
+  <figcaption>Built the Jekyll site </figcaption>
+</figure>
+
+Now browse to http://localhost:4000 to see your site.
+
+<figure>
+  <img src="/assets/images/2018-11-29/6_Localhost_site.png" alt="Built the Jekyll site by simple command">
+  <figcaption>Built the Jekyll site </figcaption>
+</figure>
+
+
+### Modify the files **Gemfile** and  **_config.yml** file ###
+
+Modify your **Gemfile** with the following code
+```
+source 'https://rubygems.org'
+gem "minimal-mistakes-jekyll"
+gem 'jekyll-include-cache'
+gem 'jekyll-archives'
+
+```
+
+Modify **_config.yml** file
+
+Now we need to modify config.yml file. We need to modify some places.
+
+We start with modifying plugins. Add the following line  
+```
+- jekyll-archives
+```
+at line 225. So that the final plugins will look like this
+
+```
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+  - jekyll-archives
+
+```
+
+Now we will uncomment the jekyll-archives which can be found at line 254. We will uncomment it till line 263. It will look like following:
+
+```
+jekyll-archives:
+  enabled:
+     - categories
+     - tags
+  layouts:
+     category: archive-taxonomy
+     tag: archive-taxonomy
+  permalinks:
+     category: /categories/:name/
+     tag: /tags/:name/
+
+```
+
+We will add the following lines at the defaults (line 287)
+```
+jekyll-archives:
+  enabled:
+     - categories
+     - tags
+  layouts:
+     category: archive-taxonomy
+     tag: archive-taxonomy
+  permalinks:
+     category: /categories/:name/
+     tag: /tags/:name/
+
+```
+
+In Site Settings we will activate breadcrumbs on line 27 by making it true. It will look like as follows:
+```
+breadcrumbs              : true # true, false (default)
+```
+
+We can change the title, name and description as we want.
+
+In the Site Author section we modify the author name, bio, location, links to email, twitter, facebook etc according to our requirements.
+
+
+
+### Built the site  ###
+
 Build the site and make it available on a local server
 
 ```
@@ -122,18 +217,17 @@ $ bundle exec jekyll serve
   <figcaption>Built the Jekyll site </figcaption>
 </figure>
 
-Now browse to http://localhost:4000 and you will see your sites
+Now browse to http://localhost:4000 to see your site.
 
-<figure>
-  <img src="/assets/images/2018-11-29/6_Localhost_site.png" alt="Built the Jekyll site by simple command">
-  <figcaption>Built the Jekyll site </figcaption>
-</figure>
+
+###Conclusion###
+
+We have learned about Jekyll, its advantages and also about how to make a blog in just five steps. Jekyll is a very powerful tool which is becoming very powerful for blogging which opens new ways to make a website faster and more secure.
 
 ---
 #### REFERENCES
-1. https://jekyllrb.com/
-2. https://github.com/jekyll/jekyll/wiki/sites
-3. https://jekyllrb.com/showcase/
-4. https://rubyinstaller.org/
-4. https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#emphasis
-5. https://jekyllrb.com/docs/ruby-101/#gems
+1. [Jekyll](https://jekyllrb.com/)
+2. [Wiki](https://github.com/jekyll/jekyll/wiki/sites)
+3. [Showcase](https://jekyllrb.com/showcase/)
+4. [RubyInstaller](https://rubyinstaller.org/)
+4. [Ruby Gem](https://jekyllrb.com/docs/ruby-101/#gems)

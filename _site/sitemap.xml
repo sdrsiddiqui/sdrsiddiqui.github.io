@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/post/Atom-eidtor/</loc>
+<loc>http://localhost:4000/wilt/Atom-eidtor/</loc>
 <lastmod>2018-11-29T00:00:00+03:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/jekyll/How-to-make-a-blog-like-this/</loc>
+<loc>http://localhost:4000/wilt/How-to-make-a-blog-like-this/</loc>
 <lastmod>2018-11-29T00:00:00+03:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/wilt/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>
@@ -24,9 +27,6 @@
 <loc>http://localhost:4000/tags/liquid/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/categories/post/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/categories/jekyll/</loc>
+<loc>http://localhost:4000/categories/wilt/</loc>
 </url>
 </urlset>

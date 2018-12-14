@@ -2,7 +2,7 @@
 title:  Atom
 description: Atom the wonderful free editor
 categories:
-  - Post
+  - wilt
 tags:
   - Atom
   - editor

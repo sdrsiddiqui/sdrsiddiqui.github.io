@@ -1,10 +1,8 @@
 # main links
 main:
-  - title: "Category"
-    url: /categories/
-  - title: "Posts"
-    url: /tags/
+  - title: "WILT"
+    url: /wilt/
   - title: "About"
-    url: https://sdrsiddiqui.github.io/
+    url: /about/
   # - title: "Sitemap"
   #   url: /sitemap/
