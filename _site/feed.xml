@@ -1,52 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-14T18:48:03+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Learning and Sharing</title><subtitle>An amazing website about learning and sharing.</subtitle><author><name>sdrsiddiqui</name></author><entry><title type="html">5 steps for making a blog with Jekyll</title><link href="http://localhost:4000/wilt/How-to-make-a-blog-like-this/" rel="alternate" type="text/html" title="5 steps for making a blog with Jekyll" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/wilt/How%20to%20make%20a%20blog%20like%20this</id><content type="html" xml:base="http://localhost:4000/wilt/How-to-make-a-blog-like-this/">&lt;p&gt;Whenever we hear about blogs we think more often about WordPress or BlogSpot blogs. &lt;a href=&quot;https://wordpress.com/&quot;&gt;WordPress&lt;/a&gt; is more popular once right now. It is an open source online website creation tool, which was written in PHP and MySQL.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-16T21:22:12+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Data Science &amp;amp; ML</title><subtitle>Its all about data science and machine learning.</subtitle><author><name>sdrsiddiqui</name></author><entry><title type="html">Create a Jekyll blog in five steps</title><link href="http://localhost:4000/wilt/Create-Jekyll-blog-in-five-steps/" rel="alternate" type="text/html" title="Create a Jekyll blog in five steps" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/wilt/Create%20Jekyll%20blog%20in%20five%20steps</id><content type="html" xml:base="http://localhost:4000/wilt/Create-Jekyll-blog-in-five-steps/">&lt;p&gt;Whenever we hear the word blog, WordPress or BlogSpot blogs cross our mind. Out of which &lt;a href=&quot;https://wordpress.com/&quot;&gt;WordPress&lt;/a&gt; is more in demand right now. It is an open source online website creation tool, which was written in PHP and MySQL.&lt;/p&gt;
 
-&lt;p&gt;Lots of people complain about their WordPress blog getting infected with malware or hacked, or being slow etc. Let us learn about Jekyll and how it overcomes the problems mentioned above.&lt;/p&gt;
+&lt;p&gt;But lots of people complain that WordPress blog is getting infected with malware or hacked, or being slow etc. So to overcome this problem, bloggers are migrating towards Jekyll.
+In the next section, Jekyll is explained as well as and how it overcomes the problems which WordPress is encountering.&lt;/p&gt;
 
 &lt;h2 id=&quot;introducing-jekyll&quot;&gt;Introducing Jekyll&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; transforms plain text into static websites. It is a simple static site generator, and takes a source file (written in markup language) for creating a static website.
-It supports all kinds of file formats and is good for quickly creating a blog.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; transforms plain text into static websites. In other words, it is a simple static site generator which takes a source file (written in the markup language) for creating a static website. It supports all kinds of file formats and is good for building a blog quickly.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;In 2009, Jekyll was written in Ruby, by &lt;a href=&quot;http://tom.preston-werner.com/&quot;&gt;Tom Preston-Werner&lt;/a&gt;, GitHub’s co-founder.&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;http://tom.preston-werner.com/&quot;&gt;Tom Preston-Werner&lt;/a&gt;, GitHub’s co-founder, wrote Jekyll in Ruby in the year 2009.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Though it needs some technical background and a good knowledge of &lt;a href=&quot;https://www.markdownguide.org/getting-started&quot;&gt;Markdown&lt;/a&gt; and the &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid&lt;/a&gt; templating language, which are easy to learn if you have some basic knowledge of HTML.
-Ever since it is getting popular and glimpse of Jekyll popularity can be seen on &lt;a href=&quot;https://jekyllrb.com/showcase/&quot;&gt;Showcase&lt;/a&gt; and &lt;a href=&quot;https://github.com/jekyll/jekyll/wiki/sites&quot;&gt;wiki&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Though it needs some technical background and a good acquaintance of &lt;a href=&quot;https://www.markdownguide.org/getting-started&quot;&gt;Markdown&lt;/a&gt; and the &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid&lt;/a&gt; templating language, which are easy to learn if you have some elementary knowledge of HTML. The popularity of Jekyll could be seen on &lt;a href=&quot;https://jekyllrb.com/showcase/&quot;&gt;Showcase&lt;/a&gt; and &lt;a href=&quot;https://github.com/jekyll/jekyll/wiki/sites&quot;&gt;wiki&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;For this blog, I preferred &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; because of the following reasons.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is preferred because of the following reasons.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Performance:&lt;/strong&gt; Extremely fast as web server only returns static files.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Performance:&lt;/strong&gt; Jekyll is tremendously fast because static files are returned by the web server.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Secure:&lt;/strong&gt; There are only static files which means content is not produced dynamically, so there is no chance for it to get exploited or hacked. Until someone hacked the server.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Secure:&lt;/strong&gt;  As content is static files which makes it more secure until someone hacked the server.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Less costly:&lt;/strong&gt; It requires less resources which reduces its operative cost.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Less expensive:&lt;/strong&gt; It requires fewer resources which cuts its operative cost.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Easy to learn:&lt;/strong&gt; If you know HTML, CSS and JavaScript then only learning a new templating language called &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid&lt;/a&gt; will suffice.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Easy to learn:&lt;/strong&gt; Basic knowledge of HTML, CSS, and JavaScript is suffice for learning &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid&lt;/a&gt; which is a templating language.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Low maintenance:&lt;/strong&gt; With first-class support for Markdown, and the Liquid templating language, making a blog is as easy as running two commands. It takes less then five minutes for setting up Jekyll and the maintaining cost is minimum.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Low maintenance:&lt;/strong&gt; It takes less than five minutes for setting up Jekyll and the maintaining cost is minimum because of superb support for Markdown, and the Liquid templating language, making a blog is as easy as running two commands.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Big community:&lt;/strong&gt; Jekyll has big active community and a team of Core maintainers which is working hard to maintain it. They have documented Jekyll very well.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Big community:&lt;/strong&gt; Jekyll has an immense active community as well as a team of Core maintainers which is working hard to maintain and document Jekyll very well.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;New Learning Experience:&lt;/strong&gt; Blogging is a the best way to learn and share about new technologies. We learn more by teaching others and while getting your hands dirty with real world problems.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;New Learning Experience:&lt;/strong&gt; Blogging is the best way to learn and share new skills in terms of technology. We learn more by teaching others and while getting your hands dirty with real-world problems.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;tldr-procedure-for-creating-a-blog-on-jekyll-like-this-one&quot;&gt;TL;DR Procedure for creating a blog on Jekyll like this one:&lt;/h3&gt;
+&lt;h3 id=&quot;tldr-five-steps-for-creating-a-jekyll-blog&quot;&gt;TL;DR Five steps for creating a Jekyll blog:&lt;/h3&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
   &lt;li&gt;Install &lt;a href=&quot;https://jekyllrb.com/docs/installation/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/li&gt;
   &lt;li&gt;Download the &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;theme&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Built the site.&lt;/li&gt;
-  &lt;li&gt;Modify the files &lt;strong&gt;Gemfile&lt;/strong&gt; and  &lt;strong&gt;_config.yml&lt;/strong&gt; file.&lt;/li&gt;
+  &lt;li&gt;Modify the &lt;strong&gt;Gemfile&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Modify the &lt;strong&gt;_config.yml&lt;/strong&gt; file.&lt;/li&gt;
   &lt;li&gt;Built the site and run the server.&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -56,45 +55,46 @@ Ever since it is getting popular and glimpse of Jekyll popularity can be seen on
 
 &lt;h3 id=&quot;installing-jekyll&quot;&gt;Installing Jekyll&lt;/h3&gt;
 
-&lt;p&gt;Install &lt;a href=&quot;https://jekyllrb.com/docs/installation/windows/&quot;&gt;Jekyll on windows&lt;/a&gt;. Installation procedures are very well documented on Jekyll website.&lt;/p&gt;
+&lt;p&gt;First Install &lt;a href=&quot;https://jekyllrb.com/docs/installation/windows/&quot;&gt;Jekyll on windows&lt;/a&gt;
+(other OS installation procedures could be found on Jekyll website).&lt;/p&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/assets/images/2018-11-29/1_Jekyll.png&quot; alt=&quot;Jekyll for windows&quot; /&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/1_Jekyll.png&quot; alt=&quot;Jekyll for windows&quot; /&gt;
   &lt;figcaption&gt;Jekyll for windows&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;According to the Jekyll official &lt;a href=&quot;https://jekyllrb.com/docs/installation/windows/&quot;&gt;documentation&lt;/a&gt;: The easiest way to run Jekyll is by using the &lt;a href=&quot;https://rubyinstaller.org/&quot;&gt;RubyInstaller&lt;/a&gt; for Windows.&lt;/p&gt;
+&lt;p&gt;According to the Jekyll official &lt;a href=&quot;https://jekyllrb.com/docs/installation/windows/&quot;&gt;documentation&lt;/a&gt;: The easiest method to run Jekyll is by using the &lt;a href=&quot;https://rubyinstaller.org/&quot;&gt;RubyInstaller&lt;/a&gt; for Windows.&lt;/p&gt;
 &lt;figure&gt;
-  &lt;img src=&quot;/assets/images/2018-11-29/2_Ruby_installation.png&quot; alt=&quot;Ruby installation&quot; /&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/2_Ruby_installation.png&quot; alt=&quot;Ruby installation&quot; /&gt;
   &lt;figcaption&gt;Ruby for windows&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Jekyll is a  &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gems&quot;&gt;Ruby Gem&lt;/a&gt;. On &lt;a href=&quot;https://stackoverflow.com/questions/5233924/what-is-a-ruby-gem&quot;&gt;stackoverflow&lt;/a&gt; Gem is explained.&lt;/p&gt;
+&lt;p&gt;Jekyll is a &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gems&quot;&gt;Ruby Gem&lt;/a&gt;. The best explanation is found on &lt;a href=&quot;https://stackoverflow.com/questions/5233924/what-is-a-ruby-gem&quot;&gt;stackoverflow&lt;/a&gt;  as:&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;Gem is a package manager for the Ruby programming language that provides a standard format for distributing Ruby programs and libraries, a tool designed to easily manage the installation of gems, and a server for distributing them.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&quot;download-the-theme&quot;&gt;Download the theme&lt;/h3&gt;
 
-&lt;p&gt;I preffered the minimal mistake &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;theme&lt;/a&gt; created by Michael Rose. I find it simple and elegant theme which is very well &lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/&quot;&gt;documented&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;We can download the theme directly from the link above and save it. I would recommend using Git. Open &lt;a href=&quot;https://git-scm.com/download/win&quot;&gt;Git bash&lt;/a&gt; and type the following command:&lt;/p&gt;
+&lt;p&gt;The minimal mistake &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;theme&lt;/a&gt; is used on this blog because of its simplicity and elegance. This theme is very well &lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/&quot;&gt;documented&lt;/a&gt; by its creator Michael Rose.
+Download the theme directly from the [link] (https://github.com/mmistakes/minimal-mistakes) above and save it.
+Another way is just by typing the following command on &lt;a href=&quot;https://git-scm.com/download/win&quot;&gt;Git bash&lt;/a&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ git clone https://github.com/mmistakes/minimal-mistakes
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;figure&gt;
-  &lt;img src=&quot;/assets/images/2018-11-29/3_Git.png&quot; alt=&quot;Git&quot; /&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/3_Git.png&quot; alt=&quot;Git&quot; /&gt;
   &lt;figcaption&gt;Downloading minimal mistake theme with Git bash&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Change into your new directory. Now, we need to install Bundler in our project folder by the following code.&lt;/p&gt;
+&lt;p&gt;Change into the minimal-mistake directory and install Bundler.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd minimal-mistakes/
 $ bundle install
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/assets/images/2018-11-29/4_Bundle_install.png&quot; alt=&quot;Install Bundle with the command&quot; /&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/4_Bundle_install.png&quot; alt=&quot;Install Bundle with the command&quot; /&gt;
   &lt;figcaption&gt;Installing Bundle with Git bash&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -102,28 +102,28 @@ $ bundle install
   &lt;p&gt;Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;built-the-site&quot;&gt;Built the site&lt;/h3&gt;
+&lt;h3 id=&quot;build-the-site&quot;&gt;Build the site&lt;/h3&gt;
 
-&lt;p&gt;Build the site and make it available on a local server by the following command:&lt;/p&gt;
+&lt;p&gt;Build the site and make it available on a local server.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll serve
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/assets/images/2018-11-29/5_Build_the_site.png&quot; alt=&quot;Built the Jekyll site by simple command&quot; /&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/5_Build_the_site.png&quot; alt=&quot;Built the Jekyll site by simple command&quot; /&gt;
   &lt;figcaption&gt;Built the Jekyll site &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Now browse to http://localhost:4000 to see your site.&lt;/p&gt;
+&lt;p&gt;Browse to http://localhost:4000 to see your site.&lt;/p&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/assets/images/2018-11-29/6_Localhost_site.png&quot; alt=&quot;Built the Jekyll site by simple command&quot; /&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/6_Localhost_site.png&quot; alt=&quot;Built the Jekyll site by simple command&quot; /&gt;
   &lt;figcaption&gt;Built the Jekyll site &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&quot;modify-the-files-gemfile-and--_configyml-file&quot;&gt;Modify the files &lt;strong&gt;Gemfile&lt;/strong&gt; and  &lt;strong&gt;_config.yml&lt;/strong&gt; file&lt;/h3&gt;
+&lt;h3 id=&quot;modify-the--gemfile&quot;&gt;Modify the  &lt;strong&gt;Gemfile&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;Modify your &lt;strong&gt;Gemfile&lt;/strong&gt; with the following code&lt;/p&gt;
+&lt;p&gt;Copy paste the following code to the &lt;strong&gt;Gemfile&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source 'https://rubygems.org'
 gem &quot;minimal-mistakes-jekyll&quot;
 gem 'jekyll-include-cache'
@@ -131,14 +131,14 @@ gem 'jekyll-archives'
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Modify &lt;strong&gt;_config.yml&lt;/strong&gt; file&lt;/p&gt;
+&lt;h3 id=&quot;modify-the-_configyml-file&quot;&gt;Modify the &lt;strong&gt;_config.yml&lt;/strong&gt; file&lt;/h3&gt;
 
-&lt;p&gt;Now we need to modify config.yml file. We need to modify some places.&lt;/p&gt;
+&lt;p&gt;In the config.yml file, some modifications are to be done.&lt;/p&gt;
 
-&lt;p&gt;We start with modifying plugins. Add the following line&lt;/p&gt;
+&lt;p&gt;Search plugins section (at line 225) and add the following line&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- jekyll-archives
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;at line 225. So that the final plugins will look like this&lt;/p&gt;
+&lt;p&gt;The final plugins will appear as follows:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;plugins:
   - jekyll-paginate
@@ -151,7 +151,7 @@ gem 'jekyll-archives'
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Now we will uncomment the jekyll-archives which can be found at line 254. We will uncomment it till line 263. It will look like following:&lt;/p&gt;
+&lt;p&gt;Uncomment the jekyll-archives (at line 254) till the tag section (the line 263). The final Jekyll-archives will appear as follows:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll-archives:
   enabled:
@@ -166,29 +166,49 @@ gem 'jekyll-archives'
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;We will add the following lines at the defaults (line 287)&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll-archives:
-  enabled:
-     - categories
-     - tags
-  layouts:
-     category: archive-taxonomy
-     tag: archive-taxonomy
-  permalinks:
-     category: /categories/:name/
-     tag: /tags/:name/
-
+&lt;p&gt;Add the following lines at the defaults section (starting at line 287)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# _pages
+  - scope:
+      path: &quot;_pages&quot;
+      type: pages
+    values:
+      layout: single
+      author_profile: true
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;In Site Settings we will activate breadcrumbs on line 27 by making it true. It will look like as follows:&lt;/p&gt;
+&lt;p&gt;So the final defaults section will appear as follows:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: &quot;&quot;
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments:  true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: &quot;_pages&quot;
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In Site Settings, title(at line 19), name(at line 21), and description(at line 22) could be changed according to the requirements.
+Activate breadcrumbs (at line 27) by making it true as follows:&lt;/p&gt;
+
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;breadcrumbs              : true # true, false (default)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;We can change the title, name and description as we want.&lt;/p&gt;
+&lt;p&gt;In the Site Author section, author name (at line 106), bio (at line 108), location (at line 109), links (line 111 onwards) to email, twitter, facebook etc could be changed according to the requirements.&lt;/p&gt;
 
-&lt;p&gt;In the Site Author section we modify the author name, bio, location, links to email, twitter, facebook etc according to our requirements.&lt;/p&gt;
-
-&lt;h3 id=&quot;built-the-site-1&quot;&gt;Built the site&lt;/h3&gt;
+&lt;h3 id=&quot;build-the-site-1&quot;&gt;Build the site&lt;/h3&gt;
 
 &lt;p&gt;Build the site and make it available on a local server&lt;/p&gt;
 
@@ -196,15 +216,15 @@ gem 'jekyll-archives'
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/assets/images/2018-11-29/5_Build_the_site.png&quot; alt=&quot;Built the Jekyll site by simple command&quot; /&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/5_Build_the_site.png&quot; alt=&quot;Built the Jekyll site by simple command&quot; /&gt;
   &lt;figcaption&gt;Built the Jekyll site &lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Now browse to http://localhost:4000 to see your site.&lt;/p&gt;
 
-&lt;p&gt;###Conclusion###&lt;/p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
-&lt;p&gt;We have learned about Jekyll, its advantages and also about how to make a blog in just five steps. Jekyll is a very powerful tool which is becoming very powerful for blogging which opens new ways to make a website faster and more secure.&lt;/p&gt;
+&lt;p&gt;We have learned about Jekyll, its various advantages over other blogging systems. We have also seen how to make a Jekyll blog. It is a very powerful tool which is widespread for blogging and creating a website. It is getting lots of attention which opens new ways to make a website faster and secure.&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;h4 id=&quot;references&quot;&gt;REFERENCES&lt;/h4&gt;
@@ -214,78 +234,201 @@ gem 'jekyll-archives'
   &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/showcase/&quot;&gt;Showcase&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://rubyinstaller.org/&quot;&gt;RubyInstaller&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gems&quot;&gt;Ruby Gem&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Jekyll" /><category term="Liquid" /><summary type="html">Whenever we hear about blogs we think more often about WordPress or BlogSpot blogs. WordPress is more popular once right now. It is an open source online website creation tool, which was written in PHP and MySQL.</summary></entry><entry><title type="html">Atom</title><link href="http://localhost:4000/wilt/Atom-eidtor/" rel="alternate" type="text/html" title="Atom" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/wilt/Atom-eidtor</id><content type="html" xml:base="http://localhost:4000/wilt/Atom-eidtor/">&lt;p&gt;Atom&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Jekyll" /><category term="Liquid" /><summary type="html">Jekyll transforms plain text into static websites. In other words, it is a simple static site generator which takes a source file for creating a static website.</summary></entry><entry><title type="html">Atom for Pythonist</title><link href="http://localhost:4000/wilt/Atom-eidtor/" rel="alternate" type="text/html" title="Atom for Pythonist" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/wilt/Atom-eidtor</id><content type="html" xml:base="http://localhost:4000/wilt/Atom-eidtor/">&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/0_Atom.png&quot; alt=&quot;Atom to downloaded&quot; /&gt;
+  &lt;figcaption&gt; Atom: A hackable text editor for the 21st Century &lt;/figcaption&gt;
+&lt;/figure&gt;
 
-&lt;p&gt;Atom is a very powerful editor.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://atom.io&quot;&gt;Atom&lt;/a&gt; is a free and open-source text and source code editor for macOS, Linux, and Microsoft Windows with support for plug-ins written in Node.js, and embedded Git Control, developed by GitHub (&lt;a href=&quot;en.wikipedia.org/wiki/Atom_(text_editor)&quot;&gt;Wikipedia&lt;/a&gt;).&lt;/p&gt;
 
-&lt;p&gt;Go to the official webpage of Atom(https://atom.io) and download the Atom for 64 bit installer.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Atom was launched in February 2014 by the GitHub team.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Install the Atom. Wait until Atom is installed.&lt;/p&gt;
+&lt;p&gt;A hackable text &lt;a href=&quot;https://atom.io&quot;&gt;editor&lt;/a&gt; for the 21st Century created by GitHub team which is simple, powerful and highly customizable.&lt;/p&gt;
 
-&lt;p&gt;Normally to open Atom, we browse to the program and click on the Atom icon which opens in a random directory.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://atom.io&quot;&gt;Download&lt;/a&gt; for 32 bit or 64-bit installer according to your operating system. Once it is downloaded, go to the download folder and double-click on “AtomSetup-x64.exe” for installing it.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/1_1_download_Atom.png&quot; alt=&quot;Atom to downloaded&quot; /&gt;
+  &lt;figcaption&gt; AtomSetup-x64.exe &lt;/figcaption&gt;
+&lt;/figure&gt;
 
-&lt;p&gt;Is it cool if we can open the Atom in any directory without changing the directory all the time.&lt;/p&gt;
+&lt;p&gt;Click on the icon and install the editor as shown below:&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/2_Installation_Atom.png&quot; alt=&quot;Install Atom&quot; /&gt;
+  &lt;figcaption&gt; Installing Atom &lt;/figcaption&gt;
+&lt;/figure&gt;
 
-&lt;p&gt;For this we have to some changes.&lt;/p&gt;
+&lt;p&gt;After giving the permission to the windows, a beautiful image will appear with the caption “Atom is being installed. It will launch once it is done”.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/3_installing_step_Atom.png&quot; alt=&quot;Install Atom&quot; /&gt;
+  &lt;figcaption&gt; Atom editor &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Once it is installed, an icon on the desktop will appear. To use Atom, either click on the desktop icon or find the “Atom” in the start menu.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;atom-for-pythonist&quot;&gt;Atom for Pythonist&lt;/h2&gt;
+
+&lt;p&gt;Pythonist loves Atom as both are open source. By doing some changes Atom could be customized for Pythonist.&lt;/p&gt;
+
+&lt;p&gt;We are going to install the following packages:&lt;/p&gt;
+
 &lt;ol&gt;
-  &lt;li&gt;Open Atom&lt;/li&gt;
+  &lt;li&gt;platform_ide-terminal&lt;/li&gt;
+  &lt;li&gt;autocomplete-python&lt;/li&gt;
+  &lt;li&gt;python-autopep8&lt;/li&gt;
+  &lt;li&gt;linter-flake8&lt;/li&gt;
+  &lt;li&gt;Browser Plus&lt;/li&gt;
+  &lt;li&gt;file-icons&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Let start installing the packages with some explanation.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-platform_ide-terminal&quot;&gt;1. platform_ide-terminal&lt;/h3&gt;
+
+&lt;p&gt;It is a terminal package for Atom for integrating command line in ATOM.&lt;/p&gt;
+
+&lt;p&gt;Click on File&amp;gt; Settings&amp;gt;Install &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;platform-ide-terminal&quot; &lt;/code&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/9_platform-ide-terminal.png&quot; alt=&quot;install platform-ide-terminal&quot; /&gt;
+  &lt;figcaption&gt; Installing platform-ide-terminal in Atom editor &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;It stays at the bottom of the editor. Click on the “plus sign” on the bottom-left side for using it.&lt;/p&gt;
+
+&lt;p&gt;For more information click &lt;a href=&quot;https://atom.io/packages/platformio-ide-terminal&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/10_platform-ide-terminal_final.png&quot; alt=&quot;platform-ide-terminal&quot; /&gt;
+  &lt;figcaption&gt; platform-ide-terminal in function &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you press Ctrl+T or Ctrl+P, the Fuzzy Finder will pop up. This will let you quickly search for any file in your project by typing parts of the path.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;2-autocomplete-python&quot;&gt;2. autocomplete-python&lt;/h3&gt;
+
+&lt;p&gt;autocomplete-python will make your life more easy as python developer. It autocompletes python packages, variables, methods, and functions with their arguments in Atom.&lt;/p&gt;
+
+&lt;p&gt;Click on File&amp;gt;Settings&amp;gt;Install &lt;code class=&quot;highlighter-rouge&quot;&gt;autocomplete-python&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/11_autocomplete_python.png&quot; alt=&quot;Install Atom&quot; /&gt;
+  &lt;figcaption&gt; Installing autocomplete-python &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;3-python-autopep8&quot;&gt;3. python-autopep8&lt;/h3&gt;
+
+&lt;p&gt;It formats the python code according to the PEP8 guidelines. For more information click &lt;a href=&quot;https://pypi.org/project/autopep8/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Click on the Settings of python-autopep8 and go to the Settings. Check the &lt;code class=&quot;highlighter-rouge&quot;&gt;Format on Save&lt;/code&gt; as shown below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/13_python-autopep8.png&quot; alt=&quot;python-autopep8&quot; /&gt;
+    &lt;figcaption&gt; Installing python-autopep8 &lt;/figcaption&gt;
+  &lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;autopep8 need to be installed on the system. Open bash and type&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     pip install autopep8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;4-linter-flake8&quot;&gt;4. linter-flake8&lt;/h3&gt;
+
+&lt;p&gt;Flake8 is a Python library that wraps PyFlakes, pycodestyle and Ned Batchelder’s McCabe script. It is a great toolkit for checking your code base against coding style (PEP8), programming errors (like “library imported but unused” and “Undefined name”) and to check cyclomatic complexity. For more information click &lt;a href=&quot;https://simpleisbetterthancomplex.com/packages/2016/08/05/flake8.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/14_linter-flake8.png&quot; alt=&quot;python-autopep8&quot; /&gt;
+  &lt;figcaption&gt; Installing linter-flake8 &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Click on File &amp;gt; Settings and Click “System” tab.
- Check the second and third options.
-   Show in file context menus
-   Show in folder context menus&lt;/p&gt;
+    &lt;p&gt;flake8 need to be installed on the system. Open bash and type&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    pip install flake8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Close Atom&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Right click and you will see “open with Atom”.
-Now you can open the Atom anywhere you want to open.&lt;/p&gt;
+&lt;h3 id=&quot;5-browser-plus&quot;&gt;5. Browser Plus&lt;/h3&gt;
 
-&lt;p&gt;Make Atom ready for Python&lt;/p&gt;
+&lt;p&gt;It opens a real browser in ATOM, which is very handy for debugging and checking the output at the same time. It opens the home page(maintained in the settings) or http://www.google.com.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ctrl + shift + P and search Browser Plus for opening the browser window.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/15_broswer_plus.png&quot; alt=&quot;python-autopep8&quot; /&gt;
+    &lt;figcaption&gt;Installing Browser Plus &lt;/figcaption&gt;
+  &lt;/figure&gt;
+
+&lt;h3 id=&quot;6file-icons&quot;&gt;6.file-icons&lt;/h3&gt;
+
+&lt;p&gt;This put a little icon next to each file, which helps us to identify which kind of file it is.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/16_file_icons.png&quot; alt=&quot;python-autopep8&quot; /&gt;
+    &lt;figcaption&gt;file icons showing the file icon next to it &lt;/figcaption&gt;
+  &lt;/figure&gt;
+
+&lt;p&gt;File-specific icons in Atom for improved visual grepping.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/17_file_icons.png&quot; alt=&quot;python-autopep8&quot; /&gt;
+    &lt;figcaption&gt;file icons showing the file icon next to it &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;open-file-with-atom-in-one-click&quot;&gt;Open File with Atom in one click&lt;/h3&gt;
+
+&lt;p&gt;The normal procedure for opening a file or a directory with Atom is by first opening the editor Atom, with either of two methods as mentioned above. Then click on “File” &amp;gt; “Open folder” and browse to the file or the folder, which is a very cumbersome process as shown below:&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/4_open_folder.png&quot; alt=&quot;Install Atom&quot; /&gt;
+  &lt;figcaption&gt; Atom editor &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Wouldn’t it be amazing if we could just open the file in one click? So let see how we can do it.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;File &amp;gt; Settings &amp;gt; Install
-then search “script” and install it.&lt;/li&gt;
+  &lt;li&gt;Open the editor Atom&lt;/li&gt;
+  &lt;li&gt;Click on File &amp;gt; Settings and Click “System” tab. Check the &lt;code class=&quot;highlighter-rouge&quot;&gt;Show in file context menus&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Show in folder context menus
+&lt;/code&gt; as shown below:&lt;/li&gt;
+  &lt;li&gt;Close the editor Atom.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;it will let the python file to run from the Atom.
-Write a code in python and then use keyboard shortcuts Ctrl + shift + b for windows and unix.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/5_open_with_Atom.png&quot; alt=&quot;Install Atom&quot; /&gt;
+  &lt;figcaption&gt; Atom’s System tab &lt;/figcaption&gt;
+&lt;/figure&gt;
 
+&lt;p&gt;Right click and “open with Atom” option will appear as shown below. Atom is available with just a right click away.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/6_rightopen_with_Atom.png&quot; alt=&quot;Install Atom&quot; /&gt;
+  &lt;figcaption&gt; Open with Atom option available on right click &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;We have learned about a wonderful open source editor called Atom. How it is being used by Pythonist and some tricks and tips about using it.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;REFERENCE&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;There are other ways also. Where we can integrate command line in ATOM so that we don’t need other windows for command line.
-  File&amp;gt; Settings&amp;gt;Install
-  “platform-ide-terminal”
-On the left side there will be a “plus” sign. click on it and a new command line window will appear.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;If you press Ctrl+T or Ctrl+P, the Fuzzy Finder will pop up. This will let you quickly search for any file in your project by typing parts of the path.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;File&amp;gt;Settings&amp;gt;Install another package
-  a. “autocomplete-python”.
-  This will make your life more easy as python developer.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;b. “python-autopep8”
-  this format the python code according to the PEP8 guidelines. more information could be find here https://pypi.org/project/autopep8/&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  1. to use this we need to install autopep8 by using pip install autopep8 in the bash
-  2. Click on the Settings of python-autopep8 and go to the Settings. check the format on Save
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;c. “linter-flake8”&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Flake8 is a Python library that wraps PyFlakes, pycodestyle and Ned Batchelder’s McCabe script. It is a great toolkit for checking your code base against coding style (PEP8), programming errors (like “library imported but unused” and “Undefined name”) and to check cyclomatic complexity.
-https://simpleisbetterthancomplex.com/packages/2016/08/05/flake8.html
-
-1. To use this plugin flake8 will need to be installed on your system.
-  pip install flake8 from the bash
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;d. “Browser Plus”
-     Install this. It opens a real browser in ATOM. Which is very handy for debugging and checking the output at the same time.
-     ctrl+shift+p(cmd+shift+p) Browser Plus: Open. It opens the home page(maintained in the settings) or http://www.google.com.
-     ctrl + shift + P to open the browser window.&lt;/p&gt;
-
-&lt;p&gt;e . “file-icons”
-  This put a little icon next to each file, which helps us to identify which kind of file it is. File-specific icons in Atom for improved visual grepping.&lt;/p&gt;</content><author><name>sdrsiddiqui</name></author><category term="Atom" /><category term="editor" /><summary type="html">Atom</summary></entry></feed>
+  &lt;li&gt;&lt;a href=&quot;en.wikipedia.org/wiki/Atom_(text_editor)&quot;&gt;wikipedia&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://atom.io&quot;&gt;Atom&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://atom.io/packages/platformio-ide-terminal&quot;&gt;platform-ide-terminal&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pypi.org/project/autopep8/&quot;&gt;python-autopep8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://simpleisbetterthancomplex.com/packages/2016/08/05/flake8.html&quot;&gt;linter-flake8&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Atom" /><category term="editor" /><summary type="html">Atom: A hackable text editor for the 21st Century</summary></entry></feed>

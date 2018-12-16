@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "default" # "default"  "air", "aqua", "contrast", "da
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Learning and Sharing"
+title                    : "Data Science & ML"
 title_separator          : "-"
 name                     : "sdrsiddiqui"
-description              : "An amazing website about learning and sharing."
+description              : "Its all about data science and machine learning."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -61,9 +61,9 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : true # true, false (default)
-search_full_content      : true # true, false (default)
-search_provider          : bing # lunr (default), algolia, google
+search                   : # true # true, false (default)
+search_full_content      : # true # true, false (default)
+search_provider          : # bing # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -105,13 +105,13 @@ analytics:
 author:
   name             : "sdrsiddiqui"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am learning something everyday."
+  bio              : "Learning data science and ML"
   location         : "France"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url:   mailto:sdrsiddiqui2k6@gmail.com
+      url:   mailto:srsiddiqui2k6@gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url:  "https://your-website.com"
