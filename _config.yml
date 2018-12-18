@@ -105,7 +105,9 @@ analytics:
 author:
   name             : "sdrsiddiqui"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Learning data science and ML"
+  bio              : "Data science enthusiast,
+                      Interested in Artifical intelligence,
+                      Machine Learning and NLP"
   location         : "France"
   email            :
   links:
@@ -114,7 +116,7 @@ author:
       url:   mailto:srsiddiqui2k6@gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url:  "https://your-website.com"
+      #url:  "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/"
@@ -126,7 +128,7 @@ author:
       url: "https://github.com/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      #url: "https://instagram.com/"
 
 # Site Footer
 footer:

@@ -3,9 +3,8 @@ title:  Create a Jekyll blog in five steps
 description: This post explains how to make a website or blog with Jekyll
 excerpt: "Jekyll transforms plain text into static websites. In other words, it is a simple static site generator which takes a source file for creating a static website."
 header:
+  image: /assets/images/2018-11-29-Create Jekyll blog in five steps/0_logo-2x.png
   overlay_color: "#000"
-  overlay_filter: "0.5"
-  image: /assets/images/2018-11-29-Create Jekyll blog in five steps/unsplash-gallery-image-1.jpg
 categories:
   - wilt
 tags:
@@ -53,7 +52,7 @@ Though it needs some technical background and a good acquaintance of [Markdown](
 2. Download the [theme](https://github.com/mmistakes/minimal-mistakes).
 3. Modify the **Gemfile**.
 4. Modify the **_config.yml** file.
-5. Built the site and run the server.
+5. Build the site and run the server.
 
 ---
 
@@ -84,7 +83,7 @@ Jekyll is a [Ruby Gem](https://jekyllrb.com/docs/ruby-101/#gems). The best expla
 ### Download the theme ###
 
 The minimal mistake [theme](https://github.com/mmistakes/minimal-mistakes) is used on this blog because of its simplicity and elegance. This theme is very well [documented](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/) by its creator Michael Rose.
-Download the theme directly from the [link] (https://github.com/mmistakes/minimal-mistakes) above and save it.
+Download the theme directly from the [link](https://github.com/mmistakes/minimal-mistakes) above and save it.
 Another way is just by typing the following command on [Git bash](https://git-scm.com/download/win):
 
  ```
@@ -119,15 +118,15 @@ $ bundle exec jekyll serve
 ```
 
 <figure>
-  <img src="/assets/images/2018-11-29-Create Jekyll blog in five steps/5_Build_the_site.png" alt="Built the Jekyll site by simple command">
-  <figcaption>Built the Jekyll site </figcaption>
+  <img src="/assets/images/2018-11-29-Create Jekyll blog in five steps/5_Build_the_site.png" alt="Build the Jekyll site by simple command">
+  <figcaption>Build the Jekyll site </figcaption>
 </figure>
 
 Browse to http://localhost:4000 to see your site.
 
 <figure>
-  <img src="/assets/images/2018-11-29-Create Jekyll blog in five steps/6_Localhost_site.png" alt="Built the Jekyll site by simple command">
-  <figcaption>Built the Jekyll site </figcaption>
+  <img src="/assets/images/2018-11-29-Create Jekyll blog in five steps/6_Localhost_site.png" alt="Jekyll site">
+  <figcaption>Jekyll site on local host </figcaption>
 </figure>
 
 
@@ -191,7 +190,7 @@ Add the following lines at the defaults section (starting at line 287)
       author_profile: true
 ```
 
-So the final defaults section will appear as follows:
+The final defaults section will appear as follows:
 
 ```
 # Defaults
@@ -238,8 +237,8 @@ $ bundle exec jekyll serve
 ```
 
 <figure>
-  <img src="/assets/images/2018-11-29-Create Jekyll blog in five steps/5_Build_the_site.png" alt="Built the Jekyll site by simple command">
-  <figcaption>Built the Jekyll site </figcaption>
+  <img src="/assets/images/2018-11-29-Create Jekyll blog in five steps/5_Build_the_site.png" alt="Build the Jekyll site by simple command">
+  <figcaption>Build the Jekyll site </figcaption>
 </figure>
 
 Now browse to http://localhost:4000 to see your site.

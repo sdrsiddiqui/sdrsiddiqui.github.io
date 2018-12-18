@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-16T21:22:12+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Data Science &amp;amp; ML</title><subtitle>Its all about data science and machine learning.</subtitle><author><name>sdrsiddiqui</name></author><entry><title type="html">Create a Jekyll blog in five steps</title><link href="http://localhost:4000/wilt/Create-Jekyll-blog-in-five-steps/" rel="alternate" type="text/html" title="Create a Jekyll blog in five steps" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/wilt/Create%20Jekyll%20blog%20in%20five%20steps</id><content type="html" xml:base="http://localhost:4000/wilt/Create-Jekyll-blog-in-five-steps/">&lt;p&gt;Whenever we hear the word blog, WordPress or BlogSpot blogs cross our mind. Out of which &lt;a href=&quot;https://wordpress.com/&quot;&gt;WordPress&lt;/a&gt; is more in demand right now. It is an open source online website creation tool, which was written in PHP and MySQL.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-18T18:46:36+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Data Science &amp;amp; ML</title><subtitle>Its all about data science and machine learning.</subtitle><author><name>sdrsiddiqui</name></author><entry><title type="html">Create a Jekyll blog in five steps</title><link href="http://localhost:4000/wilt/Create-Jekyll-blog-in-five-steps/" rel="alternate" type="text/html" title="Create a Jekyll blog in five steps" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/wilt/Create%20Jekyll%20blog%20in%20five%20steps</id><content type="html" xml:base="http://localhost:4000/wilt/Create-Jekyll-blog-in-five-steps/">&lt;p&gt;Whenever we hear the word blog, WordPress or BlogSpot blogs cross our mind. Out of which &lt;a href=&quot;https://wordpress.com/&quot;&gt;WordPress&lt;/a&gt; is more in demand right now. It is an open source online website creation tool, which was written in PHP and MySQL.&lt;/p&gt;
 
 &lt;p&gt;But lots of people complain that WordPress blog is getting infected with malware or hacked, or being slow etc. So to overcome this problem, bloggers are migrating towards Jekyll.
 In the next section, Jekyll is explained as well as and how it overcomes the problems which WordPress is encountering.&lt;/p&gt;
@@ -46,7 +46,7 @@ In the next section, Jekyll is explained as well as and how it overcomes the pro
   &lt;li&gt;Download the &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;theme&lt;/a&gt;.&lt;/li&gt;
   &lt;li&gt;Modify the &lt;strong&gt;Gemfile&lt;/strong&gt;.&lt;/li&gt;
   &lt;li&gt;Modify the &lt;strong&gt;_config.yml&lt;/strong&gt; file.&lt;/li&gt;
-  &lt;li&gt;Built the site and run the server.&lt;/li&gt;
+  &lt;li&gt;Build the site and run the server.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;hr /&gt;
@@ -77,7 +77,7 @@ In the next section, Jekyll is explained as well as and how it overcomes the pro
 &lt;h3 id=&quot;download-the-theme&quot;&gt;Download the theme&lt;/h3&gt;
 
 &lt;p&gt;The minimal mistake &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;theme&lt;/a&gt; is used on this blog because of its simplicity and elegance. This theme is very well &lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/&quot;&gt;documented&lt;/a&gt; by its creator Michael Rose.
-Download the theme directly from the [link] (https://github.com/mmistakes/minimal-mistakes) above and save it.
+Download the theme directly from the &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;link&lt;/a&gt; above and save it.
 Another way is just by typing the following command on &lt;a href=&quot;https://git-scm.com/download/win&quot;&gt;Git bash&lt;/a&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ git clone https://github.com/mmistakes/minimal-mistakes
@@ -110,15 +110,15 @@ $ bundle install
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/5_Build_the_site.png&quot; alt=&quot;Built the Jekyll site by simple command&quot; /&gt;
-  &lt;figcaption&gt;Built the Jekyll site &lt;/figcaption&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/5_Build_the_site.png&quot; alt=&quot;Build the Jekyll site by simple command&quot; /&gt;
+  &lt;figcaption&gt;Build the Jekyll site &lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Browse to http://localhost:4000 to see your site.&lt;/p&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/6_Localhost_site.png&quot; alt=&quot;Built the Jekyll site by simple command&quot; /&gt;
-  &lt;figcaption&gt;Built the Jekyll site &lt;/figcaption&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/6_Localhost_site.png&quot; alt=&quot;Jekyll site&quot; /&gt;
+  &lt;figcaption&gt;Jekyll site on local host &lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;h3 id=&quot;modify-the--gemfile&quot;&gt;Modify the  &lt;strong&gt;Gemfile&lt;/strong&gt;&lt;/h3&gt;
@@ -176,7 +176,7 @@ gem 'jekyll-archives'
       author_profile: true
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;So the final defaults section will appear as follows:&lt;/p&gt;
+&lt;p&gt;The final defaults section will appear as follows:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Defaults
 defaults:
@@ -216,8 +216,8 @@ Activate breadcrumbs (at line 27) by making it true as follows:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/5_Build_the_site.png&quot; alt=&quot;Built the Jekyll site by simple command&quot; /&gt;
-  &lt;figcaption&gt;Built the Jekyll site &lt;/figcaption&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/5_Build_the_site.png&quot; alt=&quot;Build the Jekyll site by simple command&quot; /&gt;
+  &lt;figcaption&gt;Build the Jekyll site &lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Now browse to http://localhost:4000 to see your site.&lt;/p&gt;
@@ -431,4 +431,4 @@ Activate breadcrumbs (at line 27) by making it true as follows:&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://atom.io/packages/platformio-ide-terminal&quot;&gt;platform-ide-terminal&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://pypi.org/project/autopep8/&quot;&gt;python-autopep8&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://simpleisbetterthancomplex.com/packages/2016/08/05/flake8.html&quot;&gt;linter-flake8&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Atom" /><category term="editor" /><summary type="html">Atom: A hackable text editor for the 21st Century</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Atom" /><category term="editor" /><summary type="html">Atom is a free and open-source text and source code editor for macOS, Linux, and Microsoft Windows with support for plug-ins written in Node.js, and embedded Git Control, developed by GitHub.</summary></entry></feed>

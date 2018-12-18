@@ -1,6 +1,7 @@
 ---
 title:  Atom for Pythonist  
 description: Atom the wonderful free editor
+excerpt: Atom is a free and open-source text and source code editor for macOS, Linux, and Microsoft Windows with support for plug-ins written in Node.js, and embedded Git Control, developed by GitHub.
 header:
     overlay_filter: "0.1"
 
