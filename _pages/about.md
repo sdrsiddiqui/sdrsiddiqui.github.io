@@ -13,3 +13,5 @@ This blog is going to be a personal online journal for the topics of data scienc
 This place is dedicated to all the people who are passionate about data science and machine learning who wants and love to predict trends, gain insight and analyze data.
 
 Please do not hesitate to contact me if you have any questions, ideas, concerns for me.
+
+Thank you for stopping by and stay tuned for more. 
