@@ -1,5 +1,6 @@
 ---
 title:  Create a Jekyll blog in five steps
+permalink: /Create-Jekyll-blog-in-five-steps/
 description: This post explains how to make a website or blog with Jekyll
 excerpt: "Jekyll transforms plain text into static websites. In other words, it is a simple static site generator which takes a source file for creating a static website."
 header:
@@ -248,8 +249,10 @@ Now browse to http://localhost:4000 to see your site.
 
 We have learned about Jekyll, its various advantages over other blogging systems. We have also seen how to make a Jekyll blog. It is a very powerful tool which is widespread for blogging and creating a website. It is getting lots of attention which opens new ways to make a website faster and secure.
 
+
 ---
-#### REFERENCES
+### <ins> References and further reading list </ins>
+
 1. [Jekyll](https://jekyllrb.com/)
 2. [Wiki](https://github.com/jekyll/jekyll/wiki/sites)
 3. [Showcase](https://jekyllrb.com/showcase/)

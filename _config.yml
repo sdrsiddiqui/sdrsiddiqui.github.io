@@ -119,29 +119,32 @@ author:
       #url:  "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://twitter.com/sdrsiddiqui"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      #url: "https://instagram.com/"
+      url: "https://github.com/sdrsiddiqui"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://fr.linkedin.com/in/saeed-ur-rahman-siddiqui-a77b8486"
 
 # Site Footer
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://twitter.com/sdrsiddiqui"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/sdrsiddiqui"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://fr.linkedin.com/in/saeed-ur-rahman-siddiqui-a77b8486"
 
 # production mode (will be overwritten by _config_dev.yml in dev mode)
 environment: prod

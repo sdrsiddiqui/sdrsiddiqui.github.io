@@ -1,0 +1,808 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.13.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>How to use Jupyter more effectively? - Data Science &amp; ML</title>
+<meta name="description" content="Jupyter is a very useful tool for machine learning, data science, visualizations as it can contain code, equations, visualizations etc in one place.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Data Science & ML">
+<meta property="og:title" content="How to use Jupyter more effectively?">
+<meta property="og:url" content="http://localhost:4000/How-to-use-Jupyter-more-effectively/">
+
+
+  <meta property="og:description" content="Jupyter is a very useful tool for machine learning, data science, visualizations as it can contain code, equations, visualizations etc in one place.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-12-05T00:00:00+03:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/How-to-use-Jupyter-more-effectively/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "sdrsiddiqui",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Data Science & ML Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Data Science & ML</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/wilt/" >WILT</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">How to use Jupyter more effectively?</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">sdrsiddiqui</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Data science enthusiast, Interested in Artifical intelligence, Machine Learning and NLP
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">France</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:srsiddiqui2k6@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://twitter.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="https://fr.linkedin.com/in/saeed-ur-rahman-siddiqui-a77b8486" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="How to use Jupyter more effectively?">
+    <meta itemprop="description" content="Jupyter is a browser-based graphical interface of Ipython shell. It is an open-source web application which allows a user, to create and share documents, which can execute on their systems.It is a very useful tool for machine learning, data science, visualizations as it can contain code, equations, visualizations etc in one place. It blends two things, Python(a simple scripting programming language) and Wiki pages.">
+    <meta itemprop="datePublished" content="December 05, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">How to use Jupyter more effectively?
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>IPython is about using Python effectively for interactive scientific and data-intensive computing. There are two methods of using it; the IPython shell and the IPython notebook.</p>
+
+<h3 id="ipython-shell">IPython shell</h3>
+
+<p>IPython interpreter can be launched by typing:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ipython
+
+</code></pre></div></div>
+<p>on the command line. It will look like</p>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/3_ipython.png" alt="ipython" /></p>
+
+<p><em><sub>ipython shell</sub></em></p>
+
+<h3 id="ipython-notebook">IPython notebook</h3>
+
+<p><a href="https://jupyter.org/">Jupyter</a> is a browser-based graphical interface of Ipython shell. It is an open-source web application which allows a user, to create and share documents, which can execute on their systems.</p>
+
+<p>It is a very useful tool for machine learning, data science, visualizations as it can contain code, equations, visualizations etc in one place. It blends two things, Python(a simple scripting programming language) and Wiki pages.</p>
+
+<p>To run IPython notebook, it is very easy just by typing the following on system shell:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jupyter notebook
+
+</code></pre></div></div>
+<p>It will appear as:</p>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/05_startingJupyter.png" alt="Jupyter" />
+<em><sub>starting jupyter notebook</sub></em></p>
+
+<p>A local web server and browser will automatically open and navigate to the local URL. If not, manually, it could be accessed at http://localhost:8888 on the browser.</p>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/06_jupyter_browser.png" alt="Jupyter browser" />
+<em><sub>Jupyter notebook on the browser at local localhost</sub></em></p>
+
+<h2 id="basics-of-jupyter-notebook">Basics of Jupyter Notebook</h2>
+
+<p>Click on the New &gt; Python 2, for creating a new notebook. For giving it a name, click on the “untitled” and change it. The jupyter notebook is made up of cells where the python code is written as shown:</p>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/07_Hello World2.gif" alt="Jupyter browser" />
+<em><sub>Hello World on jupyter</sub></em></p>
+
+<p>You can find the source code of the previous program here:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print "Hello World"
+</code></pre></div></div>
+
+<p>The cell is executed by clicking Cell &gt; Run Cells or by <code class="highlighter-rouge">Shift + Enter</code>.</p>
+
+<blockquote>
+  <p><code class="highlighter-rouge">Shift + Enter</code>execute the cell and create a new cell below it.
+<code class="highlighter-rouge">Crtl + Enter</code>execute the cell only.</p>
+</blockquote>
+
+<p>Markdown is used for formatting the cells. To convert it, go to Cell &gt; Cell Type &gt; Markdown or type <code class="highlighter-rouge">Esc + M</code>.</p>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/08_Formating_Text.gif" alt="Jupyter browser" />
+<em><sub>Formating text on jupyter</sub></em></p>
+
+<blockquote>
+  <p>In Markdown language: # is used for H1 Heading like in HTML and ## like H2, only the font size decrease.</p>
+</blockquote>
+
+<p><strong>Create a variable</strong></p>
+
+<p>Python is a scripting language. Variables are created on the fly, there is no need to declare it before or their types, like in another language like C. Any global variable which is created can be used in another cell.</p>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/09_Type_variable.gif" alt="Jupyter browser" />
+<em><sub>Creating variable in jupyter</sub></em></p>
+
+<p>Source code of the above program:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>i = 15
+type(i)
+</code></pre></div></div>
+
+<p>Different variables can be created in the Jupyter notebook as follows:</p>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/10_types.gif" alt="Jupyter browser" />
+<em><sub>Creating variable in jupyter</sub></em></p>
+
+<h2 id="some-advanced-level-python">Some advanced level python</h2>
+<h3 id="list">List</h3>
+<p>The list is made by comma-separated values between square brackets[]. To access values in lists, use square brackets with the index number.</p>
+<ul>
+  <li>List is mutable, which means they can be changed.</li>
+  <li>It is an ordered collection of objects, the order in which elements are defined is maintained like that.</li>
+</ul>
+
+<h3 id="dictionary">Dictionary</h3>
+<p>Dictionary is made by placing the values inside the curly brackets{} separated by a comma. It is a pair that consists of a key and value. To access the ‘value’, the ‘key’ is put in the square brackets [].</p>
+<ul>
+  <li>It is mutable.</li>
+  <li>Dictionaries are unordered.</li>
+</ul>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/11_list_and_dictionary.gif" alt="Jupyter browser" />
+<em><sub>List and dictionary in jupyter</sub></em></p>
+
+<p>You can find the source code of the previous program here:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>l = [1,3,5,7,9] # list
+print l
+print l[2]
+
+dic = {'firstValue':1,'secondValue':2,'thirdValue':3}
+dic['firstValue']
+</code></pre></div></div>
+
+<h3 id="creating-functions">Creating functions</h3>
+<p>A function is a group of statements, which perform a specific task. Data(also known as parameters)can be passed into a function which returns a data as a result.</p>
+
+<p>There are two ways to define a function:</p>
+
+<ul>
+  <li>Normal functions are defined by the <code class="highlighter-rouge">def</code> keyword as shown below:</li>
+</ul>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/12_function.gif" alt="Jupyter browser" />
+<em><sub>Function in python</sub></em></p>
+
+<p>You can find the source code of the previous program here:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def mul(a, b):
+    return a*b
+
+mul(4,5)
+</code></pre></div></div>
+
+<ul>
+  <li>Lambda function also known as anonymous functions. The syntax of a lambda function is <code class="highlighter-rouge">lambda arguments: expression</code>. Lambda functions are single-expression functions that can have numbers of arguments.</li>
+</ul>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/13_lambda.gif" alt="Jupyter browser" />
+<em><sub>Lambda function in python</sub></em></p>
+
+<p>You can find the source code of the previous program here:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cube = lambda y : y* y*y
+
+cube(5)
+</code></pre></div></div>
+<hr />
+
+<p><strong>Documentation with ?</strong></p>
+
+<p>Python has a built-in help() function that accesses the docstring (it contains the summary of the object) information and prints the results.</p>
+
+<blockquote>
+  <p>In IPython, the ? character is a shorthand for accessing documentation for functions or other objects.</p>
+</blockquote>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/14_doc.gif" alt="Jupyter browser" />
+<em><sub>Accessing documentation in python</sub></em></p>
+
+<p>You can find the source code of the previous program here:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>help(len)
+
+len?
+</code></pre></div></div>
+
+<p><strong>Source Code with ??</strong></p>
+
+<p>Source code can be accessed in IPython just by putting a double question mark ( ?? ) after the function.</p>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/15_source_code.gif" alt="Jupyter browser" />
+<em><sub>Accessing source code in python</sub></em></p>
+
+<p>You can find the source code of the previous program here:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cube??
+
+len??
+</code></pre></div></div>
+<blockquote>
+  <p>Sometimes the ?? suffix doesn’t show source code, because that particular object is not implemented in
+Python, but in other language or in C. In this case, the output of ?? is the same as the ? suffix.</p>
+</blockquote>
+
+<h2 id="magic-functions">Magic Functions</h2>
+<p>Magic functions solve common problems in data analysis using Python. These are of two types.</p>
+
+<ol>
+  <li>Line magics: operate on a single line of input and have single % prefix.</li>
+  <li>Cell magics: operate on multiple lines of input and have double %% prefix.</li>
+</ol>
+
+<h3 id="automagic">%automagic</h3>
+
+<p>If the argument is set to 1 then there is no need to type the initial <code class="highlighter-rouge">%</code> before magic functions. It can be deactivated by setting to 0.</p>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/16_automagic_function.gif" alt="Jupyter browser" />
+<em><sub>automagic function in IPython</sub></em></p>
+
+<h3 id="cd">%cd</h3>
+
+<p>It is used to change the current directory. This is a line magic function. A tab can be used to see the different options available. IPython session has <em>_dh</em>  variable in which an internal list of directories is stored.</p>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/17_cd_magic_function.gif" alt="Jupyter browser" />
+<em><sub>cd magic function in IPython</sub></em></p>
+
+<h3 id="dhist">%dhist</h3>
+
+<p>It is used to see all the directories visited in a current session. It uses the <em>_dh</em> variable list to show the list of directory.</p>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/18_dhist_magic_function.gif" alt="Jupyter browser" />
+<em><sub>dhist magic function in IPython</sub></em></p>
+
+<h3 id="run">%run</h3>
+
+<p>Python script can be run from within IPython shell by %run command.</p>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/19_run.gif" alt="Jupyter browser" />
+<em><sub>%run magic function in IPython</sub></em></p>
+
+<p>hello.py file of the above %run magic function.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def hello():
+    return "Hello World"
+
+print( hello())
+</code></pre></div></div>
+
+<h3 id="timeit">%timeit</h3>
+
+<p><a href="https://stackoverflow.com/questions/29280470/what-is-timeit-in-python">%timeit</a> is an ipython magic function, which is used to time the execution of a particular piece of code. It can be a single execution statement, or a single method. It belongs to the line magic function.</p>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/20_timeit.gif" alt="Jupyter browser" />
+<em><sub>%timeit magic function in IPython</sub></em></p>
+
+<h2 id="shell-commands-in-ipython">Shell Commands in IPython</h2>
+
+<p>The shell commands can also be used in IPython, just by adding ! character before the command.</p>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/21_shellcommands.gif" alt="Jupyter browser" />
+<em><sub>Some shell commands in IPython</sub></em></p>
+
+<p>You can find the source code of the previous program here:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>!ls
+!pwd
+!echo "Hello"
+</code></pre></div></div>
+
+<h3 id="some-shortcuts">Some Shortcuts</h3>
+<ul>
+  <li><code class="highlighter-rouge">Shift + Enter</code>: Execute the cell and create a new cell below it.</li>
+  <li><code class="highlighter-rouge">Ctrl + Enter</code>: Execute the cell only.</li>
+  <li><code class="highlighter-rouge">Esp + M</code>: To get Markdown.</li>
+  <li><code class="highlighter-rouge">Esp + L</code>: To get line numbers in long code.</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>In this post, you learned about IPython. We started with the  basics of Jupyter notebook and covered a little bit of python, magic functions and how to use shell commands in IPython. For being an effective data scientist or software engineer, it is very important to know how to find information about unknown problems through webs search or other means rather than memorizing the tool or the command.</p>
+
+<hr />
+<h3 id="-references-and-further-reading-list-"><ins> References and further reading list </ins></h3>
+
+<ol>
+  <li>
+    <p><a href="http://ipython.org/">Ipython</a></p>
+  </li>
+  <li>
+    <p><a href="https://ipython.readthedocs.io/en/stable/">IPython Documentation</a></p>
+  </li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#data-science" class="page__taxonomy-item" rel="tag">Data Science</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-12-05T00:00:00+03:00">December 05, 2018</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=How+to+use+Jupyter+more+effectively%3F%20http%3A%2F%2Flocalhost%3A4000%2FHow-to-use-Jupyter-more-effectively%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FHow-to-use-Jupyter-more-effectively%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2FHow-to-use-Jupyter-more-effectively%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2FHow-to-use-Jupyter-more-effectively%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/Create-Jekyll-blog-in-five-steps/" class="pagination--pager" title="Create a Jekyll blog in five steps
+">Previous</a>
+    
+    
+      <a href="/Amazon-Web-Services-for-Data-Science/" class="pagination--pager" title="Amazon Web Services for Data Science
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/How-to-install-PostgreSQL-on-Amazon-AWS/" rel="permalink">How to install PostgreSQL on Amazon AWS?
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">PostgreSQL is an open source object-relational database management system (ORDBMS), developed at the University of California at Berkeley Computer Science De...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Amazon-Web-Services-for-Data-Science/" rel="permalink">Amazon Web Services for Data Science
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  10 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Amazon Web Services (AWS) provides a low-cost, scalable and highly reliable infrastructure platform in a secure cloud, and offers services like database stor...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Create-Jekyll-blog-in-five-steps/" rel="permalink">Create a Jekyll blog in five steps
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Jekyll transforms plain text into static websites. In other words, it is a simple static site generator which takes a source file for creating a static websi...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Atom-editor-for-pythonist/" rel="permalink">Atom for Pythonist
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Atom is a free and open-source text and source code editor for macOS, Linux, and Microsoft Windows with support for plug-ins written in Node.js, and embedded...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://instagram.com/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="https://fr.linkedin.com/in/saeed-ur-rahman-siddiqui-a77b8486" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 sdrsiddiqui. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
