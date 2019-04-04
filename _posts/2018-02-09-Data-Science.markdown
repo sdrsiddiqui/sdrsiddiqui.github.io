@@ -75,11 +75,11 @@ Here are the main steps you will follow for any data science project.
 1. **Ask questions:** Ask question what do you want to analyze. Talk with the business unit to figure out the questions. Either you have given data and you ask the question based on it or first, you ask the question and then gather data based on your it.
 
 2. **Data Wrangling:** Once you have clear questions in your mind, now you can proceed to data wrangling which has three steps:
-  * Gather data: Data is provided from the business unit or need to gather from different sources in various formats. from one or different sources, which provide the answers to business need.
-  * Assess the data: Once you gather the data, now you will make sure if the data have problems like not in the same format or not or which kind of problems are with the data.
-  * Cleaning the data: It is very rare that the data one get is clean. Most of the time of a data science project is spent on cleaning the data. It is done either by modifying to a new data or by removing the duplicates or unnecessary data.
+  * Gather data: Either data is provided from the business unit or need to gather from different sources which generally comes in various formats.
+  * Assess the data: Once you gather the data, now you will make sure if the data have any problems like not in the same format or if there are any other problems.
+  * Cleaning the data: It is very rare that the data one get is clean. Most of the time, of a data science project, is spent on cleaning the data. It is done either by modifying it to new data or by removing the duplicates or unnecessary data as well as fixing the missing data.
 
-3. **Exploratory Data Analysis(EDA):** In this step. you explore the data, find patterns, relationships by visualizing the data which helps to gain insights. Feature engineering (removed outliers and created better features) is also done in this process. Then we select a model and train it. This is a repetitive process.
+3. **Exploratory Data Analysis(EDA):** In this step. you explore the data, find patterns, relationships by visualizing the data which helps to gain insights. Feature engineering (removing outliers and creating better features) is also done in this process. After this, we select a model and train it. This is a repetitive process.
 
 4. **Present the solution:** Present the insights which you gained from the data. It could be done in the form of reports, blog posts, presentations, etc.
 
@@ -88,13 +88,13 @@ Here are the main steps you will follow for any data science project.
 ## Prepare the data science environment in three steps ##
 
 ### Jupyter ###
-For new users, it is recommended to install [Anaconda](https://www.anaconda.com/)<sup>[4](#reference4)</sup>, The Most Popular Python Data Science Platform. Anaconda installs Python, Jupyter Notebook and other packages used for data science. Learn more about Jupyter [here](/How-to-use-Jupyter-more-effectively).
+For new users, it is recommended to install [Anaconda](https://www.anaconda.com/)<sup>[4](#reference4)</sup>, the most popular python data science platform. Anaconda installs Python, Jupyter Notebook and other packages used for data science. Learn more about Jupyter [here](/How-to-use-Jupyter-more-effectively).
 
 ![Anaconda](/assets/images/2018-12-15-Data-Science/2_Anaconda.png)
 *<sub> Download Anaconda for Python 3</sub>*
 
 ### Project template ###
-It is a good practice to have a project template which makes it easy to work and understand. A Cookiecutter is a logical, reasonably standardized, but flexible project structure for doing and sharing data science work.
+It is a good practice to have a project template which makes it easy to work and understand. A Cookiecutter is a logical, reasonably standardized, but flexible project structure for doing and sharing data science work. It can be installed by the following command.
 
 ```
 $ pip install cookiecutter
