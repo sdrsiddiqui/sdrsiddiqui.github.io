@@ -47,7 +47,7 @@ As it can be seen that, these are not a new domain of knowledge to learn but a n
 
 ### Why Python is used for Data Science ###
 
-Python is an open source high level language. It has a powerful computation tools and packages which make it easy to focus on the task. When we execute Python code, the Python interpreter converts your code into bytecode that your computer can understand, and then runs that bytecode. Python is a high-level language. High level languages allow you to write programs faster as the interpreter makes the decisions on how to execute your instructions
+Python is an open source high-level language. It has powerful computation tools and packages which make it easy to focus on the task. When we execute Python code, the Python interpreter converts your code into bytecode that your computer can understand, and then runs that bytecode. Python is a high-level language. High-level languages allow you to write programs faster as the interpreter makes the decisions on how to execute your instructions
 Following are some of the reasons for choosing Python for Data Science projects.
 
 **Easy to learn:** Python is a simple scripting language that makes it easy to interact with data that makes it learning curve easy.
@@ -58,8 +58,8 @@ Following are some of the reasons for choosing Python for Data Science projects.
 
 **Scalable:**  It is fast and scalable as compared to other languages like R, Stata, Matlab.
 
-**Packages:** Wide range of packages that make it easy to get started and build application. Some of them are:
-* NumPy for manipulation of homogeneous array based data.
+**Packages:** Wide range of packages that make it easy to get started and build the application. Some of them are:
+* NumPy for manipulation of homogeneous array-based data.
 * Pandas for manipulation of heterogeneous and labeled data.
 * SciPy for common scientific computing tasks.
 * Matplotlib for publication-quality visualizations.
@@ -72,16 +72,16 @@ It allows the programmer to focus on the task at hand very fastly.
 
 ### Data science Project Overview ###
 Here are the main steps you will follow for any data science project.
-1. **Ask questions:** Ask question what do you want to analyze. Talk with the business unit to figure out the questions. Either you have given data and you ask question based on it or first you ask question and then gather data based on your it.
+1. **Ask questions:** Ask question what do you want to analyze. Talk with the business unit to figure out the questions. Either you have given data and you ask the question based on it or first, you ask the question and then gather data based on your it.
 
-2. **Data Wrangling:** Once you have a clear questions in your mind, now you can proceed to data wrangling which has three steps:
-  * Gather data: Data is provided from the business unit or need to gather from different sources in various formats. from one or different sources, which provide the answers of business need.
+2. **Data Wrangling:** Once you have clear questions in your mind, now you can proceed to data wrangling which has three steps:
+  * Gather data: Data is provided from the business unit or need to gather from different sources in various formats. from one or different sources, which provide the answers to business need.
   * Assess the data: Once you gather the data, now you will make sure if the data have problems like not in the same format or not or which kind of problems are with the data.
-  * Cleaning the data: It is very rare that the data one get is clean. Most of the time in a data science project is spent in  cleaning the data. It is done either by modifying to a new data or by removing the duplicates or unnecessary data.
+  * Cleaning the data: It is very rare that the data one get is clean. Most of the time of a data science project is spent on cleaning the data. It is done either by modifying to a new data or by removing the duplicates or unnecessary data.
 
-3. **Exploratory Data Analysis(EDA):** In this step. you explore the data, find patterns, relationships by visualizing the data which helps to gain insights. Feature engineering (removed outliers and created better features) is also done in this process. Then we select a model and train it. This is repetitive process.
+3. **Exploratory Data Analysis(EDA):** In this step. you explore the data, find patterns, relationships by visualizing the data which helps to gain insights. Feature engineering (removed outliers and created better features) is also done in this process. Then we select a model and train it. This is a repetitive process.
 
-4. **Present the solution:** Present the insights which you gained from the data. It could be done in the form or reports, blog posts, presentations etc.
+4. **Present the solution:** Present the insights which you gained from the data. It could be done in the form of reports, blog posts, presentations, etc.
 
 
 ---
@@ -94,7 +94,7 @@ For new users, it is recommended to install [Anaconda](https://www.anaconda.com/
 *<sub> Download Anaconda for Python 3</sub>*
 
 ### Project template ###
-It is a good practice to have a project template which makes it easy to work and understand. A Cookiecutter  is a logical, reasonably standardized, but flexible project structure for doing and sharing data science work.
+It is a good practice to have a project template which makes it easy to work and understand. A Cookiecutter is a logical, reasonably standardized, but flexible project structure for doing and sharing data science work.
 
 ```
 $ pip install cookiecutter
@@ -112,11 +112,11 @@ $ cookiecutter https://github.com/drivendata/cookiecutter-data-science
 *<sub>Creating project template Cookiecutter</sub>*
 
 ### Git ###
-Versioning system is important for any data science project. It helps in working together as well going back to the earlier version if there is any problems. We will be using Git in our case.  We don't need to have an expertise to use git, just knowing 4 commands will suffice in this project.
+Versioning system is important for any data science project. It helps in working together as well as going back to the earlier version if there are any problems. We will be using Git in our case.  We don't need to have the expertise to use git, just knowing 4 commands will suffice in this project.
 
   1. ```git init```: Initialize the git repository.
   2. ```git add ```: Add files in git. For adding all the files of this current folder to the git system we have to add a dot(.) after this command.
-  3. ```git commit```: Commit the changes using  command. This tells the git that we have committed our changes and can create our check points. It's a good practice to provide commit messages for referencing by a adding a ```-m``` flag with it.
+  3. ```git commit```: Commit the changes using the command. This tells the git that we have committed our changes and can create our checkpoints. It's a good practice to provide commit messages for referencing by adding a ```-m``` flag with it.
   4. ```git log```: It shows all the logs. But to have only one line use ```---oneline``` which shows git message with git commit id.
 
 ![Cookiecutter](/assets/images/2019-02-2-Kaggle-Project/3_git_commands.png)
@@ -127,7 +127,7 @@ Versioning system is important for any data science project. It helps in working
 ---
 ## Conclusion:
 
-In this post, you learned about Data Science and learn why Python is preferred for it. We also explored different steps for starting data science projects and finally we saw the environment which is required for a data science project. I hope it helps to understand some basics concepts of data science. In the coming tutorials we will explore more about data science and various algorithm used for it, till then explore more go through the references.
+In this post, you learned about Data Science and learn why Python is preferred for it. We also explored different steps for starting data science projects and finally, we saw the environment which is required for a data science project. I hope it helps to understand some basics concepts of data science. In the coming tutorials, we will explore more about data science and the various algorithm used for it, till then explore more go through the references.
 
 
 ---
