@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://localhost:4000/Introduction-to-Data-Science/</loc>
+<lastmod>2018-02-09T00:00:00+03:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/Atom-editor-for-pythonist/</loc>
 <lastmod>2018-11-29T00:00:00+03:00</lastmod>
 </url>
@@ -19,6 +23,10 @@
 <url>
 <loc>http://localhost:4000/How-to-install-PostgreSQL-on-Amazon-AWS/</loc>
 <lastmod>2019-02-04T00:00:00+03:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/Exploratory-Data-Analysis-(EDA)/</loc>
+<lastmod>2019-03-15T00:00:00+03:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/images/2019-01-13-All-about-Amazon-Aws/2018-12-15-Data-Science/</loc>
@@ -88,6 +96,12 @@
 <loc>http://localhost:4000/year-archive/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/tags/data-science/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tags/wilt/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/tags/atom/</loc>
 </url>
 <url>
@@ -100,12 +114,12 @@
 <loc>http://localhost:4000/tags/liquid/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/tags/data-science/</loc>
-</url>
-<url>
 <loc>http://localhost:4000/tags/aws/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/categories/wilt/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page2/</loc>
 </url>
 </urlset>

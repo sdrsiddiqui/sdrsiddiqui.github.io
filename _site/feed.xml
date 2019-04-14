@@ -1,4 +1,296 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-04-02T15:58:17+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Data Science &amp;amp; ML</title><subtitle>Its all about data science and machine learning.</subtitle><author><name>sdrsiddiqui</name></author><entry><title type="html">How to install PostgreSQL on Amazon AWS?</title><link href="http://localhost:4000/How-to-install-PostgreSQL-on-Amazon-AWS/" rel="alternate" type="text/html" title="How to install PostgreSQL on Amazon AWS?" /><published>2019-02-04T00:00:00+03:00</published><updated>2019-02-04T00:00:00+03:00</updated><id>http://localhost:4000/How-to-install-PostgreSQL-on-Amazon-AWS</id><content type="html" xml:base="http://localhost:4000/How-to-install-PostgreSQL-on-Amazon-AWS/">&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-30-How-to-install-PostgreSQL-on-AWS/0_PostgreSQL_welcome.png&quot; alt=&quot;Postgre&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-04-15T00:10:38+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Data Science &amp;amp; ML</title><subtitle>Its all about data science and machine learning.</subtitle><author><name>sdrsiddiqui</name></author><entry><title type="html">Basic six steps to follow in any data science project</title><link href="http://localhost:4000/Exploratory-Data-Analysis-(EDA)/" rel="alternate" type="text/html" title="Basic six steps to follow in any data science project" /><published>2019-03-15T00:00:00+03:00</published><updated>2019-03-15T00:00:00+03:00</updated><id>http://localhost:4000/Exploratory-Data-Analysis-(EDA)</id><content type="html" xml:base="http://localhost:4000/Exploratory-Data-Analysis-(EDA)/">&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/front.jpg&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Before starting any data analysis tasks, we must have a clear goal about our results or output.We need to understand the data and problem to get meaningful results from our analysis.&lt;/p&gt;
+
+&lt;p&gt;Exploratory Data Analysis (EDA) phase of a data science project helps us to analyze our datasets, summarize their main characteristics, understand their variables and relationships between them, in order to formulate some sort of hypotheses. In this post, we will delve in important EDA techniques which are used by every data scientist/analyst.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-1--import-all-the-required-libraries&quot;&gt;Step 1 : Import all the required libraries.&lt;/h2&gt;
+&lt;p&gt;We will import numpy and padas&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#import the libraries
+import numpy as np  # we will use np as an alias for numpy
+import pandas as pd # very well accepted alias for pandas is pd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Numpy:&lt;/strong&gt; It is a fundamental tool for scientific computing. It has a very efficient array of operations and provided high-level mathematical functions. It is very good for homogeneous data types but in the real world, we have heterogeneous datasets( numerical as well as categorical features).&lt;/p&gt;
+
+&lt;p&gt;To tackle this heterogeneous dataset, we use pandas.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pandas:&lt;/strong&gt; is built on top of Numpy which allows operations on tabular data. The tabular data structure consists of rows and columns. In terms of pandas, we call it a data frame. On the data frame, we use different kinds of functions and joints.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In Pandas: Rows is an observation and column is features or attributes.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;step-2-read-the-data&quot;&gt;Step 2: Read the data&lt;/h2&gt;
+&lt;p&gt;Once the data is imported, we will read the data in the data frame. In our case, we will read two excel files and load them into our data frame.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08 = pd.read_excel(&quot;data/all_alpha_08.xls&quot;, sheet_name=0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;step-21--learn-more-about-the-data&quot;&gt;Step 2.1 : Learn more about the data&lt;/h3&gt;
+&lt;p&gt;Once we have data in our data frame, we will learn about the data by using some functions on it. Following functions are very common for this purpose.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;head()&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;info()&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;duplicated()&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;describe()&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;how many rows have missing values&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Pandas documentation is the best place to discover and understand these functions. For the sake of completing this course, I will copy and paste about them.&lt;/p&gt;
+
+&lt;h3 id=&quot;1--head&quot;&gt;1.  &lt;code class=&quot;highlighter-rouge&quot;&gt;head()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;DataFrame.&lt;a href=&quot;https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html&quot;&gt;head(n=5)&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; returns the first n rows for the object based on position. It is useful for quickly testing if your object has the right type of data in it.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;n: int, default 5&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.head()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/1_head.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2-info&quot;&gt;2. &lt;code class=&quot;highlighter-rouge&quot;&gt;info()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;This method &lt;sup&gt;&lt;a href=&quot;#reference2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; prints information about a data frame including the index type and column types, non-null values and memory usage.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.info()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/2_info.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;3-duplicated&quot;&gt;3. &lt;code class=&quot;highlighter-rouge&quot;&gt;duplicated()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Return &lt;sup&gt;&lt;a href=&quot;#reference3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; boolean Series denoting duplicate rows, optionally only considering certain columns. For finding the number of duplicated rows, we will use the sum function on the data frame.
+   &lt;em&gt;example:&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;sum(df_08.duplicated())&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#no of duplicated rows in df_08
+sum(df_08.duplicated())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/3_duplicate.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;4describe&quot;&gt;4.&lt;code class=&quot;highlighter-rouge&quot;&gt;describe()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Generate descriptive &lt;sup&gt;&lt;a href=&quot;#reference4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; statistics that summarize the central tendency, dispersion and shape of a dataset’s distribution, excluding NaN values.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.describe()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/4_describe.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;5-find-how-many-rows-have-missing-values&quot;&gt;5. Find how many rows have missing values&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-isnull()&quot;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This function &lt;sup&gt;&lt;a href=&quot;#reference5&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; takes a scalar or array-like object and indicates whether values are missing (NaN in numeric arrays, None or NaN in object arrays, NaT in datetimelike).&lt;/p&gt;
+
+&lt;p&gt;In order to find all the rows, which has missing values, we will do a sum over it, as shown below.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# numbers of rows which have missing values
+sum(df_08.isnull().any(axis=1))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/5_isnull.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# nunique() returns number of unique elements in the object.
+df_08.nunique()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/6_nunique.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-3--drop-unnecessary-columns&quot;&gt;Step 3 : Drop unnecessary columns&lt;/h2&gt;
+
+&lt;p&gt;Drop all the unnecessary columns which we don’t need by using &lt;code class=&quot;highlighter-rouge&quot;&gt;drop&lt;/code&gt; function.&lt;/p&gt;
+
+&lt;p&gt;We use &lt;code class=&quot;highlighter-rouge&quot;&gt;inplace=True&lt;/code&gt; which tells the Dataframe, to copy the data frame back into the original df object.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.drop(columns=[&quot;Stnd&quot;, &quot;Underhood ID&quot;,&quot;FE Calc Appr&quot;,&quot;Unadj Cmb MPG&quot;], inplace= True)
+df_08.info()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/6_nunique.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-4-rename-all-column-labels-to-replace-spaces-with-underscores-and-convert-everything-to-lowercaseunderscores-can-be-much-easier-to-work-with-in-python-than-spaces&quot;&gt;Step 4: Rename all column labels to replace spaces with underscores and convert everything to lowercase(Underscores can be much easier to work with in Python than spaces).&lt;/h2&gt;
+&lt;p&gt;Being consistent with lowercase and underscores also helps make column names easy to remember.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.columns = df_08.columns.str.lower().str.replace(' ','_ ')
+df_08.info()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/7_drop.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-5--clean-the-data&quot;&gt;Step 5 : Clean the data&lt;/h2&gt;
+
+&lt;p&gt;There are three common things to do in this part.&lt;/p&gt;
+&lt;h4 id=&quot;1-missing-data&quot;&gt;1. Missing data&lt;/h4&gt;
+&lt;p&gt;In every dataset, we have some missing values. It can be handled by imputing or removing them. Imputation is done by mean, median or backward or forward fill.&lt;/p&gt;
+
+&lt;p&gt;In case we are doing imputation, we use &lt;code class=&quot;highlighter-rouge&quot;&gt;fillna&lt;/code&gt; function on the data frame for filling the data.&lt;/p&gt;
+
+&lt;p&gt;For removing the data we use &lt;code class=&quot;highlighter-rouge&quot;&gt;dropna()&lt;/code&gt; on the dataset.&lt;/p&gt;
+
+&lt;p&gt;We will be just removing the missing values.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.dropna(inplace=True)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;2-duplicates&quot;&gt;2. Duplicates&lt;/h4&gt;
+&lt;p&gt;As discussed earlier, there is a &lt;code class=&quot;highlighter-rouge&quot;&gt;duplicated&lt;/code&gt; function, for checking the duplicated rows. It show’s the result in &lt;code class=&quot;highlighter-rouge&quot;&gt;True&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;False&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;We can find the number of rows which are duplicated with the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sum(df.duplicated())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In order to remove the duplicates we use&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.drop_duplicates(inplace=True)
+print df_08.duplicated().sum()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/8_sum.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The sum of &lt;code class=&quot;highlighter-rouge&quot;&gt;duplicated&lt;/code&gt; function is zero, which means there are no duplicates rows anymore.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.info()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/9_df_info.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.head()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/10_df_head_step.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;cyl&lt;/code&gt; column, string is attached to the integer. The data is dirty, so we will extract the integer from it, with the following way.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#  extract int from string.
+df_08['cyl'] = df_08.cyl.str.extract(r'(\d+)', expand=True)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;3-incorrect-data-types&quot;&gt;3. Incorrect data types:&lt;/h4&gt;
+&lt;p&gt;There are scenarios when the rows are not in the same datatypes. For example, dates are in String type. It will be more convenient to work with the date datatypes. We can change the string datatypes to date datatypes by the following command.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df['timestamp'] = pd.to_datetime(df['timestamp'])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;There are two types of data, numerical and categorical data. All the algorithms understand numerical data. All the data should be converted into numerical data. We need to change some of the data types to float or int.
+We will change some of the datatype to &lt;code class=&quot;highlighter-rouge&quot;&gt;float&lt;/code&gt; datatypes.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 2008: convert int to float.
+df_08['air_pollution_score'] = df_08['air_pollution_score'].astype('float')
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/11_error.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08[df_08['air_pollution_score'] =='6/6'].head()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/12_polution_score.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As we can see, this row has two fuels “ethanol/gas” and its air_pollution_score is &lt;code class=&quot;highlighter-rouge&quot;&gt;6/6&lt;/code&gt;. It would be better, if we create two different rows of these values by keeping the same values of the other columns.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# finding the number of rows which contains '/'.
+sum(df_08['air_pollution_score'].str.contains('/'))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/13_sum.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# copying the data which has two values into a new dataframe
+double_fuel_08 = df_08[df_08['fuel'].str.contains('/')]
+double_fuel_08_1 = double_fuel_08.copy()
+double_fuel_08_2 = double_fuel_08.copy()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;We will seperate columns which has two values in every rows and then split the data frame into two data frame to store two rows vlaues.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;columns_to_split = [&quot;fuel&quot;,&quot;air_pollution_score&quot;,&quot;city_mpg&quot;,&quot;hwy_mpg&quot;,&quot;cmb_mpg&quot;,&quot;greenhouse_gas_score&quot;]
+for col in columns_to_split:
+    double_fuel_08_1[col] = double_fuel_08_1[col].apply(lambda x: x.split(&quot;/&quot;)[0])
+    double_fuel_08_2[col] = double_fuel_08_2[col].apply(lambda x: x.split(&quot;/&quot;)[1])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Checking the data frame if it splitted in a desired way&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-double_fuel_08_1.head()&quot;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/14_double_fuel.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;double_fuel_08_2.head()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/15_head2.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now we will delete the rows which contains ‘/’  from &lt;code class=&quot;highlighter-rouge&quot;&gt;double_fuel_08&lt;/code&gt; and add two newly created data frame.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;double_fuel_08.index
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/16_index.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.info()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/17_in.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dropping the rows&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.drop(double_fuel_08.index, inplace=True)
+df_08.info()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/18_after_dropping.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# checking all the rows which contains '/'
+df_08[df_08['fuel'].str.contains('/')]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/19_check.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Appending the two data frame with two distinct values into one data frame.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rows = double_fuel_08_1.append(double_fuel_08_2)
+rows.head()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/20_rows.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08 = df_08.append(rows, ignore_index=True);
+df_08.shape
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/21_shape.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;31-converting-the-rest-of-the-columns-into-float&quot;&gt;3.1 Converting the rest of the columns into float&lt;/h5&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# convert object to float
+df_08['air_pollution_score'] = df_08['air_pollution_score'].astype('float')
+df_08['air_pollution_score'].dtype
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/22_dtype.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;column_list=['city_mpg', 'hwy_mpg', 'cmb_mpg','greenhouse_gas_score']
+for col in column_list:
+    df_08[col] = df_08[col].astype('float64')
+
+df_08.dtypes
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/23_dtypes_2.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-6-exploring-with-visuals&quot;&gt;Step 6: Exploring with Visuals&lt;/h2&gt;
+
+&lt;p&gt;For numerical datatypes, to understand the variable visually is with a histogram. To get the histogram of a pandas series, we can use the hist method, as shown below.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08[&quot;cmb_mpg&quot;].plot(kind=&quot;hist&quot;, title=&quot;combined mpg in 2008&quot;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/24_histo.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#Describe the correlation between displacement and combined mpg.
+df_08['displ'].corr(df_08['cmb_mpg'])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/25_corr.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion:&lt;/h2&gt;
+
+&lt;p&gt;In this post, you learned about Exploratory data analysis(EDA) which is very important in every data science project. These basics steps should be mastered by a data analyst/scientist. As we can see, these steps are easy to remember and practice. Take a data set and practice this method to have more confidence. In case you are not able to remember, then there is no problem. You can always search and find their solutions. As I said in an earlier post, you should know how to find the solutions for problems as a data scientist/analyst. I hope, this helps and motivates you to explore more about EDA and other phases of a data science project.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;-references-and-further-reading-list-&quot;&gt;&lt;ins&gt; References and further reading list &lt;/ins&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference1&quot;&gt;1&lt;/a&gt;: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference2&quot;&gt;2&lt;/a&gt;: http://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.info.html&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference3&quot;&gt;3&lt;/a&gt;: http://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.duplicated.html&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference4&quot;&gt;4&lt;/a&gt;: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.describe.html&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference5&quot;&gt;5&lt;/a&gt;: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.isnull.html&lt;/p&gt;</content><author><name>sdrsiddiqui</name></author><category term="Data Science" /><summary type="html">Exploratory Data Analysis (EDA) phase of a data science project helps us to analyze our datasets, summarize their main characteristics, understand their variables and relationships between them, in order to formulate some sort of hypotheses.</summary></entry><entry><title type="html">How to install PostgreSQL on Amazon AWS?</title><link href="http://localhost:4000/How-to-install-PostgreSQL-on-Amazon-AWS/" rel="alternate" type="text/html" title="How to install PostgreSQL on Amazon AWS?" /><published>2019-02-04T00:00:00+03:00</published><updated>2019-02-04T00:00:00+03:00</updated><id>http://localhost:4000/How-to-install-PostgreSQL-on-Amazon-AWS</id><content type="html" xml:base="http://localhost:4000/How-to-install-PostgreSQL-on-Amazon-AWS/">&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-30-How-to-install-PostgreSQL-on-AWS/0_PostgreSQL_welcome.png&quot; alt=&quot;Postgre&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.postgresql.org/&quot;&gt;PostgreSQL&lt;/a&gt; is an open source object-relational database management system (ORDBMS), developed at the University of California at Berkeley Computer Science Department.&lt;/p&gt;
 
@@ -1253,4 +1545,133 @@ Activate breadcrumbs (at line 27) by making it true as follows:&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/showcase/&quot;&gt;Showcase&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://rubyinstaller.org/&quot;&gt;RubyInstaller&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gems&quot;&gt;Ruby Gem&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Jekyll" /><category term="Liquid" /><summary type="html">Jekyll transforms plain text into static websites. In other words, it is a simple static site generator which takes a source file for creating a static website.</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Jekyll" /><category term="Liquid" /><summary type="html">Jekyll transforms plain text into static websites. In other words, it is a simple static site generator which takes a source file for creating a static website.</summary></entry><entry><title type="html">Introduction to Data Science</title><link href="http://localhost:4000/Introduction-to-Data-Science/" rel="alternate" type="text/html" title="Introduction to Data Science" /><published>2018-02-09T00:00:00+03:00</published><updated>2018-02-09T00:00:00+03:00</updated><id>http://localhost:4000/Data-Science</id><content type="html" xml:base="http://localhost:4000/Introduction-to-Data-Science/">&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/0_data_science_front.jpg&quot; alt=&quot;DataScience&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Every day, we are &lt;a href=&quot;https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WRL12345USEN&quot;&gt;creating&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; 2.5 quintillions(10&lt;sup&gt;18&lt;/sup&gt;) bytes of data, out of which 90 percent of the data in the world has been created in the last two years alone. This massive amount of data is generated every now and then by millions of devices around us and with various social networking websites.&lt;/p&gt;
+
+&lt;p&gt;Data can be transformed into meaningful insights to help organizations in taking crucial decisions in their business by extracting valuable data-driven insights from the tremendous amount of data present in the world. It helps them creating value-added data products.&lt;/p&gt;
+
+&lt;p&gt;The person who generates valuable insights and patterns from the data is called &lt;strong&gt;Data Scientist&lt;/strong&gt;. No wonder why it is an important asset for the company as regarded as one of the important jobs of the century.&lt;/p&gt;
+
+&lt;p&gt;The term data science became very difficult to explain especially in today world. “Data science is an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from data in various forms, both structured and unstructured, similar to data mining.” —&lt;cite&gt;&lt;a href=&quot;en.wikipedia.org/wiki/Data_science&quot;&gt;Wikipedia&lt;/a&gt;&lt;/cite&gt;&lt;sup&gt;&lt;a href=&quot;#reference2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In other words, it is a set of fundamental principles that guide the extraction of knowledge of data.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A very good explanation of the word data science is explained by &lt;a href=&quot;http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&quot;&gt;Drew Conway’s Data Science Venn Diagram&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; on his blog.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/1_Drew_conway_data_Science_venn Diagram.PNG&quot; alt=&quot;Drew Conway’s Data Science Venn Diagram&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;Drew Conway’s Data Science Venn Diagram&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Based on this diagram, which captures the spirit of the word “data science”, it comprises of three different kinds of knowledge:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1.Statistics:&lt;/strong&gt; For modeling and summarizing datasets (which are increasing day by day).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.Computer knowledge:&lt;/strong&gt; For gathering, processing and visualizing the data (designing and using the algorithms).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3.The domain expertise:&lt;/strong&gt; For expressing the correct questions and to put their answers in context.&lt;/p&gt;
+
+&lt;h2 id=&quot;as-it-can-be-seen-that-these-are-not-a-new-domain-of-knowledge-to-learn-but-a-new-set-of-skills-are-required-which-are-easy-to-learn&quot;&gt;As it can be seen that, these are not a new domain of knowledge to learn but a new set of skills are required which are easy to learn.&lt;/h2&gt;
+
+&lt;h3 id=&quot;why-python-is-used-for-data-science&quot;&gt;Why Python is used for Data Science&lt;/h3&gt;
+
+&lt;p&gt;Python is an open source high-level language. It has powerful computation tools and packages which make it easy to focus on the task. When we execute Python code, the Python interpreter converts your code into bytecode that your computer can understand, and then runs that bytecode. Python is a high-level language. High-level languages allow you to write programs faster as the interpreter makes the decisions on how to execute your instructions
+Following are some of the reasons for choosing Python for Data Science projects.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Easy to learn:&lt;/strong&gt; Python is a simple scripting language that makes it easy to interact with data that makes it learning curve easy.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Open source:&lt;/strong&gt; Python is free and open source, which means Python source code is available for the public and anyone can contribute to its development.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Active community:&lt;/strong&gt; Python has a large and active scientific community so it is easy to get help.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Scalable:&lt;/strong&gt;  It is fast and scalable as compared to other languages like R, Stata, Matlab.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Packages:&lt;/strong&gt; Wide range of packages that make it easy to get started and build the application. Some of them are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;NumPy for manipulation of homogeneous array-based data.&lt;/li&gt;
+  &lt;li&gt;Pandas for manipulation of heterogeneous and labeled data.&lt;/li&gt;
+  &lt;li&gt;SciPy for common scientific computing tasks.&lt;/li&gt;
+  &lt;li&gt;Matplotlib for publication-quality visualizations.&lt;/li&gt;
+  &lt;li&gt;Scikit-Learn for machine learning.&lt;/li&gt;
+  &lt;li&gt;IPython for interactive execution and sharing of code.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It allows the programmer to focus on the task at hand very fastly.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;data-science-project-overview&quot;&gt;Data science Project Overview&lt;/h3&gt;
+&lt;p&gt;Here are the main steps you will follow for any data science project.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Ask questions:&lt;/strong&gt; Ask question what do you want to analyze. Talk with the business unit to figure out the questions. Either you have given data and you ask the question based on it or first, you ask the question and then gather data based on your it.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Data Wrangling:&lt;/strong&gt; Once you have clear questions in your mind, now you can proceed to data wrangling which has three steps:
+    &lt;ul&gt;
+      &lt;li&gt;Gather data: Either data is provided from the business unit or need to gather from different sources which generally comes in various formats.&lt;/li&gt;
+      &lt;li&gt;Assess the data: Once you gather the data, now you will make sure if the data have any problems like not in the same format or if there are any other problems.&lt;/li&gt;
+      &lt;li&gt;Cleaning the data: It is very rare that the data one get is clean. Most of the time, of a data science project, is spent on cleaning the data. It is done either by modifying it to new data or by removing the duplicates or unnecessary data as well as fixing the missing data.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Exploratory Data Analysis(EDA):&lt;/strong&gt; In this step. you explore the data, find patterns, relationships by visualizing the data which helps to gain insights. Feature engineering (removing outliers and creating better features) is also done in this process. After this, we select a model and train it. This is a repetitive process.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Present the solution:&lt;/strong&gt; Present the insights which you gained from the data. It could be done in the form of reports, blog posts, presentations, etc.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;prepare-the-data-science-environment-in-three-steps&quot;&gt;Prepare the data science environment in three steps&lt;/h2&gt;
+
+&lt;h3 id=&quot;jupyter&quot;&gt;Jupyter&lt;/h3&gt;
+&lt;p&gt;For new users, it is recommended to install &lt;a href=&quot;https://www.anaconda.com/&quot;&gt;Anaconda&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;, the most popular python data science platform. Anaconda installs Python, Jupyter Notebook and other packages used for data science. Learn more about Jupyter &lt;a href=&quot;/How-to-use-Jupyter-more-effectively&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/2_Anaconda.png&quot; alt=&quot;Anaconda&quot; /&gt;
+&lt;em&gt;&lt;sub&gt; Download Anaconda for Python 3&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;project-template&quot;&gt;Project template&lt;/h3&gt;
+&lt;p&gt;It is a good practice to have a project template which makes it easy to work and understand. A Cookiecutter is a logical, reasonably standardized, but flexible project structure for doing and sharing data science work. It can be installed by the following command.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip install cookiecutter
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-02-2-Kaggle-Project/1_install_cookiecutter.png&quot; alt=&quot;Cookiecutter&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;Installing Cookiecutter&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Once it is installed we can create a project template by the following command.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cookiecutter https://github.com/drivendata/cookiecutter-data-science
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-02-2-Kaggle-Project/2_creating_project_template_cookiecutter.png&quot; alt=&quot;Cookiecutter&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;Creating project template Cookiecutter&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;git&quot;&gt;Git&lt;/h3&gt;
+&lt;p&gt;Versioning system is important for any data science project. It helps in working together as well as going back to the earlier version if there are any problems. We will be using Git in our case.  We don’t need to have the expertise to use git, just knowing 4 commands will suffice in this project.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt;: Initialize the git repository.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add&lt;/code&gt;: Add files in git. For adding all the files of this current folder to the git system we have to add a dot(.) after this command.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit&lt;/code&gt;: Commit the changes using the command. This tells the git that we have committed our changes and can create our checkpoints. It’s a good practice to provide commit messages for referencing by adding a &lt;code class=&quot;highlighter-rouge&quot;&gt;-m&lt;/code&gt; flag with it.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git log&lt;/code&gt;: It shows all the logs. But to have only one line use &lt;code class=&quot;highlighter-rouge&quot;&gt;---oneline&lt;/code&gt; which shows git message with git commit id.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-02-2-Kaggle-Project/3_git_commands.png&quot; alt=&quot;Cookiecutter&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;Basic git commands for data science projects&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion:&lt;/h2&gt;
+
+&lt;p&gt;In this post, you learned about Data Science and learn why Python is preferred for it. We also explored different steps for starting data science projects and finally, we saw the environment which is required for a data science project. I hope it helps to understand some basics concepts of data science. In the coming tutorials, we will explore more about data science and the various algorithm used for it, till then explore more go through the references.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;-references-and-further-reading-list-&quot;&gt;&lt;ins&gt; References and further reading list &lt;/ins&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference1&quot;&gt;1&lt;/a&gt;: https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WRL12345USEN&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference2&quot;&gt;2&lt;/a&gt;: en.wikipedia.org/wiki/Data_science&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference3&quot;&gt;3&lt;/a&gt;: http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference4&quot;&gt;4&lt;/a&gt;: https://www.anaconda.com/&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference5&quot;&gt;5&lt;/a&gt; &lt;a target=&quot;_blank&quot; href=&quot;https://www.amazon.fr/gp/product/B01N2JT3ST/ref=as_li_tl?ie=UTF8&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=B01N2JT3ST&amp;amp;linkCode=as2&amp;amp;tag=sam094-21&amp;amp;linkId=d7c72362ce852e5b63ebe8e464ba6ae2&quot;&gt;Python Data Science Handbook: Essential Tools for Working with Data (English Edition)&lt;/a&gt;&lt;img src=&quot;//ir-fr.amazon-adsystem.com/e/ir?t=sam094-21&amp;amp;l=am2&amp;amp;o=8&amp;amp;a=B01N2JT3ST&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/p&gt;</content><author><name>sdrsiddiqui</name></author><category term="Data Science" /><category term="WILT" /><summary type="html">Every day, we are creating bytes of data, out of which 90 percent of the data in the world has been created in the last two years alone. This massive amount of data is generated every now and then by millions of devices around us and with various social networking websites.</summary></entry></feed>

@@ -1,0 +1,838 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.13.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Basic six steps to follow in any data science project - Data Science &amp; ML</title>
+<meta name="description" content="Exploratory Data Analysis (EDA) phase of a data science project helps us to analyze our datasets, summarize their main characteristics, understand their variables and relationships between them, in order to formulate some sort of hypotheses.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Data Science & ML">
+<meta property="og:title" content="Basic six steps to follow in any data science project">
+<meta property="og:url" content="http://localhost:4000/Exploratory-Data-Analysis-(EDA)/">
+
+
+  <meta property="og:description" content="Exploratory Data Analysis (EDA) phase of a data science project helps us to analyze our datasets, summarize their main characteristics, understand their variables and relationships between them, in order to formulate some sort of hypotheses.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-03-15T00:00:00+03:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/Exploratory-Data-Analysis-(EDA)/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "sdrsiddiqui",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Data Science & ML Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Data Science & ML</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/wilt/" >WILT</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">Basic six steps to follow in any data science project</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">sdrsiddiqui</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Data science enthusiast, Interested in Artifical intelligence, Machine Learning and NLP
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">France</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:srsiddiqui2k6@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://twitter.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="https://fr.linkedin.com/in/saeed-ur-rahman-siddiqui-a77b8486" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Basic six steps to follow in any data science project">
+    <meta itemprop="description" content="Exploratory Data Analysis (EDA) phase of a data science project helps us to analyze our datasets, summarize their main characteristics, understand their variables and relationships between them, in order to formulate some sort of hypotheses.">
+    <meta itemprop="datePublished" content="March 15, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Basic six steps to follow in any data science project
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/front.jpg" alt="EDA" /></p>
+
+<p>Before starting any data analysis tasks, we must have a clear goal about our results or output.We need to understand the data and problem to get meaningful results from our analysis.</p>
+
+<p>Exploratory Data Analysis (EDA) phase of a data science project helps us to analyze our datasets, summarize their main characteristics, understand their variables and relationships between them, in order to formulate some sort of hypotheses. In this post, we will delve in important EDA techniques which are used by every data scientist/analyst.</p>
+
+<h2 id="step-1--import-all-the-required-libraries">Step 1 : Import all the required libraries.</h2>
+<p>We will import numpy and padas</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#import the libraries
+import numpy as np  # we will use np as an alias for numpy
+import pandas as pd # very well accepted alias for pandas is pd
+</code></pre></div></div>
+
+<p><strong>Numpy:</strong> It is a fundamental tool for scientific computing. It has a very efficient array of operations and provided high-level mathematical functions. It is very good for homogeneous data types but in the real world, we have heterogeneous datasets( numerical as well as categorical features).</p>
+
+<p>To tackle this heterogeneous dataset, we use pandas.</p>
+
+<p><strong>Pandas:</strong> is built on top of Numpy which allows operations on tabular data. The tabular data structure consists of rows and columns. In terms of pandas, we call it a data frame. On the data frame, we use different kinds of functions and joints.</p>
+
+<blockquote>
+  <p>In Pandas: Rows is an observation and column is features or attributes.</p>
+</blockquote>
+
+<h2 id="step-2-read-the-data">Step 2: Read the data</h2>
+<p>Once the data is imported, we will read the data in the data frame. In our case, we will read two excel files and load them into our data frame.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df_08 = pd.read_excel("data/all_alpha_08.xls", sheet_name=0)
+</code></pre></div></div>
+
+<h3 id="step-21--learn-more-about-the-data">Step 2.1 : Learn more about the data</h3>
+<p>Once we have data in our data frame, we will learn about the data by using some functions on it. Following functions are very common for this purpose.</p>
+
+<ol>
+  <li>
+    <p><code class="highlighter-rouge">head()</code></p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">info()</code></p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">duplicated()</code></p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">describe()</code></p>
+  </li>
+  <li>
+    <p>how many rows have missing values</p>
+  </li>
+</ol>
+
+<p>Pandas documentation is the best place to discover and understand these functions. For the sake of completing this course, I will copy and paste about them.</p>
+
+<h3 id="1--head">1.  <code class="highlighter-rouge">head()</code></h3>
+<p>DataFrame.<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html">head(n=5)</a><sup><a href="#reference1">1</a></sup> returns the first n rows for the object based on position. It is useful for quickly testing if your object has the right type of data in it.</p>
+<blockquote>
+  <p>n: int, default 5</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df_08.head()
+</code></pre></div></div>
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/1_head.PNG" alt="EDA" /></p>
+
+<h3 id="2-info">2. <code class="highlighter-rouge">info()</code></h3>
+<p>This method <sup><a href="#reference2">2</a></sup> prints information about a data frame including the index type and column types, non-null values and memory usage.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df_08.info()
+</code></pre></div></div>
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/2_info.PNG" alt="EDA" /></p>
+
+<h3 id="3-duplicated">3. <code class="highlighter-rouge">duplicated()</code></h3>
+<p>Return <sup><a href="#reference3">3</a></sup> boolean Series denoting duplicate rows, optionally only considering certain columns. For finding the number of duplicated rows, we will use the sum function on the data frame.
+   <em>example:</em> <code class="highlighter-rouge">sum(df_08.duplicated())</code></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#no of duplicated rows in df_08
+sum(df_08.duplicated())
+</code></pre></div></div>
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/3_duplicate.PNG" alt="EDA" /></p>
+
+<h3 id="4describe">4.<code class="highlighter-rouge">describe()</code></h3>
+<p>Generate descriptive <sup><a href="#reference4">4</a></sup> statistics that summarize the central tendency, dispersion and shape of a dataset’s distribution, excluding NaN values.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df_08.describe()
+</code></pre></div></div>
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/4_describe.PNG" alt="EDA" /></p>
+
+<h3 id="5-find-how-many-rows-have-missing-values">5. Find how many rows have missing values</h3>
+<pre><code class="language-isnull()">
+</code></pre>
+<p>This function <sup><a href="#reference5">5</a></sup> takes a scalar or array-like object and indicates whether values are missing (NaN in numeric arrays, None or NaN in object arrays, NaT in datetimelike).</p>
+
+<p>In order to find all the rows, which has missing values, we will do a sum over it, as shown below.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># numbers of rows which have missing values
+sum(df_08.isnull().any(axis=1))
+</code></pre></div></div>
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/5_isnull.PNG" alt="EDA" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># nunique() returns number of unique elements in the object.
+df_08.nunique()
+</code></pre></div></div>
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/6_nunique.PNG" alt="EDA" /></p>
+
+<h2 id="step-3--drop-unnecessary-columns">Step 3 : Drop unnecessary columns</h2>
+
+<p>Drop all the unnecessary columns which we don’t need by using <code class="highlighter-rouge">drop</code> function.</p>
+
+<p>We use <code class="highlighter-rouge">inplace=True</code> which tells the Dataframe, to copy the data frame back into the original df object.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df_08.drop(columns=["Stnd", "Underhood ID","FE Calc Appr","Unadj Cmb MPG"], inplace= True)
+df_08.info()
+</code></pre></div></div>
+
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/6_nunique.PNG" alt="EDA" /></p>
+
+<h2 id="step-4-rename-all-column-labels-to-replace-spaces-with-underscores-and-convert-everything-to-lowercaseunderscores-can-be-much-easier-to-work-with-in-python-than-spaces">Step 4: Rename all column labels to replace spaces with underscores and convert everything to lowercase(Underscores can be much easier to work with in Python than spaces).</h2>
+<p>Being consistent with lowercase and underscores also helps make column names easy to remember.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df_08.columns = df_08.columns.str.lower().str.replace(' ','_ ')
+df_08.info()
+</code></pre></div></div>
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/7_drop.PNG" alt="EDA" /></p>
+
+<h2 id="step-5--clean-the-data">Step 5 : Clean the data</h2>
+
+<p>There are three common things to do in this part.</p>
+<h4 id="1-missing-data">1. Missing data</h4>
+<p>In every dataset, we have some missing values. It can be handled by imputing or removing them. Imputation is done by mean, median or backward or forward fill.</p>
+
+<p>In case we are doing imputation, we use <code class="highlighter-rouge">fillna</code> function on the data frame for filling the data.</p>
+
+<p>For removing the data we use <code class="highlighter-rouge">dropna()</code> on the dataset.</p>
+
+<p>We will be just removing the missing values.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df_08.dropna(inplace=True)
+</code></pre></div></div>
+
+<h4 id="2-duplicates">2. Duplicates</h4>
+<p>As discussed earlier, there is a <code class="highlighter-rouge">duplicated</code> function, for checking the duplicated rows. It show’s the result in <code class="highlighter-rouge">True</code> or <code class="highlighter-rouge">False</code>.</p>
+
+<p>We can find the number of rows which are duplicated with the following command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sum(df.duplicated())
+</code></pre></div></div>
+
+<p>In order to remove the duplicates we use</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df_08.drop_duplicates(inplace=True)
+print df_08.duplicated().sum()
+</code></pre></div></div>
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/8_sum.PNG" alt="EDA" /></p>
+
+<p>The sum of <code class="highlighter-rouge">duplicated</code> function is zero, which means there are no duplicates rows anymore.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df_08.info()
+</code></pre></div></div>
+
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/9_df_info.PNG" alt="EDA" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df_08.head()
+</code></pre></div></div>
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/10_df_head_step.PNG" alt="EDA" /></p>
+
+<p>In <code class="highlighter-rouge">cyl</code> column, string is attached to the integer. The data is dirty, so we will extract the integer from it, with the following way.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#  extract int from string.
+df_08['cyl'] = df_08.cyl.str.extract(r'(\d+)', expand=True)
+</code></pre></div></div>
+
+<h4 id="3-incorrect-data-types">3. Incorrect data types:</h4>
+<p>There are scenarios when the rows are not in the same datatypes. For example, dates are in String type. It will be more convenient to work with the date datatypes. We can change the string datatypes to date datatypes by the following command.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df['timestamp'] = pd.to_datetime(df['timestamp'])
+</code></pre></div></div>
+<p>There are two types of data, numerical and categorical data. All the algorithms understand numerical data. All the data should be converted into numerical data. We need to change some of the data types to float or int.
+We will change some of the datatype to <code class="highlighter-rouge">float</code> datatypes.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 2008: convert int to float.
+df_08['air_pollution_score'] = df_08['air_pollution_score'].astype('float')
+</code></pre></div></div>
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/11_error.PNG" alt="EDA" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df_08[df_08['air_pollution_score'] =='6/6'].head()
+</code></pre></div></div>
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/12_polution_score.PNG" alt="EDA" /></p>
+
+<p>As we can see, this row has two fuels “ethanol/gas” and its air_pollution_score is <code class="highlighter-rouge">6/6</code>. It would be better, if we create two different rows of these values by keeping the same values of the other columns.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># finding the number of rows which contains '/'.
+sum(df_08['air_pollution_score'].str.contains('/'))
+</code></pre></div></div>
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/13_sum.PNG" alt="EDA" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># copying the data which has two values into a new dataframe
+double_fuel_08 = df_08[df_08['fuel'].str.contains('/')]
+double_fuel_08_1 = double_fuel_08.copy()
+double_fuel_08_2 = double_fuel_08.copy()
+</code></pre></div></div>
+<p>We will seperate columns which has two values in every rows and then split the data frame into two data frame to store two rows vlaues.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>columns_to_split = ["fuel","air_pollution_score","city_mpg","hwy_mpg","cmb_mpg","greenhouse_gas_score"]
+for col in columns_to_split:
+    double_fuel_08_1[col] = double_fuel_08_1[col].apply(lambda x: x.split("/")[0])
+    double_fuel_08_2[col] = double_fuel_08_2[col].apply(lambda x: x.split("/")[1])
+</code></pre></div></div>
+<p>Checking the data frame if it splitted in a desired way</p>
+<pre><code class="language-double_fuel_08_1.head()">
+</code></pre>
+
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/14_double_fuel.PNG" alt="EDA" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>double_fuel_08_2.head()
+</code></pre></div></div>
+
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/15_head2.PNG" alt="EDA" /></p>
+
+<p>Now we will delete the rows which contains ‘/’  from <code class="highlighter-rouge">double_fuel_08</code> and add two newly created data frame.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>double_fuel_08.index
+</code></pre></div></div>
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/16_index.PNG" alt="EDA" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df_08.info()
+</code></pre></div></div>
+
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/17_in.PNG" alt="EDA" /></p>
+
+<p>Dropping the rows</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df_08.drop(double_fuel_08.index, inplace=True)
+df_08.info()
+</code></pre></div></div>
+
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/18_after_dropping.PNG" alt="EDA" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># checking all the rows which contains '/'
+df_08[df_08['fuel'].str.contains('/')]
+</code></pre></div></div>
+
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/19_check.PNG" alt="EDA" /></p>
+
+<p>Appending the two data frame with two distinct values into one data frame.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rows = double_fuel_08_1.append(double_fuel_08_2)
+rows.head()
+</code></pre></div></div>
+
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/20_rows.PNG" alt="EDA" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df_08 = df_08.append(rows, ignore_index=True);
+df_08.shape
+</code></pre></div></div>
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/21_shape.PNG" alt="EDA" /></p>
+
+<h5 id="31-converting-the-rest-of-the-columns-into-float">3.1 Converting the rest of the columns into float</h5>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># convert object to float
+df_08['air_pollution_score'] = df_08['air_pollution_score'].astype('float')
+df_08['air_pollution_score'].dtype
+</code></pre></div></div>
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/22_dtype.PNG" alt="EDA" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>column_list=['city_mpg', 'hwy_mpg', 'cmb_mpg','greenhouse_gas_score']
+for col in column_list:
+    df_08[col] = df_08[col].astype('float64')
+
+df_08.dtypes
+</code></pre></div></div>
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/23_dtypes_2.PNG" alt="EDA" /></p>
+
+<h2 id="step-6-exploring-with-visuals">Step 6: Exploring with Visuals</h2>
+
+<p>For numerical datatypes, to understand the variable visually is with a histogram. To get the histogram of a pandas series, we can use the hist method, as shown below.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df_08["cmb_mpg"].plot(kind="hist", title="combined mpg in 2008");
+</code></pre></div></div>
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/24_histo.PNG" alt="EDA" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Describe the correlation between displacement and combined mpg.
+df_08['displ'].corr(df_08['cmb_mpg'])
+</code></pre></div></div>
+<p><img src="/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/25_corr.PNG" alt="EDA" /></p>
+
+<h2 id="conclusion">Conclusion:</h2>
+
+<p>In this post, you learned about Exploratory data analysis(EDA) which is very important in every data science project. These basics steps should be mastered by a data analyst/scientist. As we can see, these steps are easy to remember and practice. Take a data set and practice this method to have more confidence. In case you are not able to remember, then there is no problem. You can always search and find their solutions. As I said in an earlier post, you should know how to find the solutions for problems as a data scientist/analyst. I hope, this helps and motivates you to explore more about EDA and other phases of a data science project.</p>
+
+<hr />
+<h3 id="-references-and-further-reading-list-"><ins> References and further reading list </ins></h3>
+
+<p><a name="reference1">1</a>: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html</p>
+
+<p><a name="reference2">2</a>: http://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.info.html</p>
+
+<p><a name="reference3">3</a>: http://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.duplicated.html</p>
+
+<p><a name="reference4">4</a>: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.describe.html</p>
+
+<p><a name="reference5">5</a>: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.isnull.html</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#data-science" class="page__taxonomy-item" rel="tag">Data Science</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-03-15T00:00:00+03:00">March 15, 2019</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Basic+six+steps+to+follow+in+any+data+science+project%20http%3A%2F%2Flocalhost%3A4000%2FExploratory-Data-Analysis-%28EDA%29%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FExploratory-Data-Analysis-%28EDA%29%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2FExploratory-Data-Analysis-%28EDA%29%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2FExploratory-Data-Analysis-%28EDA%29%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/How-to-install-PostgreSQL-on-Amazon-AWS/" class="pagination--pager" title="How to install PostgreSQL on Amazon AWS?
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/How-to-install-PostgreSQL-on-Amazon-AWS/" rel="permalink">How to install PostgreSQL on Amazon AWS?
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">PostgreSQL is an open source object-relational database management system (ORDBMS), developed at the University of California at Berkeley Computer Science De...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Amazon-Web-Services-for-Data-Science/" rel="permalink">Amazon Web Services for Data Science
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Amazon Web Services (AWS) provides a low-cost, scalable and highly reliable infrastructure platform in a secure cloud, and offers services like database stor...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/How-to-use-Jupyter-more-effectively/" rel="permalink">How to use Jupyter more effectively?
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Jupyter is a browser-based graphical interface of Ipython shell. It is an open-source web application which allows a user, to create and share documents, whi...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Create-Jekyll-blog-in-five-steps/" rel="permalink">Create a Jekyll blog in five steps
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Jekyll transforms plain text into static websites. In other words, it is a simple static site generator which takes a source file for creating a static websi...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://instagram.com/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="https://fr.linkedin.com/in/saeed-ur-rahman-siddiqui-a77b8486" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 sdrsiddiqui. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
