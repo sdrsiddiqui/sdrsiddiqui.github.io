@@ -178,6 +178,7 @@ For the sake of completing notes, I am copying the below information from the py
 
 ```pip freeze``` will produce a similar list of the installed packages, but the output uses the format that pip install expects. A common convention is to put this list in a requirements.txt file.
 
+
 The ```requirements.txt``` can then be committed to version control and shipped as part of an application. Users can then install all the necessary packages with the install –r.
 
 ---
