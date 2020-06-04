@@ -1,0 +1,1755 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-04-23T11:16:58+02:00</updated><id>/feed.xml</id><title type="html">Data Science &amp;amp; ML</title><subtitle>Its all about data science and machine learning.</subtitle><author><name>sdrsiddiqui</name></author><entry><title type="html">Basic six steps to follow in any data science project</title><link href="/Exploratory-Data-Analysis-(EDA)/" rel="alternate" type="text/html" title="Basic six steps to follow in any data science project" /><published>2019-03-15T00:00:00+01:00</published><updated>2019-03-15T00:00:00+01:00</updated><id>/Exploratory-Data-Analysis-(EDA)</id><content type="html" xml:base="/Exploratory-Data-Analysis-(EDA)/">&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/front.jpg&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Before starting any data analysis tasks, we must have a clear goal about our results or output.We need to understand the data and problem to get meaningful results from our analysis.&lt;/p&gt;
+
+&lt;p&gt;Exploratory Data Analysis (EDA) phase of a data science project helps us to analyze our datasets, summarize their main characteristics, understand their variables and relationships between them, in order to formulate some sort of hypotheses. In this post, we will delve in important EDA techniques which are used by every data scientist/analyst.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-1--import-all-the-required-libraries&quot;&gt;Step 1 : Import all the required libraries.&lt;/h2&gt;
+&lt;p&gt;We will import numpy and padas&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#import the libraries
+import numpy as np  # we will use np as an alias for numpy
+import pandas as pd # very well accepted alias for pandas is pd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Numpy:&lt;/strong&gt; It is a fundamental tool for scientific computing. It has a very efficient array of operations and provided high-level mathematical functions. It is very good for homogeneous data types but in the real world, we have heterogeneous datasets( numerical as well as categorical features).&lt;/p&gt;
+
+&lt;p&gt;To tackle this heterogeneous dataset, we use pandas.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pandas:&lt;/strong&gt; is built on top of Numpy which allows operations on tabular data. The tabular data structure consists of rows and columns. In terms of pandas, we call it a data frame. On the data frame, we use different kinds of functions and joints.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In Pandas: Rows is an observation and column is features or attributes.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;step-2-read-the-data&quot;&gt;Step 2: Read the data&lt;/h2&gt;
+&lt;p&gt;Once the data is imported, we will read the data in the data frame. In our case, we will read two excel files and load them into our data frame.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08 = pd.read_excel(&quot;data/all_alpha_08.xls&quot;, sheet_name=0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;step-21--learn-more-about-the-data&quot;&gt;Step 2.1 : Learn more about the data&lt;/h3&gt;
+&lt;p&gt;Once we have data in our data frame, we will learn about the data by using some functions on it. Following functions are very common for this purpose.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;head()&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;info()&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;duplicated()&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;describe()&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;how many rows have missing values&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Pandas documentation is the best place to discover and understand these functions. For the sake of completing this course, I will copy and paste about them.&lt;/p&gt;
+
+&lt;h3 id=&quot;1--head&quot;&gt;1.  &lt;code class=&quot;highlighter-rouge&quot;&gt;head()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;DataFrame.&lt;a href=&quot;https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html&quot;&gt;head(n=5)&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; returns the first n rows for the object based on position. It is useful for quickly testing if your object has the right type of data in it.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;n: int, default 5&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.head()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/1_head.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2-info&quot;&gt;2. &lt;code class=&quot;highlighter-rouge&quot;&gt;info()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;This method &lt;sup&gt;&lt;a href=&quot;#reference2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; prints information about a data frame including the index type and column types, non-null values and memory usage.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.info()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/2_info.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;3-duplicated&quot;&gt;3. &lt;code class=&quot;highlighter-rouge&quot;&gt;duplicated()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Return &lt;sup&gt;&lt;a href=&quot;#reference3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; boolean Series denoting duplicate rows, optionally only considering certain columns. For finding the number of duplicated rows, we will use the sum function on the data frame.
+   &lt;em&gt;example:&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;sum(df_08.duplicated())&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#no of duplicated rows in df_08
+sum(df_08.duplicated())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/3_duplicate.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;4describe&quot;&gt;4.&lt;code class=&quot;highlighter-rouge&quot;&gt;describe()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Generate descriptive &lt;sup&gt;&lt;a href=&quot;#reference4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; statistics that summarize the central tendency, dispersion and shape of a dataset’s distribution, excluding NaN values.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.describe()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/4_describe.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;5-find-how-many-rows-have-missing-values&quot;&gt;5. Find how many rows have missing values&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-isnull()&quot;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This function &lt;sup&gt;&lt;a href=&quot;#reference5&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; takes a scalar or array-like object and indicates whether values are missing (NaN in numeric arrays, None or NaN in object arrays, NaT in datetimelike).&lt;/p&gt;
+
+&lt;p&gt;In order to find all the rows, which has missing values, we will do a sum over it, as shown below.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# numbers of rows which have missing values
+sum(df_08.isnull().any(axis=1))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/5_isnull.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# nunique() returns number of unique elements in the object.
+df_08.nunique()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/6_nunique.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-3--drop-unnecessary-columns&quot;&gt;Step 3 : Drop unnecessary columns&lt;/h2&gt;
+
+&lt;p&gt;Drop all the unnecessary columns which we don’t need by using &lt;code class=&quot;highlighter-rouge&quot;&gt;drop&lt;/code&gt; function.&lt;/p&gt;
+
+&lt;p&gt;We use &lt;code class=&quot;highlighter-rouge&quot;&gt;inplace=True&lt;/code&gt; which tells the Dataframe, to copy the data frame back into the original df object.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.drop(columns=[&quot;Stnd&quot;, &quot;Underhood ID&quot;,&quot;FE Calc Appr&quot;,&quot;Unadj Cmb MPG&quot;], inplace= True)
+df_08.info()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/6_nunique.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-4-rename-all-column-labels-to-replace-spaces-with-underscores-and-convert-everything-to-lowercaseunderscores-can-be-much-easier-to-work-with-in-python-than-spaces&quot;&gt;Step 4: Rename all column labels to replace spaces with underscores and convert everything to lowercase(Underscores can be much easier to work with in Python than spaces).&lt;/h2&gt;
+&lt;p&gt;Being consistent with lowercase and underscores also helps make column names easy to remember.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.columns = df_08.columns.str.lower().str.replace(' ','_ ')
+df_08.info()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/7_drop.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-5--clean-the-data&quot;&gt;Step 5 : Clean the data&lt;/h2&gt;
+
+&lt;p&gt;There are three common things to do in this part.&lt;/p&gt;
+&lt;h4 id=&quot;1-missing-data&quot;&gt;1. Missing data&lt;/h4&gt;
+&lt;p&gt;In every dataset, we have some missing values. It can be handled by imputing or removing them. Imputation is done by mean, median or backward or forward fill.&lt;/p&gt;
+
+&lt;p&gt;In case we are doing imputation, we use &lt;code class=&quot;highlighter-rouge&quot;&gt;fillna&lt;/code&gt; function on the data frame for filling the data.&lt;/p&gt;
+
+&lt;p&gt;For removing the data we use &lt;code class=&quot;highlighter-rouge&quot;&gt;dropna()&lt;/code&gt; on the dataset.&lt;/p&gt;
+
+&lt;p&gt;We will be just removing the missing values.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.dropna(inplace=True)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;2-duplicates&quot;&gt;2. Duplicates&lt;/h4&gt;
+&lt;p&gt;As discussed earlier, there is a &lt;code class=&quot;highlighter-rouge&quot;&gt;duplicated&lt;/code&gt; function, for checking the duplicated rows. It show’s the result in &lt;code class=&quot;highlighter-rouge&quot;&gt;True&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;False&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;We can find the number of rows which are duplicated with the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sum(df.duplicated())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In order to remove the duplicates we use&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.drop_duplicates(inplace=True)
+print df_08.duplicated().sum()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/8_sum.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The sum of &lt;code class=&quot;highlighter-rouge&quot;&gt;duplicated&lt;/code&gt; function is zero, which means there are no duplicates rows anymore.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.info()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/9_df_info.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.head()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/10_df_head_step.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;cyl&lt;/code&gt; column, string is attached to the integer. The data is dirty, so we will extract the integer from it, with the following way.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#  extract int from string.
+df_08['cyl'] = df_08.cyl.str.extract(r'(\d+)', expand=True)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;3-incorrect-data-types&quot;&gt;3. Incorrect data types:&lt;/h4&gt;
+&lt;p&gt;There are scenarios when the rows are not in the same datatypes. For example, dates are in String type. It will be more convenient to work with the date datatypes. We can change the string datatypes to date datatypes by the following command.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df['timestamp'] = pd.to_datetime(df['timestamp'])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;There are two types of data, numerical and categorical data. All the algorithms understand numerical data. All the data should be converted into numerical data. We need to change some of the data types to float or int.
+We will change some of the datatype to &lt;code class=&quot;highlighter-rouge&quot;&gt;float&lt;/code&gt; datatypes.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 2008: convert int to float.
+df_08['air_pollution_score'] = df_08['air_pollution_score'].astype('float')
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/11_error.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08[df_08['air_pollution_score'] =='6/6'].head()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/12_polution_score.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As we can see, this row has two fuels “ethanol/gas” and its air_pollution_score is &lt;code class=&quot;highlighter-rouge&quot;&gt;6/6&lt;/code&gt;. It would be better, if we create two different rows of these values by keeping the same values of the other columns.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# finding the number of rows which contains '/'.
+sum(df_08['air_pollution_score'].str.contains('/'))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/13_sum.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# copying the data which has two values into a new dataframe
+double_fuel_08 = df_08[df_08['fuel'].str.contains('/')]
+double_fuel_08_1 = double_fuel_08.copy()
+double_fuel_08_2 = double_fuel_08.copy()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;We will seperate columns which has two values in every rows and then split the data frame into two data frame to store two rows vlaues.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;columns_to_split = [&quot;fuel&quot;,&quot;air_pollution_score&quot;,&quot;city_mpg&quot;,&quot;hwy_mpg&quot;,&quot;cmb_mpg&quot;,&quot;greenhouse_gas_score&quot;]
+for col in columns_to_split:
+    double_fuel_08_1[col] = double_fuel_08_1[col].apply(lambda x: x.split(&quot;/&quot;)[0])
+    double_fuel_08_2[col] = double_fuel_08_2[col].apply(lambda x: x.split(&quot;/&quot;)[1])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Checking the data frame if it splitted in a desired way&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-double_fuel_08_1.head()&quot;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/14_double_fuel.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;double_fuel_08_2.head()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/15_head2.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now we will delete the rows which contains ‘/’  from &lt;code class=&quot;highlighter-rouge&quot;&gt;double_fuel_08&lt;/code&gt; and add two newly created data frame.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;double_fuel_08.index
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/16_index.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.info()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/17_in.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dropping the rows&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08.drop(double_fuel_08.index, inplace=True)
+df_08.info()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/18_after_dropping.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# checking all the rows which contains '/'
+df_08[df_08['fuel'].str.contains('/')]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/19_check.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Appending the two data frame with two distinct values into one data frame.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rows = double_fuel_08_1.append(double_fuel_08_2)
+rows.head()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/20_rows.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08 = df_08.append(rows, ignore_index=True);
+df_08.shape
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/21_shape.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;31-converting-the-rest-of-the-columns-into-float&quot;&gt;3.1 Converting the rest of the columns into float&lt;/h5&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# convert object to float
+df_08['air_pollution_score'] = df_08['air_pollution_score'].astype('float')
+df_08['air_pollution_score'].dtype
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/22_dtype.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;column_list=['city_mpg', 'hwy_mpg', 'cmb_mpg','greenhouse_gas_score']
+for col in column_list:
+    df_08[col] = df_08[col].astype('float64')
+
+df_08.dtypes
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/23_dtypes_2.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-6-exploring-with-visuals&quot;&gt;Step 6: Exploring with Visuals&lt;/h2&gt;
+
+&lt;p&gt;For numerical datatypes, to understand the variable visually is with a histogram. To get the histogram of a pandas series, we can use the hist method, as shown below.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;df_08[&quot;cmb_mpg&quot;].plot(kind=&quot;hist&quot;, title=&quot;combined mpg in 2008&quot;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/24_histo.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#Describe the correlation between displacement and combined mpg.
+df_08['displ'].corr(df_08['cmb_mpg'])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/25_corr.PNG&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion:&lt;/h2&gt;
+
+&lt;p&gt;In this post, you learned about Exploratory data analysis(EDA) which is very important in every data science project. These basics steps should be mastered by a data analyst/scientist. As we can see, these steps are easy to remember and practice. Take a data set and practice this method to have more confidence. In case you are not able to remember, then there is no problem. You can always search and find their solutions. As I said in an earlier post, you should know how to find the solutions for problems as a data scientist/analyst. I hope, this helps and motivates you to explore more about EDA and other phases of a data science project.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;-references-and-further-reading-list-&quot;&gt;&lt;ins&gt; References and further reading list &lt;/ins&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference1&quot;&gt;1&lt;/a&gt;: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference2&quot;&gt;2&lt;/a&gt;: http://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.info.html&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference3&quot;&gt;3&lt;/a&gt;: http://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.duplicated.html&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference4&quot;&gt;4&lt;/a&gt;: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.describe.html&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference5&quot;&gt;5&lt;/a&gt;: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.isnull.html&lt;/p&gt;</content><author><name>sdrsiddiqui</name></author><category term="Data Science" /><summary type="html">Exploratory Data Analysis (EDA) phase of a data science project helps us to analyze our datasets, summarize their main characteristics, understand their variables and relationships between them, in order to formulate some sort of hypotheses.</summary></entry><entry><title type="html">How to install PostgreSQL on Amazon AWS?</title><link href="/How-to-install-PostgreSQL-on-Amazon-AWS/" rel="alternate" type="text/html" title="How to install PostgreSQL on Amazon AWS?" /><published>2019-02-04T00:00:00+01:00</published><updated>2019-02-04T00:00:00+01:00</updated><id>/How-to-install-PostgreSQL-on-Amazon-AWS</id><content type="html" xml:base="/How-to-install-PostgreSQL-on-Amazon-AWS/">&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-30-How-to-install-PostgreSQL-on-AWS/0_PostgreSQL_welcome.png&quot; alt=&quot;Postgre&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.postgresql.org/&quot;&gt;PostgreSQL&lt;/a&gt; is an open source object-relational database management system (ORDBMS), developed at the University of California at Berkeley Computer Science Department.&lt;/p&gt;
+
+&lt;p&gt;It supports a large part of the SQL standard and offers many modern features:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;complex queries&lt;/li&gt;
+  &lt;li&gt;foreign keys&lt;/li&gt;
+  &lt;li&gt;triggers&lt;/li&gt;
+  &lt;li&gt;updatable views&lt;/li&gt;
+  &lt;li&gt;transactional integrity&lt;/li&gt;
+  &lt;li&gt;multiversion concurrency control&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;-architectural-fundamentals&quot;&gt;&lt;ins&gt; Architectural Fundamentals&lt;/ins&gt;&lt;/h3&gt;
+
+&lt;p&gt;PostgreSQL&lt;sup&gt;&lt;a href=&quot;#reference1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; uses a client/server model and its session consists of the following cooperating processes (programs):&lt;/p&gt;
+
+&lt;p&gt;• &lt;strong&gt;A server process&lt;/strong&gt;: which manages the database files, accepts connections to the database from client applications and performs database actions on behalf of the clients. The database server program is called &lt;code class=&quot;highlighter-rouge&quot;&gt;postgres&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;• &lt;strong&gt;The user’s client&lt;/strong&gt;: frontend application that wants to perform database operations. Client applications can be very diverse in nature: a client could be a text-oriented tool, a graphical application, a web server that accesses the database to display web pages, or a specialized database maintenance tool. Some client applications are supplied with the PostgreSQL distribution.&lt;/p&gt;
+
+&lt;p&gt;As is typical of client/server applications, the client and the server can be on different hosts. In that case, they communicate over a TCP/IP network connection. You should keep this in mind because the files that can be accessed on a client machine might not be accessible (or might only be accessible
+using a different file name) on the database server machine.&lt;/p&gt;
+
+&lt;h3 id=&quot;installation-of-postgresql&quot;&gt;Installation of PostgreSQL&lt;/h3&gt;
+
+&lt;p&gt;You can install the Postgres package and a &lt;code class=&quot;highlighter-rouge&quot;&gt;-contrib&lt;/code&gt; &lt;sup&gt;&lt;a href=&quot;#reference2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;package that adds some additional utilities and functionality by the following command.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-30-How-to-install-PostgreSQL-on-AWS/15_installing_postgresql_in_amazon_instance.gif&quot; alt=&quot;Postgre&quot; /&gt;
+&lt;em&gt;&lt;sub&gt; Installing PostgreSQL on Amazon AWS instance&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Tables are grouped into databases, and a collection of databases managed by a single PostgreSQL server instance constitutes a database cluster.&lt;/p&gt;
+
+&lt;h3 id=&quot;creating-a-database&quot;&gt;Creating a Database&lt;/h3&gt;
+
+&lt;p&gt;A user account &lt;code class=&quot;highlighter-rouge&quot;&gt;postgres&lt;/code&gt; is created, with the default Postgres role, after the installation. To use PostgreSQL, you have to log into this account, by typing:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo -i -u postgres
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-30-How-to-install-PostgreSQL-on-AWS/16_accessing_postgres_account.png&quot; alt=&quot;Postgre&quot; /&gt;
+&lt;em&gt;&lt;sub&gt; Accessing postgres account&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Now you are logged in &lt;code class=&quot;highlighter-rouge&quot;&gt;postgres&lt;/code&gt; account, and you can create a database called &lt;code class=&quot;highlighter-rouge&quot;&gt;company_insights&lt;/code&gt; for our project by typing:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;createdb company_insights
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you do not want to use your database anymore you can remove it. For example, if you are the owner(creator) of the database &lt;code class=&quot;highlighter-rouge&quot;&gt;company_insights&lt;/code&gt;, you can destroy it using the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dropdb company_insights
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;accessing-the-database&quot;&gt;Accessing the Database&lt;/h3&gt;
+
+&lt;p&gt;Once you have created a database, you can access it by:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Running the PostgreSQL interactive terminal program, called psql, which allows you to interactively enter, edit, and execute SQL commands.&lt;/li&gt;
+  &lt;li&gt;Using an existing graphical frontend tool like pgAdmin or an office suite with ODBC or JDBC support to create and manipulate a database. These possibilities are not covered in this tutorial.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You will use &lt;code class=&quot;highlighter-rouge&quot;&gt;psql&lt;/code&gt; for executing SQL commands so type &lt;code class=&quot;highlighter-rouge&quot;&gt;psql&lt;/code&gt; on the command line:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;psql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;You can exit the interactive Postgres session, by typing &lt;code class=&quot;highlighter-rouge&quot;&gt;\q&lt;/code&gt;.
+You can log out from the user &lt;code class=&quot;highlighter-rouge&quot;&gt;postgres&lt;/code&gt; by typing &lt;code class=&quot;highlighter-rouge&quot;&gt;exit&lt;/code&gt; on the command line.&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-30-How-to-install-PostgreSQL-on-AWS/17_creating_db_tables.png&quot; alt=&quot;Postgre&quot; /&gt;
+&lt;em&gt;&lt;sub&gt; Creating database and tables with the postgres account in Amazon AWS instance&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;accessing-a-database-from-our-local-machine&quot;&gt;Accessing a Database from our local machine&lt;/h3&gt;
+
+&lt;p&gt;You will install pgAdmin, in order to access the database from our local machine to the amazon aws instance.&lt;/p&gt;
+
+&lt;p&gt;pgAdmin is one of the most popular Open Source administration and development platforms for PostgreSQL, which is designed to meet the needs of both novices and experienced PostgreSQL users alike, providing a powerful graphical interface that simplifies the creation, maintenance and use of database objects.&lt;/p&gt;
+
+&lt;p&gt;The steps for installing  pgAdmin could be found &lt;a href=&quot;https://severalnines.com/blog/top-gui-tools-postgresql&quot;&gt;here&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, but for the sake of completing this tutorial, I wrote them here.&lt;/p&gt;
+
+&lt;p&gt;First, you need to import the repository key.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo apt-get install curl ca-certificates
+ curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-30-How-to-install-PostgreSQL-on-AWS/18_pgadmin_installation.png&quot; alt=&quot;Postgre&quot; /&gt;
+&lt;em&gt;&lt;sub&gt; Importing keys and postgres certificate&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, you will add &lt;code class=&quot;highlighter-rouge&quot;&gt;apt.postgresql.org repository&lt;/code&gt; by using vi.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vi /etc/apt/sources.list.d/pgdg.list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After this, you need to update the package lists, and install the pgadmin package:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get update
+sudo apt-get install pgadmin4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-30-How-to-install-PostgreSQL-on-AWS/20_installing_pgadmin.png&quot; alt=&quot;Postgre&quot; /&gt;
+&lt;em&gt;&lt;sub&gt; Installing pgadmin4&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, you only need to run the pgadmin4 command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pgadmin4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Once it started, you can configure it.&lt;/p&gt;
+
+&lt;p&gt;In case, one has to delete PostgreSQL from the instance, the following command should be used.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get --purge remove postgresql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;downloading-and-copying-the-dataset-to-the-amazon-ec2-instance&quot;&gt;Downloading and copying the dataset to the Amazon EC2 instance.&lt;/h2&gt;
+
+&lt;p&gt;Download the data from &lt;a href=&quot;https://data.crunchbase.com/docs/open-data-map&quot;&gt;Crunchbase&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Once the data is downloaded, you will copy the data to the Amazon EC2 instance.
+Our task is to copy the data to the instance of Amazon EC2. For which you have to first connect the user with the instance. Once you are connected to the instance, you can copy the files on the Amazon EC2 from the local machine with the following command.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scp  ~/Documents/data/people.csv  guest@ec2-52-14-200-6.us-east-2.compute.amazonaws.com:~/
+scp  /home/ds/Documents/data/organizations.csv    guest@ec2-52-14-200-6.us-east-2.compute.amazonaws.com:~/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, you will connect to the &lt;code class=&quot;highlighter-rouge&quot;&gt;company_insights&lt;/code&gt; database.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;guest@ip-172-31-37-92:~$ sudo -i -u postgres
+postgres@ip-172-31-37-92:~$ psql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;or just by&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;guest@ip-172-31-37-92:~$  sudo -u postgres psql postgres
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;you will create two tables, &lt;code class=&quot;highlighter-rouge&quot;&gt;organizations&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;people&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Run the command to create TABLE &lt;code class=&quot;highlighter-rouge&quot;&gt;organizations&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CREATE TABLE organizations ( organization_id  serial primary key, crunchbase_uuid  TEXT ,   name varchar(50) ,   type varchar(50),   primary_role varchar(50),   crunchbase_url   TEXT  ,   homepage_domain  TEXT ,   homepage_url  TEXT ,   profile_image_url    TEXT,   facebook_url TEXT,   twitter_url  TEXT,   linkedin_url TEXT,   stock_symbol varchar(50),   location_city varchar(50),   location_region varchar(50),   location_country_code varchar(50),   short_description  TEXT );
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Run the command to create TABLE &lt;code class=&quot;highlighter-rouge&quot;&gt;people&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CREATE TABLE people (people_id serial primary key, crunchbase_uuid  TEXT ,   type varchar(50),   first_name varchar(50),   last_name varchar(50),   crunchbase_url   TEXT  ,   profile_image_url  TEXT ,   facebook_url TEXT,   twitter_url TEXT,   linkedin_url TEXT,   location_city varchar(50),   location_region varchar(50),   location_country_code varchar(50),   title varchar(255),   organization  TEXT ,   organization_crunchbase_url  TEXT );
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Since the dataset are already saved on the Amazon instance, you will copy the data into the respective tables.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;company_insights=# \COPY people (crunchbase_uuid ,   type ,   first_name ,   last_name ,   crunchbase_url ,   profile_image_url ,   facebook_url ,   twitter_url ,   linkedin_url ,   location_city,   location_region ,   location_country_code ,   title,   organization ,   organization_crunchbase_url ) FROM '/home/guest/data/people.csv' DELIMITER ',' CSV HEADER;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion:&lt;/h2&gt;
+
+&lt;p&gt;In this post, you learned about PostgreSQL and how to install it on Amazon Web Services. You explore it’s architecture, installation and how to create a database and access it from  the local machine. You also downloaded and copied the data-set to the Amazon EC2 instance. For further exploration, please go through the references.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;-references-and-further-reading-list-&quot;&gt;&lt;ins&gt; References and further reading list &lt;/ins&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference1&quot;&gt;1&lt;/a&gt;: https://www.postgresql.org/files/documentation/pdf/11/postgresql-11-A4.pdf&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference2&quot;&gt;2&lt;/a&gt;: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference1&quot;&gt;3&lt;/a&gt;: https://severalnines.com/blog/top-gui-tools-postgresql&lt;/p&gt;</content><author><name>sdrsiddiqui</name></author><category term="Data Science" /><category term="AWS" /><summary type="html">PostgreSQL is an open source object-relational database management system (ORDBMS), developed at the University of California at Berkeley Computer Science Department.</summary></entry><entry><title type="html">Amazon Web Services for Data Science</title><link href="/Amazon-Web-Services-for-Data-Science/" rel="alternate" type="text/html" title="Amazon Web Services for Data Science" /><published>2019-01-13T00:00:00+01:00</published><updated>2019-01-13T00:00:00+01:00</updated><id>/Amazon-Web-Services-for-Data-Science</id><content type="html" xml:base="/Amazon-Web-Services-for-Data-Science/">&lt;p&gt;Amazon Web Services &lt;a href=&quot;https://aws.amazon.com/what-is-aws/&quot;&gt;(AWS)&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; provides a low-cost, scalable and highly reliable infrastructure platform in a secure cloud, and offers services like database storage, security, networking, computing, mobile development functionalities, on pay as you use basis.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-13-Amazon-Web-Services-for-Data-Science/0_Amazon_AWS.png&quot; alt=&quot;Amazon Web Services&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;sub&gt; AWS home page&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;In a traditional system, a server has to set up and maintain, which is not consumed most of its life cycle and a huge amount and resources are wasted. This problem is solved by AWS, by giving the opportunity to bring the servers online and offline whenever required.&lt;/p&gt;
+
+&lt;p&gt;Thousands of companies like Quora, Dropbox, Reddit etc are using Amazon web services, as it helps them to focus on their business and relieves the pain of setting and maintaining servers which reduce the costs effectively.&lt;/p&gt;
+
+&lt;p&gt;Out of all the services provided by Amazon, you will learn all about Amazon EC2.&lt;/p&gt;
+
+&lt;h1 id=&quot;amazon-ec2&quot;&gt;Amazon EC2&lt;/h1&gt;
+
+&lt;p&gt;Amazon Elastic Compute Cloud(Amazon EC2), as explained on the official &lt;a href=&quot;https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html&quot;&gt;website&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, provides scalable computing capacity in the Amazon Web Services (AWS) cloud, which eliminates your need to invest in hardware and help to develop and deploy applications faster.&lt;/p&gt;
+
+&lt;p&gt;It can be used to launch many or a few virtual servers as you need, configure security and networking, and manage storage. Amazon EC2  also enables you to scale up or down as per the requirements or spikes in popularity, reducing your need to forecast traffic.&lt;/p&gt;
+
+&lt;p&gt;All the features of Amazon EC2 can be found &lt;a href=&quot;https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;aws-free-tier&quot;&gt;AWS Free Tier&lt;/h2&gt;
+
+&lt;p&gt;AWS provides AWS Free Tier to run an EC2 micro instance free of cost for 12 months, which is a very good start for a developer for trying and getting accustomed to AWS.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-13-Amazon-Web-Services-for-Data-Science/1_AWS_Free_Tier.png&quot; alt=&quot;Amazon Web Services&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;sub&gt; AWS Free Tier &lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Go to AWS Free Tier &lt;a href=&quot;https://aws.amazon.com/free/&quot;&gt;website&lt;/a&gt; to sign up for all the services in AWS, including Amazon EC2.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-create-an-instance-in-an-amazon-web-services-aws&quot;&gt;How to create an instance in an Amazon Web Services (AWS)?&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-13-Amazon-Web-Services-for-Data-Science/2-how to connect with an instance.gif&quot; alt=&quot;Amazon Web Services(AWS)&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;sub&gt;How to connect to an instance of Amazon Web Services(AWS)&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;In order to make an instance in an Amazon web service, follow the following steps:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Open the browser and go to the &lt;a href=&quot;https://aws.amazon.com/&quot;&gt;amazon web service&lt;/a&gt; and sign in with your credentials.&lt;/li&gt;
+  &lt;li&gt;From AWS dashboard, select &lt;strong&gt;EC2&lt;/strong&gt; or click on &lt;strong&gt;Services&lt;/strong&gt; and select &lt;strong&gt;EC2&lt;/strong&gt; to open the Amazon EC2 console.&lt;/li&gt;
+  &lt;li&gt;Click on blue button &lt;strong&gt;Launch instances&lt;/strong&gt;.
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;dl&gt;
+          &lt;dt&gt;Choose an Amazon Machine Image (AMI)&lt;/dt&gt;
+          &lt;dd&gt;Select Ubuntu Server 18.04 LTS (HVM), SSD Volume Type - ami-0f65671a86f061fcd (64-bit x86) / ami-0f2057f28f0a44d06 (64-bit Arm) and click on &lt;strong&gt;Select&lt;/strong&gt;.&lt;/dd&gt;
+        &lt;/dl&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;dl&gt;
+          &lt;dt&gt;Choose an Instance Type&lt;/dt&gt;
+          &lt;dd&gt;Select General purpose t2.micro Free tier eligible and click on Configure Instance Details.&lt;/dd&gt;
+        &lt;/dl&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;dl&gt;
+          &lt;dt&gt;Configure Instance Details&lt;/dt&gt;
+          &lt;dd&gt;Configure the instance according to your requirements and click on Next Add Storage.&lt;/dd&gt;
+        &lt;/dl&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;dl&gt;
+          &lt;dt&gt;Add Storage&lt;/dt&gt;
+          &lt;dd&gt;By default is 8 GB size but we will change it to 20 GB and click on Review and Launch.&lt;/dd&gt;
+        &lt;/dl&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;p&gt;It will take us to step 7: Review Instance Launch and click on Launch.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A pop will come which will ask to &lt;code class=&quot;highlighter-rouge&quot;&gt;Select an existing key pair or create a new key pair&lt;/code&gt;. Chose &lt;code class=&quot;highlighter-rouge&quot;&gt;Create a new key pair&lt;/code&gt; and give a Key pair name&lt;code class=&quot;highlighter-rouge&quot;&gt;my_key_pair&lt;/code&gt; and download the file.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Click on Launch the instances.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The above steps are shown below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-13-Amazon-Web-Services-for-Data-Science/1_aws-making-instances.gif&quot; alt=&quot;Amazon Web Services(AWS)&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;sub&gt;How to make an instance in an Amazon Web Services(AWS)&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-connect-to-an-instance-of-amazon-web-servicesaws&quot;&gt;How to connect to an instance of Amazon Web Services(AWS)&lt;/h2&gt;
+
+&lt;p&gt;Once the instance of Amazon Web Services (AWS) is created, it can be accessed by a web browser.&lt;/p&gt;
+
+&lt;p&gt;Follow the following steps for connecting the instance to Amazon Web Services.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Open the browser and go to the &lt;a href=&quot;https://aws.amazon.com/&quot;&gt;amazon web service&lt;/a&gt; and sign in with your credentials.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Select the instance, if it is not running then start it by clicking on &lt;strong&gt;Action&lt;/strong&gt; then &lt;strong&gt;Start&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Once the instance is selected and running then click on &lt;strong&gt;Connect&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A pop up will appear with the instructions below:&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-13-Amazon-Web-Services-for-Data-Science/2_How_Connect_To_Your_instance.png&quot; alt=&quot;Amazon Web Services(AWS)&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;&lt;sub&gt;How to connect to your instance of Amazon Web Services (AWS)&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Select &lt;code class=&quot;highlighter-rouge&quot;&gt;I would like to connect with A standalone SSH client&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Open the terminal and go to the directory, where you saved the &lt;code class=&quot;highlighter-rouge&quot;&gt;my_key_pair.pem&lt;/code&gt; key file and type the following command.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; chmod 400 my_key_pair.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Connect to the instance with ssh with the following command as explained in the pop-up.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sh -i &quot;my_key_pair.pem&quot; ubuntu@ec2-3-17-5-29.us-east-2.compute.amazonaws.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The user with the default username &lt;code class=&quot;highlighter-rouge&quot;&gt;ubuntu&lt;/code&gt; is connected to the Amazon EC2 instance.&lt;/p&gt;
+
+&lt;h2 id=&quot;create-a-new-user-and-access-amazon-ec2-instance-in-four-steps&quot;&gt;Create a new user and access Amazon EC2 instance in four steps.&lt;/h2&gt;
+
+&lt;p&gt;The user is connected to the instance of Amazon web services(aws) with the default user &lt;code class=&quot;highlighter-rouge&quot;&gt;ubuntu&lt;/code&gt;. Fortunately, Amazon EC2 gives the opportunity to create users like in Ubuntu or in Linux operating system.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-13-Amazon-Web-Services-for-Data-Science/4_add_user_access_user.gif&quot; alt=&quot;Amazon Web Services(AWS)&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;sub&gt;Creating and accessing Amazon EC2 instance with a new user in four steps&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a user by the following command.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo adduser guest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;After executing the above command, it will ask a password. Once it is given, it creates a user called &lt;code class=&quot;highlighter-rouge&quot;&gt;guest&lt;/code&gt;.&lt;/p&gt;
+
+    &lt;p&gt;A user can also be created without a password, with &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo adduser guest --disabled-password&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Access the user by the following command.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo su guest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;In case, the root user wants to delete a user, it can be done by the following command:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo deluser guest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;Users in ubuntu are verified by the command &lt;code class=&quot;highlighter-rouge&quot;&gt;compgen -u&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;cut -d: -f1 /etc/passwd&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Make changes in the &lt;code class=&quot;highlighter-rouge&quot;&gt;ssh_config&lt;/code&gt; file for giving access to the &lt;code class=&quot;highlighter-rouge&quot;&gt;guest&lt;/code&gt; user.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Open the file &lt;code class=&quot;highlighter-rouge&quot;&gt;ssh_config&lt;/code&gt; using the command&lt;/p&gt;
+
+        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  sudo vi /etc/ssh/sshd_config
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Search for the line &lt;code class=&quot;highlighter-rouge&quot;&gt;PasswordAuthentication&lt;/code&gt; then remove the comment and write &lt;code class=&quot;highlighter-rouge&quot;&gt;yes&lt;/code&gt; at the end of it.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Save the file by &lt;code class=&quot;highlighter-rouge&quot;&gt;Escape + wq!&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Execute the following commands.&lt;/p&gt;
+        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;service sshd reload
+/etc/init.d/sshd reload
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Access the Amazon EC2 instance with our new user &lt;code class=&quot;highlighter-rouge&quot;&gt;guest&lt;/code&gt; using ssh.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ssh guest@ec2-52-14-200-6.us-east-2.compute.amazonaws.com
+ ssh username@public_dns_name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;It will ask the password of the user, once you enter the right password, it gives access to amazon ec2.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The user can be verified by the command &lt;code class=&quot;highlighter-rouge&quot;&gt;whoami&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;install-anaconda-on-amazon-ec2-instance-in-four-steps&quot;&gt;Install Anaconda on Amazon EC2 instance in four steps.&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://docs.continuum.io/&quot;&gt;Anaconda®&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; is a package manager, an environment manager, a Python/R data science distribution, and a collection of over 1,500+ open source packages. Anaconda is free and easy to install, and it offers free community support.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;In order to install Anaconda, the user should have superuser rights, else it can be done by adding the user to the sudo group by the following command.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo usermod -aG sudo guest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use the &lt;code class=&quot;highlighter-rouge&quot;&gt;su&lt;/code&gt; command to switch to the new user account.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; su - guest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Download the Anaconda &lt;a href=&quot;#reference4&quot;&gt;4&lt;/a&gt;&amp;lt;/sup&amp;gt;distribution of your choice with the following command.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo wget https://repo.continuum.io/archive/Anaconda2-5.3.1-Linux-x86_64.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;Copy the above command and paste it on your favorite terminal.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-13-Amazon-Web-Services-for-Data-Science/5_download_anaconda.png&quot; alt=&quot;Amazon Web Services(AWS&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;&lt;sub&gt;Downloading Anaconda on Amazon AWS instance&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Now we can run the script&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo bash Anaconda2-5.3.1-Linux-x86_64.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Press &lt;code class=&quot;highlighter-rouge&quot;&gt;Enter&lt;/code&gt; to continue and again for reading through the license and then &lt;code class=&quot;highlighter-rouge&quot;&gt;yes&lt;/code&gt; when asked if you accept the license term as shown below. The installation process will continue, it may take some time.
+ Type &lt;code class=&quot;highlighter-rouge&quot;&gt;yes&lt;/code&gt; again when asked about the PATH.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-13-Amazon-Web-Services-for-Data-Science/6_bash_anaconda.gif&quot; alt=&quot;Amazon Web Services(AWS&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;&lt;sub&gt;Downloading Anaconda on Amazon AWS instance&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Activate the installation, you should source the &lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; file:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; source .bashrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;how-to-run-jupyter-notebooks-on-amazon-ec2-in-five-steps&quot;&gt;How to run Jupyter notebooks on Amazon EC2 in five steps?&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jupyter.org/&quot;&gt;Jupyter&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference5&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; is a browser-based graphical interface of Ipython shell. It is an open-source web application which allows a user, to create and share documents, which can execute on their systems. If you want to use Jupyter effectively please read &lt;a href=&quot;/How-to-use-Jupyter-more-effectively&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Jupyter can be installed on Amazon EC2 in five steps.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-connect-to-your-instance&quot;&gt;1. Connect to your instance.&lt;/h3&gt;
+
+&lt;p&gt;We chose to connect with user &lt;code class=&quot;highlighter-rouge&quot;&gt;guest&lt;/code&gt;. Write the following command on terminal.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```
+ssh guest@ec2-52-14-200-6.us-east-2.compute.amazonaws.com
+```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2-set-up-a-ssl-certificates&quot;&gt;2. Set up a SSL certificates&lt;/h3&gt;
+
+&lt;p&gt;Once we are logged in the instance, we need to create a SSL directory&lt;a href=&quot;#reference6&quot;&gt;6&lt;/a&gt;&amp;lt;/sup&amp;gt; at the root of the instance and then enter that directory by &lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; command as shown below:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir ssl
+cd ssl
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, create a new SSL certificate using OpenSSL:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-13-Amazon-Web-Services-for-Data-Science/8_creating_ssl_certificate_for_jupyter.png&quot; alt=&quot;Amazon Web Services&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;sub&gt; Creating SSL directory for accessing jupyter on Amazon AWS instance&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout &quot;cert.key&quot; -out &quot;cert.pem&quot; -batch
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3-configure-jupyter&quot;&gt;3. Configure jupyter&lt;/h3&gt;
+
+&lt;p&gt;Now, generate a new Jupyter config file on the instance of Amazon AWS with the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jupyter notebook --generate-config
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In our case, it shows &lt;code class=&quot;highlighter-rouge&quot;&gt;Errno 2&lt;/code&gt; so we will install Jupyter on our instance by the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt install jupyter
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-13-Amazon-Web-Services-for-Data-Science/9_install_jupyter.png&quot; alt=&quot;Amazon Web Services&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;sub&gt; Installing jupyter on Amazon AWS instance&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, again configure the Jupyter with the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jupyter notebook --generate-config
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-13-Amazon-Web-Services-for-Data-Science/10_configure_jupyter.png&quot; alt=&quot;Amazon Web Services&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;sub&gt; Command for configuring jupyter on Amazon AWS instance&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;It will be more secure to restrict access to Jupyter via a password because the instance will be accessible from an IP. For generating a password, open an IPython shell by typing &lt;code class=&quot;highlighter-rouge&quot;&gt;ipython&lt;/code&gt; on the terminal and run:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from IPython.lib import passwd
+passwd()
+exit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The passwd() command ask the user to enter and verify a password and create the hash, copy the hash as it will be used in the next step.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-13-Amazon-Web-Services-for-Data-Science/11_generating_password_jupyter.gif&quot; alt=&quot;Amazon Web Services&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;sub&gt; Generating password for using Jupyter on Amazon AWS instance&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Edit the config file of jupyter notebook by typing the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; vim ~/.jupyter/jupyter_notebook_config.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Insert the following line. We need the hash which we generated in the last step.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;Type &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; to insert the lines and once you copied the following line, type press &lt;code class=&quot;highlighter-rouge&quot;&gt;esc + wq!&lt;/code&gt; to save and quit.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;c = get_config()  # get the config object
+c.NotebookApp.certfile = u'/home/ubuntu/ssl/cert.pem' # path to the certificate we generated
+c.NotebookApp.keyfile = u'/home/ubuntu/ssl/cert.key' # path to the certificate key we generated
+c.IPKernelApp.pylab = 'inline'  # in-line figure when using Matplotlib
+c.NotebookApp.ip = '*'  # serve the notebooks locally
+c.NotebookApp.open_browser = False  # do not open a browser window by default when using notebooks
+c.NotebookApp.password =  'sha1:0b4a2fe67267:904dda5e2caf07b400e4039de87fd89440e3b6b4'  # this is the password hash that we generated earlier.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-13-Amazon-Web-Services-for-Data-Science/12_configuring_jupyter_configfile.gif&quot; alt=&quot;Amazon Web Services&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;sub&gt; Configuring jupyter configuration file on Amazon AWS instance&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;4-set-up-local-port-forwarding&quot;&gt;4. Set up local port forwarding&lt;/h3&gt;
+
+&lt;p&gt;We will be forwarding local port 443 (the HTTPS port) to port 8888 of the remote instance.&lt;/p&gt;
+
+&lt;p&gt;Open a terminal in the &lt;strong&gt;local machine&lt;/strong&gt; and type the following command.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo ssh -L 443:127.0.0.1:8888 guest@ec2-52-14-200-6.us-east-2.compute.amazonaws.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Enter the password correctly for connecting to the instance.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-13-Amazon-Web-Services-for-Data-Science/13_forwaring_local_to_cloud.gif&quot; alt=&quot;Amazon Web Services&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;sub&gt; Setting up forwarding local port(443) to the port (8888) of Amazon AWS instance&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;5-use-jupyter-from-a-local-browser&quot;&gt;5. Use Jupyter from a local browser&lt;/h3&gt;
+
+&lt;p&gt;On the Amazon instance, create a folder for saving all the notebooks.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir notebooks
+cd notebooks
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, start the Jupyter notebook by running the command on the Amazon instance:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jupyter notebook
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Copy the address &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:8888/?token=df2abf94cba1e7016e7940e52e35df08b539ba438e07a08a&lt;/code&gt; which is shown on the terminal of the Amazon AWS instance.&lt;/p&gt;
+
+&lt;p&gt;Now, open a local browser and paste the address which we copied above. We are able to access jupyter which is running on Amazon AWS instance from our local machine.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-13-Amazon-Web-Services-for-Data-Science/14_using_jupyter_on_local_machine.gif&quot; alt=&quot;Amazon Web Services&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;sub&gt; Accessing jupyter running on Amazon AWS instance, from our local machine&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;In short, the Jupyter is running on the Amazon AWS instance and we are accessing it from our local machine.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion:&lt;/h2&gt;
+
+&lt;p&gt;In this post, you learned about Amazon Web Services and explored about the its free tier services. You created and accessed an instance and also created a user on it. You also installed important software which are necessary for data science.
+For being an effective data scientist or software engineer, it is very important to know how to find information about unknown problems either by webs search or by reading books. It is better to focus more on how to find the solutions, rather than memorizing the tools or the commands.&lt;/p&gt;
+
+&lt;p&gt;I hope, this helps and motivates you to explore more about Amazon Web Services for doing complicated and analysis on huge data set in a short span of time.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;-references-and-further-reading-list-&quot;&gt;&lt;ins&gt; References and further reading list &lt;/ins&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference1&quot;&gt;1&lt;/a&gt;: https://aws.amazon.com/what-is-aws/&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference2&quot;&gt;2&lt;/a&gt;: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference3&quot;&gt;3&lt;/a&gt;: http://docs.continuum.io/&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference4&quot;&gt;4&lt;/a&gt;: https://repo.continuum.io/archive/Anaconda2-5.3.1-Linux-x86_64.sh&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference5&quot;&gt;5&lt;/a&gt;: https://jupyter.org/&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference6&quot;&gt;6&lt;/a&gt;: https://blog.keras.io/running-jupyter-notebooks-on-gpu-on-aws-a-starter-guide.html&lt;/p&gt;</content><author><name>sdrsiddiqui</name></author><category term="Data Science" /><category term="AWS" /><summary type="html">Amazon Web Services (AWS) provides a low-cost, scalable and highly reliable infrastructure platform in a secure cloud, and offers services like database storage, security, networking, computing, mobile development functionalities, on pay as you use basis.</summary></entry><entry><title type="html">How to use Jupyter more effectively?</title><link href="/How-to-use-Jupyter-more-effectively/" rel="alternate" type="text/html" title="How to use Jupyter more effectively?" /><published>2018-12-05T00:00:00+01:00</published><updated>2018-12-05T00:00:00+01:00</updated><id>/How-to-use-Jupyter-more-effectively</id><content type="html" xml:base="/How-to-use-Jupyter-more-effectively/">&lt;p&gt;IPython is about using Python effectively for interactive scientific and data-intensive computing. There are two methods of using it; the IPython shell and the IPython notebook.&lt;/p&gt;
+
+&lt;h3 id=&quot;ipython-shell&quot;&gt;IPython shell&lt;/h3&gt;
+
+&lt;p&gt;IPython interpreter can be launched by typing:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ipython
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;on the command line. It will look like&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/3_ipython.png&quot; alt=&quot;ipython&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;sub&gt;ipython shell&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ipython-notebook&quot;&gt;IPython notebook&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jupyter.org/&quot;&gt;Jupyter&lt;/a&gt; is a browser-based graphical interface of Ipython shell. It is an open-source web application which allows a user, to create and share documents, which can execute on their systems.&lt;/p&gt;
+
+&lt;p&gt;It is a very useful tool for machine learning, data science, visualizations as it can contain code, equations, visualizations etc in one place. It blends two things, Python(a simple scripting programming language) and Wiki pages.&lt;/p&gt;
+
+&lt;p&gt;To run IPython notebook, it is very easy just by typing the following on system shell:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jupyter notebook
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;It will appear as:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/05_startingJupyter.png&quot; alt=&quot;Jupyter&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;starting jupyter notebook&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A local web server and browser will automatically open and navigate to the local URL. If not, manually, it could be accessed at http://localhost:8888 on the browser.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/06_jupyter_browser.png&quot; alt=&quot;Jupyter browser&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;Jupyter notebook on the browser at local localhost&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;basics-of-jupyter-notebook&quot;&gt;Basics of Jupyter Notebook&lt;/h2&gt;
+
+&lt;p&gt;Click on the New &amp;gt; Python 2, for creating a new notebook. For giving it a name, click on the “untitled” and change it. The jupyter notebook is made up of cells where the python code is written as shown:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/07_Hello World2.gif&quot; alt=&quot;Jupyter browser&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;Hello World on jupyter&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;You can find the source code of the previous program here:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;print &quot;Hello World&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The cell is executed by clicking Cell &amp;gt; Run Cells or by &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + Enter&lt;/code&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + Enter&lt;/code&gt;execute the cell and create a new cell below it.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Crtl + Enter&lt;/code&gt;execute the cell only.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Markdown is used for formatting the cells. To convert it, go to Cell &amp;gt; Cell Type &amp;gt; Markdown or type &lt;code class=&quot;highlighter-rouge&quot;&gt;Esc + M&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/08_Formating_Text.gif&quot; alt=&quot;Jupyter browser&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;Formating text on jupyter&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In Markdown language: # is used for H1 Heading like in HTML and ## like H2, only the font size decrease.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Create a variable&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Python is a scripting language. Variables are created on the fly, there is no need to declare it before or their types, like in another language like C. Any global variable which is created can be used in another cell.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/09_Type_variable.gif&quot; alt=&quot;Jupyter browser&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;Creating variable in jupyter&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Source code of the above program:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;i = 15
+type(i)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Different variables can be created in the Jupyter notebook as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/10_types.gif&quot; alt=&quot;Jupyter browser&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;Creating variable in jupyter&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;some-advanced-level-python&quot;&gt;Some advanced level python&lt;/h2&gt;
+&lt;h3 id=&quot;list&quot;&gt;List&lt;/h3&gt;
+&lt;p&gt;The list is made by comma-separated values between square brackets[]. To access values in lists, use square brackets with the index number.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;List is mutable, which means they can be changed.&lt;/li&gt;
+  &lt;li&gt;It is an ordered collection of objects, the order in which elements are defined is maintained like that.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;dictionary&quot;&gt;Dictionary&lt;/h3&gt;
+&lt;p&gt;Dictionary is made by placing the values inside the curly brackets{} separated by a comma. It is a pair that consists of a key and value. To access the ‘value’, the ‘key’ is put in the square brackets [].&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;It is mutable.&lt;/li&gt;
+  &lt;li&gt;Dictionaries are unordered.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/11_list_and_dictionary.gif&quot; alt=&quot;Jupyter browser&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;List and dictionary in jupyter&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;You can find the source code of the previous program here:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;l = [1,3,5,7,9] # list
+print l
+print l[2]
+
+dic = {'firstValue':1,'secondValue':2,'thirdValue':3}
+dic['firstValue']
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;creating-functions&quot;&gt;Creating functions&lt;/h3&gt;
+&lt;p&gt;A function is a group of statements, which perform a specific task. Data(also known as parameters)can be passed into a function which returns a data as a result.&lt;/p&gt;
+
+&lt;p&gt;There are two ways to define a function:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Normal functions are defined by the &lt;code class=&quot;highlighter-rouge&quot;&gt;def&lt;/code&gt; keyword as shown below:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/12_function.gif&quot; alt=&quot;Jupyter browser&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;Function in python&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;You can find the source code of the previous program here:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def mul(a, b):
+    return a*b
+
+mul(4,5)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Lambda function also known as anonymous functions. The syntax of a lambda function is &lt;code class=&quot;highlighter-rouge&quot;&gt;lambda arguments: expression&lt;/code&gt;. Lambda functions are single-expression functions that can have numbers of arguments.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/13_lambda.gif&quot; alt=&quot;Jupyter browser&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;Lambda function in python&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;You can find the source code of the previous program here:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cube = lambda y : y* y*y
+
+cube(5)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Documentation with ?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Python has a built-in help() function that accesses the docstring (it contains the summary of the object) information and prints the results.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In IPython, the ? character is a shorthand for accessing documentation for functions or other objects.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/14_doc.gif&quot; alt=&quot;Jupyter browser&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;Accessing documentation in python&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;You can find the source code of the previous program here:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;help(len)
+
+len?
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Source Code with ??&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Source code can be accessed in IPython just by putting a double question mark ( ?? ) after the function.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/15_source_code.gif&quot; alt=&quot;Jupyter browser&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;Accessing source code in python&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;You can find the source code of the previous program here:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cube??
+
+len??
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Sometimes the ?? suffix doesn’t show source code, because that particular object is not implemented in
+Python, but in other language or in C. In this case, the output of ?? is the same as the ? suffix.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;magic-functions&quot;&gt;Magic Functions&lt;/h2&gt;
+&lt;p&gt;Magic functions solve common problems in data analysis using Python. These are of two types.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Line magics: operate on a single line of input and have single % prefix.&lt;/li&gt;
+  &lt;li&gt;Cell magics: operate on multiple lines of input and have double %% prefix.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;automagic&quot;&gt;%automagic&lt;/h3&gt;
+
+&lt;p&gt;If the argument is set to 1 then there is no need to type the initial &lt;code class=&quot;highlighter-rouge&quot;&gt;%&lt;/code&gt; before magic functions. It can be deactivated by setting to 0.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/16_automagic_function.gif&quot; alt=&quot;Jupyter browser&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;automagic function in IPython&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;cd&quot;&gt;%cd&lt;/h3&gt;
+
+&lt;p&gt;It is used to change the current directory. This is a line magic function. A tab can be used to see the different options available. IPython session has &lt;em&gt;_dh&lt;/em&gt;  variable in which an internal list of directories is stored.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/17_cd_magic_function.gif&quot; alt=&quot;Jupyter browser&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;cd magic function in IPython&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;dhist&quot;&gt;%dhist&lt;/h3&gt;
+
+&lt;p&gt;It is used to see all the directories visited in a current session. It uses the &lt;em&gt;_dh&lt;/em&gt; variable list to show the list of directory.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/18_dhist_magic_function.gif&quot; alt=&quot;Jupyter browser&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;dhist magic function in IPython&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;run&quot;&gt;%run&lt;/h3&gt;
+
+&lt;p&gt;Python script can be run from within IPython shell by %run command.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/19_run.gif&quot; alt=&quot;Jupyter browser&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;%run magic function in IPython&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;hello.py file of the above %run magic function.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def hello():
+    return &quot;Hello World&quot;
+
+print( hello())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;timeit&quot;&gt;%timeit&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/29280470/what-is-timeit-in-python&quot;&gt;%timeit&lt;/a&gt; is an ipython magic function, which is used to time the execution of a particular piece of code. It can be a single execution statement, or a single method. It belongs to the line magic function.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/20_timeit.gif&quot; alt=&quot;Jupyter browser&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;%timeit magic function in IPython&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;shell-commands-in-ipython&quot;&gt;Shell Commands in IPython&lt;/h2&gt;
+
+&lt;p&gt;The shell commands can also be used in IPython, just by adding ! character before the command.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/21_shellcommands.gif&quot; alt=&quot;Jupyter browser&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;Some shell commands in IPython&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;You can find the source code of the previous program here:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;!ls
+!pwd
+!echo &quot;Hello&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;some-shortcuts&quot;&gt;Some Shortcuts&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + Enter&lt;/code&gt;: Execute the cell and create a new cell below it.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + Enter&lt;/code&gt;: Execute the cell only.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Esp + M&lt;/code&gt;: To get Markdown.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Esp + L&lt;/code&gt;: To get line numbers in long code.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In this post, you learned about IPython. We started with the  basics of Jupyter notebook and covered a little bit of python, magic functions and how to use shell commands in IPython. For being an effective data scientist or software engineer, it is very important to know how to find information about unknown problems through webs search or other means rather than memorizing the tool or the command.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;-references-and-further-reading-list-&quot;&gt;&lt;ins&gt; References and further reading list &lt;/ins&gt;&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://ipython.org/&quot;&gt;Ipython&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://ipython.readthedocs.io/en/stable/&quot;&gt;IPython Documentation&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Data Science" /><summary type="html">Jupyter is a browser-based graphical interface of Ipython shell. It is an open-source web application which allows a user, to create and share documents, which can execute on their systems.It is a very useful tool for machine learning, data science, visualizations as it can contain code, equations, visualizations etc in one place. It blends two things, Python(a simple scripting programming language) and Wiki pages.</summary></entry><entry><title type="html">Atom for Pythonist</title><link href="/Atom-editor-for-pythonist/" rel="alternate" type="text/html" title="Atom for Pythonist" /><published>2018-11-29T00:00:00+01:00</published><updated>2018-11-29T00:00:00+01:00</updated><id>/Atom-eidtor-for-pythonist</id><content type="html" xml:base="/Atom-editor-for-pythonist/">&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/0_Atom.png&quot; alt=&quot;Atom to downloaded&quot; /&gt;
+  &lt;figcaption&gt; Atom: A hackable text editor for the 21st Century &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://atom.io&quot;&gt;Atom&lt;/a&gt; is a free and open-source text and source code editor for macOS, Linux, and Microsoft Windows with support for plug-ins written in Node.js, and embedded Git Control, developed by GitHub (&lt;a href=&quot;en.wikipedia.org/wiki/Atom_(text_editor)&quot;&gt;Wikipedia&lt;/a&gt;).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Atom was launched in February 2014 by the GitHub team.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A hackable text &lt;a href=&quot;https://atom.io&quot;&gt;editor&lt;/a&gt; for the 21st Century created by GitHub team which is simple, powerful and highly customizable.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://atom.io&quot;&gt;Download&lt;/a&gt; for 32 bit or 64-bit installer according to your operating system. Once it is downloaded, go to the download folder and double-click on “AtomSetup-x64.exe” for installing it.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/1_1_download_Atom.png&quot; alt=&quot;Atom to downloaded&quot; /&gt;
+  &lt;figcaption&gt; AtomSetup-x64.exe &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Click on the icon and install the editor as shown below:&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/2_Installation_Atom.png&quot; alt=&quot;Install Atom&quot; /&gt;
+  &lt;figcaption&gt; Installing Atom &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;After giving the permission to the windows, a beautiful image will appear with the caption “Atom is being installed. It will launch once it is done”.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/3_installing_step_Atom.png&quot; alt=&quot;Install Atom&quot; /&gt;
+  &lt;figcaption&gt; Atom editor &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Once it is installed, an icon on the desktop will appear. To use Atom, either click on the desktop icon or find the “Atom” in the start menu.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;atom-for-pythonist&quot;&gt;Atom for Pythonist&lt;/h2&gt;
+
+&lt;p&gt;Pythonist loves Atom, as both are open source. It could be customized for Pythonist by installing six packages:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;platform_ide-terminal&lt;/li&gt;
+  &lt;li&gt;autocomplete-python&lt;/li&gt;
+  &lt;li&gt;python-autopep8&lt;/li&gt;
+  &lt;li&gt;linter-flake8&lt;/li&gt;
+  &lt;li&gt;Browser Plus&lt;/li&gt;
+  &lt;li&gt;file-icons&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;1-platform_ide-terminal&quot;&gt;1. platform_ide-terminal&lt;/h3&gt;
+
+&lt;p&gt;It is a terminal package for Atom for integrating command line in ATOM.&lt;/p&gt;
+
+&lt;p&gt;Click on File&amp;gt; Settings&amp;gt;Install &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;platform-ide-terminal&quot; &lt;/code&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/9_platform-ide-terminal.png&quot; alt=&quot;install platform-ide-terminal&quot; /&gt;
+  &lt;figcaption&gt; Installing platform-ide-terminal in Atom editor &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;It stays at the bottom of the editor. Click on the “plus sign” on the bottom-left side for using it.&lt;/p&gt;
+
+&lt;p&gt;For more information click &lt;a href=&quot;https://atom.io/packages/platformio-ide-terminal&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/10_platform-ide-terminal_final.png&quot; alt=&quot;platform-ide-terminal&quot; /&gt;
+  &lt;figcaption&gt; platform-ide-terminal in function &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you press Ctrl+T or Ctrl+P, the Fuzzy Finder will pop up. This will let you quickly search for any file in your project by typing parts of the path.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;2-autocomplete-python&quot;&gt;2. autocomplete-python&lt;/h3&gt;
+
+&lt;p&gt;autocomplete-python autocompletes python packages, variables, methods, and functions with their arguments in Atom.&lt;/p&gt;
+
+&lt;p&gt;Click on File&amp;gt;Settings&amp;gt;Install &lt;code class=&quot;highlighter-rouge&quot;&gt;autocomplete-python&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/11_autocomplete_python.png&quot; alt=&quot;Install Atom&quot; /&gt;
+  &lt;figcaption&gt; Installing autocomplete-python &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;3-python-autopep8&quot;&gt;3. python-autopep8&lt;/h3&gt;
+
+&lt;p&gt;It formats the python code according to the PEP8 guidelines. For more information click &lt;a href=&quot;https://pypi.org/project/autopep8/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Click on the Settings of python-autopep8 and go to the Settings. Check the &lt;code class=&quot;highlighter-rouge&quot;&gt;Format on Save&lt;/code&gt; as shown below.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/13_python-autopep8.png&quot; alt=&quot;python-autopep8&quot; /&gt;
+    &lt;figcaption&gt; Installing python-autopep8 &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;autopep8 need to be installed on the system. Open bash and type&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install autopep8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;4-linter-flake8&quot;&gt;4. linter-flake8&lt;/h3&gt;
+
+&lt;p&gt;Flake8 is a Python library that wraps PyFlakes, pycodestyle and Ned Batchelder’s McCabe script. It is a great toolkit for checking your code base against coding style (PEP8), programming errors (like “library imported but unused” and “Undefined name”) and to check cyclomatic complexity. For more information click &lt;a href=&quot;https://simpleisbetterthancomplex.com/packages/2016/08/05/flake8.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/14_linter-flake8.png&quot; alt=&quot;python-autopep8&quot; /&gt;
+  &lt;figcaption&gt; Installing linter-flake8 &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;flake8 need to be installed on the system. Open bash and type&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install flake8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;5-browser-plus&quot;&gt;5. Browser Plus&lt;/h3&gt;
+
+&lt;p&gt;It opens a real browser in ATOM, which is very handy for debugging and checking the output at the same time. It opens the home page(maintained in the settings) or http://www.google.com.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ctrl + shift + P and search Browser Plus for opening the browser window.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/15_broswer_plus.png&quot; alt=&quot;python-autopep8&quot; /&gt;
+  &lt;figcaption&gt;Installing Browser Plus &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;6-file-icons&quot;&gt;6. file-icons&lt;/h3&gt;
+
+&lt;p&gt;This put a little icon next to each file, which helps us to identify which kind of file it is.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/16_file_icons.png&quot; alt=&quot;python-autopep8&quot; /&gt;
+    &lt;figcaption&gt;file icons showing the file icon next to it &lt;/figcaption&gt;
+  &lt;/figure&gt;
+
+&lt;p&gt;File-specific icons in Atom for improved visual grepping.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/17_file_icons.png&quot; alt=&quot;python-autopep8&quot; /&gt;
+  &lt;figcaption&gt;file icons showing the file icon next to it &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;open-file-with-atom-in-one-click&quot;&gt;Open File with Atom in one click&lt;/h2&gt;
+
+&lt;p&gt;The normal procedure for opening a file or a directory with Atom is by first opening the editor Atom, with either of two methods as mentioned above. Then click on “File” &amp;gt; “Open folder” and browse to the file or the folder, which is a very cumbersome process as shown below:&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/4_open_folder.png&quot; alt=&quot;Install Atom&quot; /&gt;
+  &lt;figcaption&gt; Atom editor &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Wouldn’t it be amazing if we could just open the file in one click? So let see how we can do it.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open the editor Atom&lt;/li&gt;
+  &lt;li&gt;Click on File &amp;gt; Settings and Click “System” tab. Check the &lt;code class=&quot;highlighter-rouge&quot;&gt;Show in file context menus&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Show in folder context menus
+&lt;/code&gt; as shown below:&lt;/li&gt;
+  &lt;li&gt;Close the editor Atom.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/5_open_with_Atom.png&quot; alt=&quot;Install Atom&quot; /&gt;
+  &lt;figcaption&gt; Atom’s System tab &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Right click and “open with Atom” option will appear as shown below. Atom is available with just a right click away.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/6_rightopen_with_Atom.png&quot; alt=&quot;Install Atom&quot; /&gt;
+  &lt;figcaption&gt; Open with Atom option available on right click &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;We have learned about a wonderful open source editor called Atom. How it is being used by Pythonist and some tricks and tips about using it.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;-references-and-further-reading-list-&quot;&gt;&lt;ins&gt; References and further reading list &lt;/ins&gt;&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;en.wikipedia.org/wiki/Atom_(text_editor)&quot;&gt;wikipedia&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://atom.io&quot;&gt;Atom&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://atom.io/packages/platformio-ide-terminal&quot;&gt;platform-ide-terminal&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pypi.org/project/autopep8/&quot;&gt;python-autopep8&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://simpleisbetterthancomplex.com/packages/2016/08/05/flake8.html&quot;&gt;linter-flake8&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Atom" /><category term="editor" /><summary type="html">Atom is a free and open-source text and source code editor for macOS, Linux, and Microsoft Windows with support for plug-ins written in Node.js, and embedded Git Control, developed by GitHub.</summary></entry><entry><title type="html">Create a Jekyll blog in five steps</title><link href="/Create-Jekyll-blog-in-five-steps/" rel="alternate" type="text/html" title="Create a Jekyll blog in five steps" /><published>2018-11-29T00:00:00+01:00</published><updated>2018-11-29T00:00:00+01:00</updated><id>/Create%20Jekyll%20blog%20in%20five%20steps</id><content type="html" xml:base="/Create-Jekyll-blog-in-five-steps/">&lt;p&gt;Whenever we hear the word blog, WordPress or BlogSpot blogs cross our mind. Out of which &lt;a href=&quot;https://wordpress.com/&quot;&gt;WordPress&lt;/a&gt; is more in demand right now. It is an open source online website creation tool, which was written in PHP and MySQL.&lt;/p&gt;
+
+&lt;p&gt;But lots of people complain that WordPress blog is getting infected with malware or hacked, or being slow etc. So to overcome this problem, bloggers are migrating towards Jekyll.
+In the next section, Jekyll is explained as well as and how it overcomes the problems which WordPress is encountering.&lt;/p&gt;
+
+&lt;h2 id=&quot;introducing-jekyll&quot;&gt;Introducing Jekyll&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; transforms plain text into static websites. In other words, it is a simple static site generator which takes a source file (written in the markup language) for creating a static website. It supports all kinds of file formats and is good for building a blog quickly.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;http://tom.preston-werner.com/&quot;&gt;Tom Preston-Werner&lt;/a&gt;, GitHub’s co-founder, wrote Jekyll in Ruby in the year 2009.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Though it needs some technical background and a good acquaintance of &lt;a href=&quot;https://www.markdownguide.org/getting-started&quot;&gt;Markdown&lt;/a&gt; and the &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid&lt;/a&gt; templating language, which are easy to learn if you have some elementary knowledge of HTML. The popularity of Jekyll could be seen on &lt;a href=&quot;https://jekyllrb.com/showcase/&quot;&gt;Showcase&lt;/a&gt; and &lt;a href=&quot;https://github.com/jekyll/jekyll/wiki/sites&quot;&gt;wiki&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is preferred because of the following reasons.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Performance:&lt;/strong&gt; Jekyll is tremendously fast because static files are returned by the web server.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Secure:&lt;/strong&gt;  As content is static files which makes it more secure until someone hacked the server.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Less expensive:&lt;/strong&gt; It requires fewer resources which cuts its operative cost.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Easy to learn:&lt;/strong&gt; Basic knowledge of HTML, CSS, and JavaScript is suffice for learning &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid&lt;/a&gt; which is a templating language.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Low maintenance:&lt;/strong&gt; It takes less than five minutes for setting up Jekyll and the maintaining cost is minimum because of superb support for Markdown, and the Liquid templating language, making a blog is as easy as running two commands.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Big community:&lt;/strong&gt; Jekyll has an immense active community as well as a team of Core maintainers which is working hard to maintain and document Jekyll very well.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;New Learning Experience:&lt;/strong&gt; Blogging is the best way to learn and share new skills in terms of technology. We learn more by teaching others and while getting your hands dirty with real-world problems.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;tldr-five-steps-for-creating-a-jekyll-blog&quot;&gt;TL;DR Five steps for creating a Jekyll blog:&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+  &lt;li&gt;Install &lt;a href=&quot;https://jekyllrb.com/docs/installation/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Download the &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;theme&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Modify the &lt;strong&gt;Gemfile&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Modify the &lt;strong&gt;_config.yml&lt;/strong&gt; file.&lt;/li&gt;
+  &lt;li&gt;Build the site and run the server.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;The above steps are explained below in details.&lt;/p&gt;
+
+&lt;h3 id=&quot;installing-jekyll&quot;&gt;Installing Jekyll&lt;/h3&gt;
+
+&lt;p&gt;First Install &lt;a href=&quot;https://jekyllrb.com/docs/installation/windows/&quot;&gt;Jekyll on windows&lt;/a&gt;
+(other OS installation procedures could be found on Jekyll website).&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/1_Jekyll.png&quot; alt=&quot;Jekyll for windows&quot; /&gt;
+  &lt;figcaption&gt;Jekyll for windows&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;According to the Jekyll official &lt;a href=&quot;https://jekyllrb.com/docs/installation/windows/&quot;&gt;documentation&lt;/a&gt;: The easiest method to run Jekyll is by using the &lt;a href=&quot;https://rubyinstaller.org/&quot;&gt;RubyInstaller&lt;/a&gt; for Windows.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/2_Ruby_installation.png&quot; alt=&quot;Ruby installation&quot; /&gt;
+  &lt;figcaption&gt;Ruby for windows&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Jekyll is a &lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gems&quot;&gt;Ruby Gem&lt;/a&gt;. The best explanation is found on &lt;a href=&quot;https://stackoverflow.com/questions/5233924/what-is-a-ruby-gem&quot;&gt;stackoverflow&lt;/a&gt;  as:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Gem is a package manager for the Ruby programming language that provides a standard format for distributing Ruby programs and libraries, a tool designed to easily manage the installation of gems, and a server for distributing them.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;download-the-theme&quot;&gt;Download the theme&lt;/h3&gt;
+
+&lt;p&gt;The minimal mistake &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;theme&lt;/a&gt; is used on this blog because of its simplicity and elegance. This theme is very well &lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/&quot;&gt;documented&lt;/a&gt; by its creator Michael Rose.
+Download the theme directly from the &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;link&lt;/a&gt; above and save it.
+Another way is just by typing the following command on &lt;a href=&quot;https://git-scm.com/download/win&quot;&gt;Git bash&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ git clone https://github.com/mmistakes/minimal-mistakes
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/3_Git.png&quot; alt=&quot;Git&quot; /&gt;
+  &lt;figcaption&gt;Downloading minimal mistake theme with Git bash&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Change into the minimal-mistake directory and install Bundler.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd minimal-mistakes/
+$ bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/4_Bundle_install.png&quot; alt=&quot;Install Bundle with the command&quot; /&gt;
+  &lt;figcaption&gt;Installing Bundle with Git bash&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;build-the-site&quot;&gt;Build the site&lt;/h3&gt;
+
+&lt;p&gt;Build the site and make it available on a local server.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/5_Build_the_site.png&quot; alt=&quot;Build the Jekyll site by simple command&quot; /&gt;
+  &lt;figcaption&gt;Build the Jekyll site &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Browse to http://localhost:4000 to see your site.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/6_Localhost_site.png&quot; alt=&quot;Jekyll site&quot; /&gt;
+  &lt;figcaption&gt;Jekyll site on local host &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;modify-the--gemfile&quot;&gt;Modify the  &lt;strong&gt;Gemfile&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Copy paste the following code to the &lt;strong&gt;Gemfile&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source 'https://rubygems.org'
+gem &quot;minimal-mistakes-jekyll&quot;
+gem 'jekyll-include-cache'
+gem 'jekyll-archives'
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;modify-the-_configyml-file&quot;&gt;Modify the &lt;strong&gt;_config.yml&lt;/strong&gt; file&lt;/h3&gt;
+
+&lt;p&gt;In the config.yml file, some modifications are to be done.&lt;/p&gt;
+
+&lt;p&gt;Search plugins section (at line 225) and add the following line&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- jekyll-archives
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The final plugins will appear as follows:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+  - jekyll-archives
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Uncomment the jekyll-archives (at line 254) till the tag section (the line 263). The final Jekyll-archives will appear as follows:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll-archives:
+  enabled:
+     - categories
+     - tags
+  layouts:
+     category: archive-taxonomy
+     tag: archive-taxonomy
+  permalinks:
+     category: /categories/:name/
+     tag: /tags/:name/
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Add the following lines at the defaults section (starting at line 287)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# _pages
+  - scope:
+      path: &quot;_pages&quot;
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The final defaults section will appear as follows:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: &quot;&quot;
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments:  true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: &quot;_pages&quot;
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In Site Settings, title(at line 19), name(at line 21), and description(at line 22) could be changed according to the requirements.
+Activate breadcrumbs (at line 27) by making it true as follows:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;breadcrumbs              : true # true, false (default)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In the Site Author section, author name (at line 106), bio (at line 108), location (at line 109), links (line 111 onwards) to email, twitter, facebook etc could be changed according to the requirements.&lt;/p&gt;
+
+&lt;h3 id=&quot;build-the-site-1&quot;&gt;Build the site&lt;/h3&gt;
+
+&lt;p&gt;Build the site and make it available on a local server&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/images/2018-11-29-Create Jekyll blog in five steps/5_Build_the_site.png&quot; alt=&quot;Build the Jekyll site by simple command&quot; /&gt;
+  &lt;figcaption&gt;Build the Jekyll site &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Now browse to http://localhost:4000 to see your site.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;We have learned about Jekyll, its various advantages over other blogging systems. We have also seen how to make a Jekyll blog. It is a very powerful tool which is widespread for blogging and creating a website. It is getting lots of attention which opens new ways to make a website faster and secure.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;-references-and-further-reading-list-&quot;&gt;&lt;ins&gt; References and further reading list &lt;/ins&gt;&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll/wiki/sites&quot;&gt;Wiki&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/showcase/&quot;&gt;Showcase&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://rubyinstaller.org/&quot;&gt;RubyInstaller&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gems&quot;&gt;Ruby Gem&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Jekyll" /><category term="Liquid" /><summary type="html">Jekyll transforms plain text into static websites. In other words, it is a simple static site generator which takes a source file for creating a static website.</summary></entry><entry><title type="html">Basics of Machine learning.</title><link href="/Machine-Learning/" rel="alternate" type="text/html" title="Basics of Machine learning." /><published>2018-04-22T00:00:00+02:00</published><updated>2018-04-22T00:00:00+02:00</updated><id>/Machine-Learning</id><content type="html" xml:base="/Machine-Learning/">&lt;p&gt;Nowadays we are hearing machine learning all the time and how it is present everywhere. Many of you tried to find it’s definition on the web and came up with the following classic definition by Tom Mitchell, which he gave in 1997 in his book &lt;a href=&quot;https://amzn.to/2GqWA4E&quot;&gt;Machine Learning&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;” A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E”.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Are you wondering what is this E, T, P, etc? At once, it looks so complicated and weird.  At least, this is how I felt. In simple terms it can be defined as “Machine learning is learning from data or examples”.  We use data to learn some sort of patterns and once we learn these patterns then we can do some sort of predictions. In other words, in machine learning, we take data, learn the pattern and then use this pattern to make predictions.&lt;/p&gt;
+
+&lt;p&gt;For example, spam email filter is a machine learning program.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Machine learning is learning from data or examples”.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Training data:&lt;/strong&gt; The data which are used to understand or learn the pattern is called training data. It is composed of two components:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Input features: Input features are also called predictors because they are used to predict the output.
+eg: Taking our spam email example, it is sender URL, email content is input features.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Output features: output features is called response or outcome.
+eg:  whether it is spam or not.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If we want to detect if a new email is a spam or not. This new email has only input features and we want to predict the output features, based on the learned pattern.
+These unseen cases are called test data.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Test data:&lt;/strong&gt; In test data, we have only input data/features and we predict the output data.&lt;/p&gt;
+
+&lt;h3 id=&quot;problems-which-can-be-solved-by-machine-learning&quot;&gt;Problems which can be solved by machine learning&lt;/h3&gt;
+&lt;p&gt;A very good article &lt;sup&gt;&lt;a href=&quot;#reference2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; explained the problems which can be solved by machine learning. For the sake of completing this tutorial, I copy some of them here.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Manual data entry&lt;/li&gt;
+  &lt;li&gt;Detecting spam&lt;/li&gt;
+  &lt;li&gt;Product recommendation&lt;/li&gt;
+  &lt;li&gt;Medical Diagnosis&lt;/li&gt;
+  &lt;li&gt;Financial analysis&lt;/li&gt;
+  &lt;li&gt;Image recognition (computer vision)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;how-to-know-if-a-problem-is-a-machine-learning-problem&quot;&gt;How to know if a problem is a machine learning problem?&lt;/h3&gt;
+&lt;p&gt;Not every problem is a machine learning problem. The following three factors determine if machine learning can be used to solve a problem:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;There are data available.&lt;/li&gt;
+  &lt;li&gt;A pattern should exist&lt;/li&gt;
+  &lt;li&gt;It could not be solved mathematically.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Always look for these three factors to decide if machine learning is a tool to solve a particular problem.&lt;/p&gt;
+
+&lt;h3 id=&quot;types-of-machine-learning&quot;&gt;Types of machine learning.&lt;/h3&gt;
+&lt;p&gt;There are various types of the machine learning system, here will focus only supervised and unsupervised.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Supervised learning:&lt;/strong&gt; If we have both input and output features in a training data is called supervised learning. It is called supervised because we already have the output features, which we want to predict by using machine learning.
+Eg: If we want to predict whether an email is a spam or not. We will use various input features in order to determine it. We already know the output of our prediction, it will be either spam or not spam. This kind of problems is called a classification problem. Here we are classifying the output into two parts. So, it is a binary classification problem.&lt;/p&gt;
+
+&lt;p&gt;Another problem could be where we want to predict a house price or salary based on various input features. Instead of predicting labels, we predict a value which is continuous in nature(if it is a positive value). This sort of task is called regression.
+In other words, problems, where output is a continuous variable, is called a regression problem.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Unsupervised learning:&lt;/strong&gt; Machine learning problems where we only have input features in the training data is called unsupervised learning. In other words, we try to find a pattern in the training data and then apply that pattern on test data or we can say we are trying to learn with a teacher.&lt;/p&gt;
+
+&lt;p&gt;Eg: Customer segmentation: We want to group people who are reading your blog based on the topic they are reading on your post, this is an example of clustering.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion:&lt;/h2&gt;
+
+&lt;p&gt;In this post, I tried to explain machine learning in a simple way. We saw what is train data, test data and types of machine learning, supervised and unsupervised learning. We also learn what is classification and regression problem. In the following post, we learn more about different types of algorithms used in machine learning until then explore more through the references.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;-references-and-further-reading-list-&quot;&gt;&lt;ins&gt; References and further reading list &lt;/ins&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a name=&quot;reference1&quot;&gt;1&lt;/a&gt;: &lt;a href=&quot;https://amzn.to/2GqWA4E&quot;&gt;Machine Learning&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference2&quot;&gt;2&lt;/a&gt;: https://www.marutitech.com/problems-solved-machine-learning/&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://amzn.to/2USvFZu&quot;&gt;Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems&lt;/a&gt;&lt;/p&gt;
+
+&lt;div id=&quot;amzn-assoc-ad-6c607667-0546-4b15-8490-17601f30f7c0&quot;&gt;&lt;/div&gt;
+&lt;script async=&quot;&quot; src=&quot;//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&amp;amp;adInstanceId=6c607667-0546-4b15-8490-17601f30f7c0&quot;&gt;&lt;/script&gt;</content><author><name>sdrsiddiqui</name></author><category term="Machine learning" /><summary type="html">Nowadays we are hearing machine learning all the time and how it is present everywhere. Many of you tried to find it's definition on the web and came up with the following classic definition by Tom Mitchell, which he gave in 1997 in his book &quot;Machine Learning&quot;.</summary></entry><entry><title type="html">Introduction to Data Science</title><link href="/Introduction-to-Data-Science/" rel="alternate" type="text/html" title="Introduction to Data Science" /><published>2018-02-09T00:00:00+01:00</published><updated>2018-02-09T00:00:00+01:00</updated><id>/Data-Science</id><content type="html" xml:base="/Introduction-to-Data-Science/">&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/0_data_science_front.jpg&quot; alt=&quot;DataScience&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Every day, we are &lt;a href=&quot;https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WRL12345USEN&quot;&gt;creating&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; 2.5 quintillions(10&lt;sup&gt;18&lt;/sup&gt;) bytes of data, out of which 90 percent of the data in the world has been created in the last two years alone. This massive amount of data is generated every now and then by millions of devices around us and with various social networking websites.&lt;/p&gt;
+
+&lt;p&gt;Data can be transformed into meaningful insights to help organizations in taking crucial decisions in their business by extracting valuable data-driven insights from the tremendous amount of data present in the world. It helps them creating value-added data products.&lt;/p&gt;
+
+&lt;p&gt;The person who generates valuable insights and patterns from the data is called &lt;strong&gt;Data Scientist&lt;/strong&gt;. No wonder why it is an important asset for the company as regarded as one of the important jobs of the century.&lt;/p&gt;
+
+&lt;p&gt;The term data science became very difficult to explain especially in today world. “Data science is an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from data in various forms, both structured and unstructured, similar to data mining.” —&lt;cite&gt;&lt;a href=&quot;en.wikipedia.org/wiki/Data_science&quot;&gt;Wikipedia&lt;/a&gt;&lt;/cite&gt;&lt;sup&gt;&lt;a href=&quot;#reference2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In other words, it is a set of fundamental principles that guide the extraction of knowledge of data.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A very good explanation of the word data science is explained by &lt;a href=&quot;http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&quot;&gt;Drew Conway’s Data Science Venn Diagram&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; on his blog.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/1_Drew_conway_data_Science_venn Diagram.PNG&quot; alt=&quot;Drew Conway’s Data Science Venn Diagram&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;Drew Conway’s Data Science Venn Diagram&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Based on this diagram, which captures the spirit of the word “data science”, it comprises of three different kinds of knowledge:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1.Statistics:&lt;/strong&gt; For modeling and summarizing datasets (which are increasing day by day).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.Computer knowledge:&lt;/strong&gt; For gathering, processing and visualizing the data (designing and using the algorithms).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3.The domain expertise:&lt;/strong&gt; For expressing the correct questions and to put their answers in context.&lt;/p&gt;
+
+&lt;h2 id=&quot;as-it-can-be-seen-that-these-are-not-a-new-domain-of-knowledge-to-learn-but-a-new-set-of-skills-are-required-which-are-easy-to-learn&quot;&gt;As it can be seen that, these are not a new domain of knowledge to learn but a new set of skills are required which are easy to learn.&lt;/h2&gt;
+
+&lt;h3 id=&quot;why-python-is-used-for-data-science&quot;&gt;Why Python is used for Data Science&lt;/h3&gt;
+
+&lt;p&gt;Python is an open source high-level language. It has powerful computation tools and packages which make it easy to focus on the task. When we execute Python code, the Python interpreter converts your code into bytecode that your computer can understand, and then runs that bytecode. Python is a high-level language. High-level languages allow you to write programs faster as the interpreter makes the decisions on how to execute your instructions
+Following are some of the reasons for choosing Python for Data Science projects.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Easy to learn:&lt;/strong&gt; Python is a simple scripting language that makes it easy to interact with data that makes it learning curve easy.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Open source:&lt;/strong&gt; Python is free and open source, which means Python source code is available for the public and anyone can contribute to its development.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Active community:&lt;/strong&gt; Python has a large and active scientific community so it is easy to get help.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Scalable:&lt;/strong&gt;  It is fast and scalable as compared to other languages like R, Stata, Matlab.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Packages:&lt;/strong&gt; Wide range of packages that make it easy to get started and build the application. Some of them are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;NumPy for manipulation of homogeneous array-based data.&lt;/li&gt;
+  &lt;li&gt;Pandas for manipulation of heterogeneous and labeled data.&lt;/li&gt;
+  &lt;li&gt;SciPy for common scientific computing tasks.&lt;/li&gt;
+  &lt;li&gt;Matplotlib for publication-quality visualizations.&lt;/li&gt;
+  &lt;li&gt;Scikit-Learn for machine learning.&lt;/li&gt;
+  &lt;li&gt;IPython for interactive execution and sharing of code.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It allows the programmer to focus on the task at hand very fastly.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;data-science-project-overview&quot;&gt;Data science Project Overview&lt;/h3&gt;
+&lt;p&gt;Here are the main steps you will follow for any data science project.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Ask questions:&lt;/strong&gt; Ask question what do you want to analyze. Talk with the business unit to figure out the questions. Either you have given data and you ask the question based on it or first, you ask the question and then gather data based on your it.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Data Wrangling:&lt;/strong&gt; Once you have clear questions in your mind, now you can proceed to data wrangling which has three steps:
+    &lt;ul&gt;
+      &lt;li&gt;Gather data: Either data is provided from the business unit or need to gather from different sources which generally comes in various formats.&lt;/li&gt;
+      &lt;li&gt;Assess the data: Once you gather the data, now you will make sure if the data have any problems like not in the same format or if there are any other problems.&lt;/li&gt;
+      &lt;li&gt;Cleaning the data: It is very rare that the data one get is clean. Most of the time, of a data science project, is spent on cleaning the data. It is done either by modifying it to new data or by removing the duplicates or unnecessary data as well as fixing the missing data.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Exploratory Data Analysis(EDA):&lt;/strong&gt; In this step. you explore the data, find patterns, relationships by visualizing the data which helps to gain insights. Feature engineering (removing outliers and creating better features) is also done in this process. After this, we select a model and train it. This is a repetitive process.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Present the solution:&lt;/strong&gt; Present the insights which you gained from the data. It could be done in the form of reports, blog posts, presentations, etc.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;prepare-the-data-science-environment-in-three-steps&quot;&gt;Prepare the data science environment in three steps&lt;/h2&gt;
+
+&lt;h3 id=&quot;jupyter&quot;&gt;Jupyter&lt;/h3&gt;
+&lt;p&gt;For new users, it is recommended to install &lt;a href=&quot;https://www.anaconda.com/&quot;&gt;Anaconda&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;, the most popular python data science platform. Anaconda installs Python, Jupyter Notebook and other packages used for data science. Learn more about Jupyter &lt;a href=&quot;/How-to-use-Jupyter-more-effectively&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/2_Anaconda.png&quot; alt=&quot;Anaconda&quot; /&gt;
+&lt;em&gt;&lt;sub&gt; Download Anaconda for Python 3&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;project-template&quot;&gt;Project template&lt;/h3&gt;
+&lt;p&gt;It is a good practice to have a project template which makes it easy to work and understand. A Cookiecutter is a logical, reasonably standardized, but flexible project structure for doing and sharing data science work. It can be installed by the following command.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip install cookiecutter
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-02-2-Kaggle-Project/1_install_cookiecutter.png&quot; alt=&quot;Cookiecutter&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;Installing Cookiecutter&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Once it is installed we can create a project template by the following command.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cookiecutter https://github.com/drivendata/cookiecutter-data-science
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-02-2-Kaggle-Project/2_creating_project_template_cookiecutter.png&quot; alt=&quot;Cookiecutter&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;Creating project template Cookiecutter&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;git&quot;&gt;Git&lt;/h3&gt;
+&lt;p&gt;Versioning system is important for any data science project. It helps in working together as well as going back to the earlier version if there are any problems. We will be using Git in our case.  We don’t need to have the expertise to use git, just knowing 4 commands will suffice in this project.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt;: Initialize the git repository.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add&lt;/code&gt;: Add files in git. For adding all the files of this current folder to the git system we have to add a dot(.) after this command.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit&lt;/code&gt;: Commit the changes using the command. This tells the git that we have committed our changes and can create our checkpoints. It’s a good practice to provide commit messages for referencing by adding a &lt;code class=&quot;highlighter-rouge&quot;&gt;-m&lt;/code&gt; flag with it.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git log&lt;/code&gt;: It shows all the logs. But to have only one line use &lt;code class=&quot;highlighter-rouge&quot;&gt;---oneline&lt;/code&gt; which shows git message with git commit id.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-02-2-Kaggle-Project/3_git_commands.png&quot; alt=&quot;Cookiecutter&quot; /&gt;
+&lt;em&gt;&lt;sub&gt;Basic git commands for data science projects&lt;/sub&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion:&lt;/h2&gt;
+
+&lt;p&gt;In this post, you learned about Data Science and learn why Python is preferred for it. We also explored different steps for starting data science projects and finally, we saw the environment which is required for a data science project. I hope it helps to understand some basics concepts of data science. In the coming tutorials, we will explore more about data science and the various algorithm used for it, till then explore more go through the references.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;-references-and-further-reading-list-&quot;&gt;&lt;ins&gt; References and further reading list &lt;/ins&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference1&quot;&gt;1&lt;/a&gt;: https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WRL12345USEN&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference2&quot;&gt;2&lt;/a&gt;: en.wikipedia.org/wiki/Data_science&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference3&quot;&gt;3&lt;/a&gt;: http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference4&quot;&gt;4&lt;/a&gt;: https://www.anaconda.com/&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference5&quot;&gt;5&lt;/a&gt; &lt;a target=&quot;_blank&quot; href=&quot;https://www.amazon.fr/gp/product/B01N2JT3ST/ref=as_li_tl?ie=UTF8&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=B01N2JT3ST&amp;amp;linkCode=as2&amp;amp;tag=sam094-21&amp;amp;linkId=d7c72362ce852e5b63ebe8e464ba6ae2&quot;&gt;Python Data Science Handbook: Essential Tools for Working with Data (English Edition)&lt;/a&gt;&lt;img src=&quot;//ir-fr.amazon-adsystem.com/e/ir?t=sam094-21&amp;amp;l=am2&amp;amp;o=8&amp;amp;a=B01N2JT3ST&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/p&gt;</content><author><name>sdrsiddiqui</name></author><category term="Data Science" /><category term="WILT" /><summary type="html">Every day, we are creating bytes of data, out of which 90 percent of the data in the world has been created in the last two years alone. This massive amount of data is generated every now and then by millions of devices around us and with various social networking websites.</summary></entry></feed>

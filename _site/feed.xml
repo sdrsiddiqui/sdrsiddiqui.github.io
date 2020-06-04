@@ -1,4 +1,157 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-04-15T00:16:03+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Data Science &amp;amp; ML</title><subtitle>Its all about data science and machine learning.</subtitle><author><name>sdrsiddiqui</name></author><entry><title type="html">Basic six steps to follow in any data science project</title><link href="http://localhost:4000/Exploratory-Data-Analysis-(EDA)/" rel="alternate" type="text/html" title="Basic six steps to follow in any data science project" /><published>2019-03-15T00:00:00+03:00</published><updated>2019-03-15T00:00:00+03:00</updated><id>http://localhost:4000/Exploratory-Data-Analysis-(EDA)</id><content type="html" xml:base="http://localhost:4000/Exploratory-Data-Analysis-(EDA)/">&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/front.jpg&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-04T11:28:46+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Data Science &amp;amp; ML</title><subtitle>Its all about data science and machine learning.</subtitle><author><name>sdrsiddiqui</name></author><entry><title type="html">Virtual Environment</title><link href="http://localhost:4000/wilt/Virtual-Environment/" rel="alternate" type="text/html" title="Virtual Environment" /><published>2020-06-01T00:00:00+02:00</published><updated>2020-06-01T00:00:00+02:00</updated><id>http://localhost:4000/wilt/Virtual-Environment</id><content type="html" xml:base="http://localhost:4000/wilt/Virtual-Environment/">&lt;p&gt;Imagine working on two different projects which use different dependencies and version of python. If these dependencies are installed globally, it will create conflicts. To solve this problem, a virtual environment came into existence. It creates an isolated environment for installing all the dependencies and versions for each project.&lt;/p&gt;
+
+&lt;p&gt;The official &lt;a href=&quot;https://docs.python.org/3/glossary.html#term-virtual-environment&quot;&gt;documentation&lt;/a&gt; of Python defined as &lt;em&gt;A cooperatively isolated runtime environment that allows Python users and applications to install and upgrade Python distribution packages without interfering with the behavior of other Python applications running on the same system&lt;sup&gt;&lt;a href=&quot;#reference1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;It separate environments for each project for its dependencies without disturbing other project dependencies. By default, a virtual environment is entirely isolated from the system-level site-packages directories &lt;sup&gt;&lt;a href=&quot;#reference2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;It is recommended to have one virtual environment for every python project, so the dependencies of each project are isolated without breaking the packages installed in the other environments.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;PEP 405 &lt;sup&gt;&lt;a href=&quot;#reference2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; explained more about Python virtual environment.The virtual environment is just directories with some scripts.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;ways-of-creating-a-virtual-environment&quot;&gt;Ways of creating a virtual environment.&lt;/h2&gt;
+
+&lt;p&gt;There are various ways of creating a virtual environment. The most popular ones are mentioned below.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-venv&quot;&gt;1. venv&lt;/h3&gt;
+
+&lt;p&gt;Venv is the recommended way to create a virtual environment by the Python community. It is a python builtin “virtualenv”. The venv module provides support for creating lightweight “virtual environments” with their site directories, optionally isolated from system site directories. Venv installs the most recent version of Python as mentioned &lt;a href=&quot;https://docs.python.org/3/tutorial/venv.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;11-create-a-virtual-environment-with-venv&quot;&gt;1.1 Create a virtual environment with venv.&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ python –m venv &amp;lt;myenvname&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This will create the directory if it doesn’t exist. It also creates directories containing a copy of the Python interpreter, the standard library, and various supporting files&lt;sup&gt;&lt;a href=&quot;#reference3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;12-activate-a-virtual-environment-with-venv&quot;&gt;1.2 Activate a virtual environment with venv.&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ source &amp;lt;myenvname&amp;gt;/Scripts/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;13-deactivate-a-virtual-environment-with-venv&quot;&gt;1.3 Deactivate a virtual environment with venv.&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ deactivate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-06-01-Virtual-Environment/venv.gif&quot; alt=&quot;Virtual Environment&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2-virtualenv&quot;&gt;2. virtualenv&lt;/h3&gt;
+
+&lt;p&gt;virtualenv is also a tool for creating Python environments by creating a folder that contains all the necessary executables which would be required by Python project. Another advantage of using virtualenv is that you won’t need any administration privileges to install Python packages.&lt;/p&gt;
+
+&lt;p&gt;For more information check the definition &lt;a href=&quot;https://packaging.python.org/key_projects/#virtualenv&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;20-install-virtualenv-with-pip&quot;&gt;2.0 Install virtualenv with pip.&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip install virtualenv_name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;21-create-a-virtual-environment-with-virtualenv&quot;&gt;2.1 Create a virtual environment with virtualenv.&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ virtualenv &amp;lt;virtualenv_name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;22-activate-a-virtual-environment-with-virtualenv&quot;&gt;2.2 Activate a virtual environment with virtualenv.&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ source &amp;lt;virtualenv_name&amp;gt;/bin/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;23-deactivate-a-virtual-environment-with-virtualenv&quot;&gt;2.3 Deactivate a virtual environment with virtualenv.&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ deactivate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;3-pipenv&quot;&gt;3. Pipenv&lt;/h4&gt;
+
+&lt;p&gt;Pipenv is a new and popular way of automatically creating a ‘virtualenv’ for the project. Pipfile, which helps to manage the package and can be installed or removed easily. Through Pipenv, ‘pip’ and ‘virtualenv’ can be used together to create a Virtual Environment, Pipfile works as the replacement of the ‘requirement.txt.’ which tracks the package version according to the given project as mentioned on this &lt;a href=&quot;https://www.datacamp.com/community/tutorials/virtual-environment-in-python&quot;&gt;website&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;30-install-pipenv-with-pip&quot;&gt;3.0 Install pipenv with pip.&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip install pipenv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;31-create-a-virtual-environment-with-pipenv&quot;&gt;3.1 Create a virtual environment with pipenv.&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pipenv shell
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It creates a new ‘virtualenv’ for the project along with Pipfile.&lt;/p&gt;
+
+&lt;h4 id=&quot;32-activate-a-virtual-environment-with-pipenv&quot;&gt;3.2 Activate a virtual environment with pipenv.&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ source &amp;lt;virtualenv_name&amp;gt;/bin/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;33-deactivate-a-virtual-environment-with-pipenv&quot;&gt;3.3 Deactivate a virtual environment with pipenv.&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;exit&lt;/code&gt; is used to deactivate from the current environment.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-06-01-Virtual-Environment/pipenv.JPG&quot; alt=&quot;Virtual Environment&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;4-conda&quot;&gt;4. Conda&lt;/h3&gt;
+
+&lt;p&gt;Anaconda is famous among data scientists. It uses “conda” for managing dependencies.
+Install anaconda from its official website https://www.anaconda.com/products/individual then press windows icon and search for “Anaconda Prompt”.&lt;/p&gt;
+
+&lt;h4 id=&quot;41-create-a-virtual-environment-with-conda&quot;&gt;4.1 Create a virtual environment with conda.&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda create –n virtual_env python
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;42-activate-the-virtual-environment-with-conda&quot;&gt;4.2 Activate the virtual environment with conda.&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda activate virtual_env
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;43-installing-package-with-conda&quot;&gt;4.3 Installing package with conda.&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda install -n virtual_env numpy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;44-deactive-the-virtual-environment-with-conda&quot;&gt;4.4 Deactive the virtual environment with conda.&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda deactivate 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-06-01-Virtual-Environment/conda.gif&quot; alt=&quot;Virtual Environment&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;managing-packages-with-pip&quot;&gt;Managing Packages with pip&lt;/h3&gt;
+
+&lt;p&gt;Pip is used to install, upgrade, and remove packages. &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt; will install packages from the Python Package Index (https://pyppi.org).&lt;/p&gt;
+
+&lt;p&gt;For the sake of completing notes, I am copying the below information from the python &lt;a href=&quot;https://docs.python.org/3/tutorial/venv.html&quot;&gt;docs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;:  has several subcommands: “search”, “install”, “uninstall”, “freeze”, etc&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pip uninstall&lt;/code&gt;followed by one or more package names will remove the packages from the virtual environment.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pip show&lt;/code&gt; will display information about a particular package.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pip list&lt;/code&gt; will display all of the packages installed in the virtual environment.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pip freeze&lt;/code&gt; will produce a similar list of the installed packages, but the output uses the format that pip install expects. A common convention is to put this list in a requirements.txt file.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;requirements.txt&lt;/code&gt; can then be committed to version control and shipped as part of an application. Users can then install all the necessary packages with the install –r.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion:&lt;/h2&gt;
+
+&lt;p&gt;Congratulations on completing this post!&lt;/p&gt;
+
+&lt;p&gt;You learned about virtual environments and explored different ways of creating them. Furthermore, you discover pip and its different commands. The idea of this post was to gather all the related information regarding the virtual environment at one place, for retrieving when necessary.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;-references-and-further-reading-list-&quot;&gt;&lt;ins&gt; References and further reading list &lt;/ins&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference1&quot;&gt;1&lt;/a&gt;: https://docs.python.org/3/glossary.html#term-virtual-environment&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference2&quot;&gt;2&lt;/a&gt;:  https://www.python.org/dev/peps/pep-0405/&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference3&quot;&gt;3&lt;/a&gt;: https://docs.python.org/3/tutorial/venv.html&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference4&quot;&gt;4&lt;/a&gt;: https://www.datacamp.com/community/tutorials/virtual-environment-in-python&lt;/p&gt;</content><author><name>sdrsiddiqui</name></author><category term="Python" /><summary type="html">Virtual Environment is a cooperatively isolated runtime environment that allows Python users and applications to install and upgrade Python distribution packages without interfering with the behavior of other Python applications running on the same system.</summary></entry><entry><title type="html">Basic six steps to follow in any data science project</title><link href="http://localhost:4000/Exploratory-Data-Analysis-(EDA)/" rel="alternate" type="text/html" title="Basic six steps to follow in any data science project" /><published>2019-03-15T00:00:00+01:00</published><updated>2019-03-15T00:00:00+01:00</updated><id>http://localhost:4000/Exploratory-Data-Analysis-(EDA)</id><content type="html" xml:base="http://localhost:4000/Exploratory-Data-Analysis-(EDA)/">&lt;p&gt;&lt;img src=&quot;/assets/images/2019-03-15-Exploratory-Data-Analysis-(EDA)/front.jpg&quot; alt=&quot;EDA&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Before starting any data analysis tasks, we must have a clear goal about our results or output.We need to understand the data and problem to get meaningful results from our analysis.&lt;/p&gt;
 
@@ -290,7 +443,7 @@ df_08['displ'].corr(df_08['cmb_mpg'])
 
 &lt;p&gt;&lt;a name=&quot;reference4&quot;&gt;4&lt;/a&gt;: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.describe.html&lt;/p&gt;
 
-&lt;p&gt;&lt;a name=&quot;reference5&quot;&gt;5&lt;/a&gt;: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.isnull.html&lt;/p&gt;</content><author><name>sdrsiddiqui</name></author><category term="Data Science" /><summary type="html">Exploratory Data Analysis (EDA) phase of a data science project helps us to analyze our datasets, summarize their main characteristics, understand their variables and relationships between them, in order to formulate some sort of hypotheses.</summary></entry><entry><title type="html">How to install PostgreSQL on Amazon AWS?</title><link href="http://localhost:4000/How-to-install-PostgreSQL-on-Amazon-AWS/" rel="alternate" type="text/html" title="How to install PostgreSQL on Amazon AWS?" /><published>2019-02-04T00:00:00+03:00</published><updated>2019-02-04T00:00:00+03:00</updated><id>http://localhost:4000/How-to-install-PostgreSQL-on-Amazon-AWS</id><content type="html" xml:base="http://localhost:4000/How-to-install-PostgreSQL-on-Amazon-AWS/">&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-30-How-to-install-PostgreSQL-on-AWS/0_PostgreSQL_welcome.png&quot; alt=&quot;Postgre&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;reference5&quot;&gt;5&lt;/a&gt;: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.isnull.html&lt;/p&gt;</content><author><name>sdrsiddiqui</name></author><category term="Data Science" /><summary type="html">Exploratory Data Analysis (EDA) phase of a data science project helps us to analyze our datasets, summarize their main characteristics, understand their variables and relationships between them, in order to formulate some sort of hypotheses.</summary></entry><entry><title type="html">How to install PostgreSQL on Amazon AWS?</title><link href="http://localhost:4000/How-to-install-PostgreSQL-on-Amazon-AWS/" rel="alternate" type="text/html" title="How to install PostgreSQL on Amazon AWS?" /><published>2019-02-04T00:00:00+01:00</published><updated>2019-02-04T00:00:00+01:00</updated><id>http://localhost:4000/How-to-install-PostgreSQL-on-Amazon-AWS</id><content type="html" xml:base="http://localhost:4000/How-to-install-PostgreSQL-on-Amazon-AWS/">&lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-30-How-to-install-PostgreSQL-on-AWS/0_PostgreSQL_welcome.png&quot; alt=&quot;Postgre&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.postgresql.org/&quot;&gt;PostgreSQL&lt;/a&gt; is an open source object-relational database management system (ORDBMS), developed at the University of California at Berkeley Computer Science Department.&lt;/p&gt;
 
@@ -461,7 +614,7 @@ postgres@ip-172-31-37-92:~$ psql
 
 &lt;p&gt;&lt;a name=&quot;reference2&quot;&gt;2&lt;/a&gt;: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04&lt;/p&gt;
 
-&lt;p&gt;&lt;a name=&quot;reference1&quot;&gt;3&lt;/a&gt;: https://severalnines.com/blog/top-gui-tools-postgresql&lt;/p&gt;</content><author><name>sdrsiddiqui</name></author><category term="Data Science" /><category term="AWS" /><summary type="html">PostgreSQL is an open source object-relational database management system (ORDBMS), developed at the University of California at Berkeley Computer Science Department.</summary></entry><entry><title type="html">Amazon Web Services for Data Science</title><link href="http://localhost:4000/Amazon-Web-Services-for-Data-Science/" rel="alternate" type="text/html" title="Amazon Web Services for Data Science" /><published>2019-01-13T00:00:00+03:00</published><updated>2019-01-13T00:00:00+03:00</updated><id>http://localhost:4000/Amazon-Web-Services-for-Data-Science</id><content type="html" xml:base="http://localhost:4000/Amazon-Web-Services-for-Data-Science/">&lt;p&gt;Amazon Web Services &lt;a href=&quot;https://aws.amazon.com/what-is-aws/&quot;&gt;(AWS)&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; provides a low-cost, scalable and highly reliable infrastructure platform in a secure cloud, and offers services like database storage, security, networking, computing, mobile development functionalities, on pay as you use basis.&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;reference1&quot;&gt;3&lt;/a&gt;: https://severalnines.com/blog/top-gui-tools-postgresql&lt;/p&gt;</content><author><name>sdrsiddiqui</name></author><category term="Data Science" /><category term="AWS" /><summary type="html">PostgreSQL is an open source object-relational database management system (ORDBMS), developed at the University of California at Berkeley Computer Science Department.</summary></entry><entry><title type="html">Amazon Web Services for Data Science</title><link href="http://localhost:4000/Amazon-Web-Services-for-Data-Science/" rel="alternate" type="text/html" title="Amazon Web Services for Data Science" /><published>2019-01-13T00:00:00+01:00</published><updated>2019-01-13T00:00:00+01:00</updated><id>http://localhost:4000/Amazon-Web-Services-for-Data-Science</id><content type="html" xml:base="http://localhost:4000/Amazon-Web-Services-for-Data-Science/">&lt;p&gt;Amazon Web Services &lt;a href=&quot;https://aws.amazon.com/what-is-aws/&quot;&gt;(AWS)&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; provides a low-cost, scalable and highly reliable infrastructure platform in a secure cloud, and offers services like database storage, security, networking, computing, mobile development functionalities, on pay as you use basis.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2019-01-13-Amazon-Web-Services-for-Data-Science/0_Amazon_AWS.png&quot; alt=&quot;Amazon Web Services&quot; /&gt;&lt;/p&gt;
 
@@ -859,7 +1012,7 @@ For being an effective data scientist or software engineer, it is very important
 
 &lt;p&gt;&lt;a name=&quot;reference5&quot;&gt;5&lt;/a&gt;: https://jupyter.org/&lt;/p&gt;
 
-&lt;p&gt;&lt;a name=&quot;reference6&quot;&gt;6&lt;/a&gt;: https://blog.keras.io/running-jupyter-notebooks-on-gpu-on-aws-a-starter-guide.html&lt;/p&gt;</content><author><name>sdrsiddiqui</name></author><category term="Data Science" /><category term="AWS" /><summary type="html">Amazon Web Services (AWS) provides a low-cost, scalable and highly reliable infrastructure platform in a secure cloud, and offers services like database storage, security, networking, computing, mobile development functionalities, on pay as you use basis.</summary></entry><entry><title type="html">How to use Jupyter more effectively?</title><link href="http://localhost:4000/How-to-use-Jupyter-more-effectively/" rel="alternate" type="text/html" title="How to use Jupyter more effectively?" /><published>2018-12-05T00:00:00+03:00</published><updated>2018-12-05T00:00:00+03:00</updated><id>http://localhost:4000/How-to-use-Jupyter-more-effectively</id><content type="html" xml:base="http://localhost:4000/How-to-use-Jupyter-more-effectively/">&lt;p&gt;IPython is about using Python effectively for interactive scientific and data-intensive computing. There are two methods of using it; the IPython shell and the IPython notebook.&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;reference6&quot;&gt;6&lt;/a&gt;: https://blog.keras.io/running-jupyter-notebooks-on-gpu-on-aws-a-starter-guide.html&lt;/p&gt;</content><author><name>sdrsiddiqui</name></author><category term="Data Science" /><category term="AWS" /><summary type="html">Amazon Web Services (AWS) provides a low-cost, scalable and highly reliable infrastructure platform in a secure cloud, and offers services like database storage, security, networking, computing, mobile development functionalities, on pay as you use basis.</summary></entry><entry><title type="html">How to use Jupyter more effectively?</title><link href="http://localhost:4000/How-to-use-Jupyter-more-effectively/" rel="alternate" type="text/html" title="How to use Jupyter more effectively?" /><published>2018-12-05T00:00:00+01:00</published><updated>2018-12-05T00:00:00+01:00</updated><id>http://localhost:4000/How-to-use-Jupyter-more-effectively</id><content type="html" xml:base="http://localhost:4000/How-to-use-Jupyter-more-effectively/">&lt;p&gt;IPython is about using Python effectively for interactive scientific and data-intensive computing. There are two methods of using it; the IPython shell and the IPython notebook.&lt;/p&gt;
 
 &lt;h3 id=&quot;ipython-shell&quot;&gt;IPython shell&lt;/h3&gt;
 
@@ -1120,7 +1273,7 @@ print( hello())
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://ipython.readthedocs.io/en/stable/&quot;&gt;IPython Documentation&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Data Science" /><summary type="html">Jupyter is a browser-based graphical interface of Ipython shell. It is an open-source web application which allows a user, to create and share documents, which can execute on their systems.It is a very useful tool for machine learning, data science, visualizations as it can contain code, equations, visualizations etc in one place. It blends two things, Python(a simple scripting programming language) and Wiki pages.</summary></entry><entry><title type="html">Atom for Pythonist</title><link href="http://localhost:4000/Atom-editor-for-pythonist/" rel="alternate" type="text/html" title="Atom for Pythonist" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/Atom-eidtor-for-pythonist</id><content type="html" xml:base="http://localhost:4000/Atom-editor-for-pythonist/">&lt;figure&gt;
+&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Data Science" /><summary type="html">Jupyter is a browser-based graphical interface of Ipython shell. It is an open-source web application which allows a user, to create and share documents, which can execute on their systems.It is a very useful tool for machine learning, data science, visualizations as it can contain code, equations, visualizations etc in one place. It blends two things, Python(a simple scripting programming language) and Wiki pages.</summary></entry><entry><title type="html">Atom for Pythonist</title><link href="http://localhost:4000/Atom-editor-for-pythonist/" rel="alternate" type="text/html" title="Atom for Pythonist" /><published>2018-11-29T00:00:00+01:00</published><updated>2018-11-29T00:00:00+01:00</updated><id>http://localhost:4000/Atom-eidtor-for-pythonist</id><content type="html" xml:base="http://localhost:4000/Atom-editor-for-pythonist/">&lt;figure&gt;
   &lt;img src=&quot;/assets/images/2018-11-29-Atom-eidtor/0_Atom.png&quot; alt=&quot;Atom to downloaded&quot; /&gt;
   &lt;figcaption&gt; Atom: A hackable text editor for the 21st Century &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -1308,7 +1461,7 @@ print( hello())
   &lt;li&gt;&lt;a href=&quot;https://atom.io/packages/platformio-ide-terminal&quot;&gt;platform-ide-terminal&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://pypi.org/project/autopep8/&quot;&gt;python-autopep8&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://simpleisbetterthancomplex.com/packages/2016/08/05/flake8.html&quot;&gt;linter-flake8&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Atom" /><category term="editor" /><summary type="html">Atom is a free and open-source text and source code editor for macOS, Linux, and Microsoft Windows with support for plug-ins written in Node.js, and embedded Git Control, developed by GitHub.</summary></entry><entry><title type="html">Create a Jekyll blog in five steps</title><link href="http://localhost:4000/Create-Jekyll-blog-in-five-steps/" rel="alternate" type="text/html" title="Create a Jekyll blog in five steps" /><published>2018-11-29T00:00:00+03:00</published><updated>2018-11-29T00:00:00+03:00</updated><id>http://localhost:4000/Create%20Jekyll%20blog%20in%20five%20steps</id><content type="html" xml:base="http://localhost:4000/Create-Jekyll-blog-in-five-steps/">&lt;p&gt;Whenever we hear the word blog, WordPress or BlogSpot blogs cross our mind. Out of which &lt;a href=&quot;https://wordpress.com/&quot;&gt;WordPress&lt;/a&gt; is more in demand right now. It is an open source online website creation tool, which was written in PHP and MySQL.&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Atom" /><category term="editor" /><summary type="html">Atom is a free and open-source text and source code editor for macOS, Linux, and Microsoft Windows with support for plug-ins written in Node.js, and embedded Git Control, developed by GitHub.</summary></entry><entry><title type="html">Create a Jekyll blog in five steps</title><link href="http://localhost:4000/Create-Jekyll-blog-in-five-steps/" rel="alternate" type="text/html" title="Create a Jekyll blog in five steps" /><published>2018-11-29T00:00:00+01:00</published><updated>2018-11-29T00:00:00+01:00</updated><id>http://localhost:4000/Create%20Jekyll%20blog%20in%20five%20steps</id><content type="html" xml:base="http://localhost:4000/Create-Jekyll-blog-in-five-steps/">&lt;p&gt;Whenever we hear the word blog, WordPress or BlogSpot blogs cross our mind. Out of which &lt;a href=&quot;https://wordpress.com/&quot;&gt;WordPress&lt;/a&gt; is more in demand right now. It is an open source online website creation tool, which was written in PHP and MySQL.&lt;/p&gt;
 
 &lt;p&gt;But lots of people complain that WordPress blog is getting infected with malware or hacked, or being slow etc. So to overcome this problem, bloggers are migrating towards Jekyll.
 In the next section, Jekyll is explained as well as and how it overcomes the problems which WordPress is encountering.&lt;/p&gt;
@@ -1545,7 +1698,92 @@ Activate breadcrumbs (at line 27) by making it true as follows:&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/showcase/&quot;&gt;Showcase&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://rubyinstaller.org/&quot;&gt;RubyInstaller&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/ruby-101/#gems&quot;&gt;Ruby Gem&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Jekyll" /><category term="Liquid" /><summary type="html">Jekyll transforms plain text into static websites. In other words, it is a simple static site generator which takes a source file for creating a static website.</summary></entry><entry><title type="html">Introduction to Data Science</title><link href="http://localhost:4000/Introduction-to-Data-Science/" rel="alternate" type="text/html" title="Introduction to Data Science" /><published>2018-02-09T00:00:00+03:00</published><updated>2018-02-09T00:00:00+03:00</updated><id>http://localhost:4000/Data-Science</id><content type="html" xml:base="http://localhost:4000/Introduction-to-Data-Science/">&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/0_data_science_front.jpg&quot; alt=&quot;DataScience&quot; /&gt;&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>sdrsiddiqui</name></author><category term="Jekyll" /><category term="Liquid" /><summary type="html">Jekyll transforms plain text into static websites. In other words, it is a simple static site generator which takes a source file for creating a static website.</summary></entry><entry><title type="html">Basics of Machine learning.</title><link href="http://localhost:4000/Machine-Learning/" rel="alternate" type="text/html" title="Basics of Machine learning." /><published>2018-04-22T00:00:00+02:00</published><updated>2018-04-22T00:00:00+02:00</updated><id>http://localhost:4000/Machine-Learning</id><content type="html" xml:base="http://localhost:4000/Machine-Learning/">&lt;p&gt;&lt;img src=&quot;/assets/images/2018-04-22-Machine-Learning/1_ML.jpg&quot; alt=&quot;Machine learning&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nowadays we are hearing machine learning all the time and how it is present everywhere. Many of you tried to find it’s definition on the web and came up with the following classic definition by Tom Mitchell, which he gave in 1997 in his book &lt;a href=&quot;https://amzn.to/2GqWA4E&quot;&gt;Machine Learning&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;” A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E”.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Are you wondering what is this E, T, P, etc? At once, it looks so complicated and weird.  At least, this is how I felt. In simple terms it can be defined as “Machine learning is learning from data or examples”.  We use data to learn some sort of patterns and once we learn these patterns then we can do some sort of predictions. In other words, in machine learning, we take data, learn the pattern and then use this pattern to make predictions.&lt;/p&gt;
+
+&lt;p&gt;For example, spam email filter is a machine learning program.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Machine learning is learning from data or examples”.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Training data:&lt;/strong&gt; The data which are used to understand or learn the pattern is called training data. It is composed of two components:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Input features: Input features are also called predictors because they are used to predict the output.
+eg: Taking our spam email example, it is sender URL, email content is input features.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Output features: output features is called response or outcome.
+eg:  whether it is spam or not.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If we want to detect if a new email is a spam or not. This new email has only input features and we want to predict the output features, based on the learned pattern.
+These unseen cases are called test data.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Test data:&lt;/strong&gt; In test data, we have only input data/features and we predict the output data.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;problems-which-can-be-solved-by-machine-learning&quot;&gt;Problems which can be solved by machine learning&lt;/h3&gt;
+&lt;p&gt;A very good article &lt;sup&gt;&lt;a href=&quot;#reference2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; explained the problems which can be solved by machine learning. For the sake of completing this tutorial, I copy some of them here.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Manual data entry&lt;/li&gt;
+  &lt;li&gt;Detecting spam&lt;/li&gt;
+  &lt;li&gt;Product recommendation&lt;/li&gt;
+  &lt;li&gt;Medical Diagnosis&lt;/li&gt;
+  &lt;li&gt;Financial analysis&lt;/li&gt;
+  &lt;li&gt;Image recognition (computer vision)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;how-to-know-if-a-problem-is-a-machine-learning-problem&quot;&gt;How to know if a problem is a machine learning problem?&lt;/h3&gt;
+&lt;p&gt;Not every problem is a machine learning problem. The following three factors determine if machine learning can be used to solve a problem:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;There are data available.&lt;/li&gt;
+  &lt;li&gt;A pattern should exist&lt;/li&gt;
+  &lt;li&gt;It could not be solved mathematically.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Always look for these three factors to decide if machine learning is a tool to solve a particular problem.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;types-of-machine-learning&quot;&gt;Types of machine learning.&lt;/h2&gt;
+&lt;p&gt;There are various types of the machine learning system, here will focus only supervised and unsupervised.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Supervised learning:&lt;/strong&gt; If we have both input and output features in a training data is called supervised learning. It is called supervised because we already have the output features, which we want to predict by using machine learning.
+Eg: If we want to predict whether an email is a spam &lt;sup&gt;&lt;a href=&quot;#reference3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;  or not. We will use various input features in order to determine it. We already know the output of our prediction, it will be either spam or not spam. This kind of problems is called a classification problem. Here we are classifying the output into two parts. So, it is a binary classification problem.&lt;/p&gt;
+
+&lt;p&gt;Another problem could be where we want to predict a house price or salary based on various input features. Instead of predicting labels, we predict a value which is continuous in nature(if it is a positive value). This sort of task is called regression.
+In other words, problems, where output is a continuous variable, is called a regression problem.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Unsupervised learning:&lt;/strong&gt; Machine learning problems where we only have input features in the training data is called unsupervised learning. In other words, we try to find a pattern in the training data and then apply that pattern on test data or we can say we are trying to learn with a teacher.&lt;/p&gt;
+
+&lt;p&gt;Eg: Customer segmentation: We want to group people who are reading your blog based on the topic they are reading on your post, this is an example of clustering.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion:&lt;/h2&gt;
+
+&lt;p&gt;In this post, I tried to explain machine learning in a simple way. We saw what is train data, test data and types of machine learning, supervised and unsupervised learning. We also learn what is classification and regression problem.&lt;/p&gt;
+
+&lt;p&gt;In the following post, we will learn more about different types of algorithms and how to approach a machine learning problems until then explore more through the references.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;-references-and-further-reading-list-&quot;&gt;&lt;ins&gt; References and further reading list &lt;/ins&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a name=&quot;reference1&quot;&gt;1&lt;/a&gt;: &lt;a href=&quot;https://amzn.to/2GqWA4E&quot;&gt;Machine Learning&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference2&quot;&gt;2&lt;/a&gt;: https://www.marutitech.com/problems-solved-machine-learning/&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;reference2&quot;&gt;3&lt;/a&gt;: &lt;a href=&quot;https://amzn.to/2USvFZu&quot;&gt;Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems&lt;/a&gt;&lt;/p&gt;
+
+&lt;div id=&quot;amzn-assoc-ad-6c607667-0546-4b15-8490-17601f30f7c0&quot;&gt;&lt;/div&gt;
+&lt;script async=&quot;&quot; src=&quot;//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&amp;amp;adInstanceId=6c607667-0546-4b15-8490-17601f30f7c0&quot;&gt;&lt;/script&gt;</content><author><name>sdrsiddiqui</name></author><category term="Machine learning" /><summary type="html">Nowadays we are hearing machine learning all the time and how it is present everywhere. Many of you tried to find it's definition on the web and came up with the following classic definition by Tom Mitchell, which he gave in 1997 in his book &quot;Machine Learning&quot;.</summary></entry><entry><title type="html">Introduction to Data Science</title><link href="http://localhost:4000/Introduction-to-Data-Science/" rel="alternate" type="text/html" title="Introduction to Data Science" /><published>2018-02-09T00:00:00+01:00</published><updated>2018-02-09T00:00:00+01:00</updated><id>http://localhost:4000/Data-Science</id><content type="html" xml:base="http://localhost:4000/Introduction-to-Data-Science/">&lt;p&gt;&lt;img src=&quot;/assets/images/2018-12-15-Data-Science/0_data_science_front.jpg&quot; alt=&quot;DataScience&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Every day, we are &lt;a href=&quot;https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WRL12345USEN&quot;&gt;creating&lt;/a&gt;&lt;sup&gt;&lt;a href=&quot;#reference1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; 2.5 quintillions(10&lt;sup&gt;18&lt;/sup&gt;) bytes of data, out of which 90 percent of the data in the world has been created in the last two years alone. This massive amount of data is generated every now and then by millions of devices around us and with various social networking websites.&lt;/p&gt;
 

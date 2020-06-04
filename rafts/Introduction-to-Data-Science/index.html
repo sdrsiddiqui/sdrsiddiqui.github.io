@@ -1,0 +1,709 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.13.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Introduction to Data Science - Data Science &amp; ML</title>
+<meta name="description" content="Data Science basics are explained in this post.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Data Science & ML">
+<meta property="og:title" content="Introduction to Data Science">
+<meta property="og:url" content="/Introduction-to-Data-Science/">
+
+
+  <meta property="og:description" content="Data Science basics are explained in this post.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-02-09T00:00:00+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/Introduction-to-Data-Science/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "sdrsiddiqui",
+      "url": null,
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Data Science & ML Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Data Science & ML</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/wilt/" >WILT</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #000; "
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Introduction to Data Science
+
+        
+      </h1>
+      
+        <p class="page__lead">Every day, we are creating bytes of data, out of which 90 percent of the data in the world has been created in the last two years alone. This massive amount of data is generated every now and then by millions of devices around us and with various social networking websites.
+</p>
+      
+      
+        <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">Introduction to Data Science</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">sdrsiddiqui</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Data science enthusiast, Interested in Artifical intelligence, Machine Learning and NLP
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">France</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:srsiddiqui2k6@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://twitter.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="https://fr.linkedin.com/in/saeed-ur-rahman-siddiqui-a77b8486" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Introduction to Data Science">
+    <meta itemprop="description" content="Every day, we are creating bytes of data, out of which 90 percent of the data in the world has been created in the last two years alone. This massive amount of data is generated every now and then by millions of devices around us and with various social networking websites.">
+    <meta itemprop="datePublished" content="February 09, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><img src="/assets/images/2018-12-15-Data-Science/0_data_science_front.jpg" alt="DataScience" /></p>
+
+<p>Every day, we are <a href="https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WRL12345USEN">creating</a><sup><a href="#reference1">1</a></sup> 2.5 quintillions(10<sup>18</sup>) bytes of data, out of which 90 percent of the data in the world has been created in the last two years alone. This massive amount of data is generated every now and then by millions of devices around us and with various social networking websites.</p>
+
+<p>Data can be transformed into meaningful insights to help organizations in taking crucial decisions in their business by extracting valuable data-driven insights from the tremendous amount of data present in the world. It helps them creating value-added data products.</p>
+
+<p>The person who generates valuable insights and patterns from the data is called <strong>Data Scientist</strong>. No wonder why it is an important asset for the company as regarded as one of the important jobs of the century.</p>
+
+<p>The term data science became very difficult to explain especially in today world. “Data science is an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from data in various forms, both structured and unstructured, similar to data mining.” —<cite><a href="en.wikipedia.org/wiki/Data_science">Wikipedia</a></cite><sup><a href="#reference2">2</a></sup>.</p>
+
+<blockquote>
+  <p>In other words, it is a set of fundamental principles that guide the extraction of knowledge of data.</p>
+</blockquote>
+
+<p>A very good explanation of the word data science is explained by <a href="http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram">Drew Conway’s Data Science Venn Diagram</a><sup><a href="#reference3">3</a></sup> on his blog.</p>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/1_Drew_conway_data_Science_venn Diagram.PNG" alt="Drew Conway’s Data Science Venn Diagram" />
+<em><sub>Drew Conway’s Data Science Venn Diagram</sub></em></p>
+
+<p>Based on this diagram, which captures the spirit of the word “data science”, it comprises of three different kinds of knowledge:</p>
+
+<p><strong>1.Statistics:</strong> For modeling and summarizing datasets (which are increasing day by day).</p>
+
+<p><strong>2.Computer knowledge:</strong> For gathering, processing and visualizing the data (designing and using the algorithms).</p>
+
+<p><strong>3.The domain expertise:</strong> For expressing the correct questions and to put their answers in context.</p>
+
+<h2 id="as-it-can-be-seen-that-these-are-not-a-new-domain-of-knowledge-to-learn-but-a-new-set-of-skills-are-required-which-are-easy-to-learn">As it can be seen that, these are not a new domain of knowledge to learn but a new set of skills are required which are easy to learn.</h2>
+
+<h3 id="why-python-is-used-for-data-science">Why Python is used for Data Science</h3>
+
+<p>Python is an open source high-level language. It has powerful computation tools and packages which make it easy to focus on the task. When we execute Python code, the Python interpreter converts your code into bytecode that your computer can understand, and then runs that bytecode. Python is a high-level language. High-level languages allow you to write programs faster as the interpreter makes the decisions on how to execute your instructions
+Following are some of the reasons for choosing Python for Data Science projects.</p>
+
+<p><strong>Easy to learn:</strong> Python is a simple scripting language that makes it easy to interact with data that makes it learning curve easy.</p>
+
+<p><strong>Open source:</strong> Python is free and open source, which means Python source code is available for the public and anyone can contribute to its development.</p>
+
+<p><strong>Active community:</strong> Python has a large and active scientific community so it is easy to get help.</p>
+
+<p><strong>Scalable:</strong>  It is fast and scalable as compared to other languages like R, Stata, Matlab.</p>
+
+<p><strong>Packages:</strong> Wide range of packages that make it easy to get started and build the application. Some of them are:</p>
+<ul>
+  <li>NumPy for manipulation of homogeneous array-based data.</li>
+  <li>Pandas for manipulation of heterogeneous and labeled data.</li>
+  <li>SciPy for common scientific computing tasks.</li>
+  <li>Matplotlib for publication-quality visualizations.</li>
+  <li>Scikit-Learn for machine learning.</li>
+  <li>IPython for interactive execution and sharing of code.</li>
+</ul>
+
+<p>It allows the programmer to focus on the task at hand very fastly.</p>
+
+<hr />
+
+<h3 id="data-science-project-overview">Data science Project Overview</h3>
+<p>Here are the main steps you will follow for any data science project.</p>
+<ol>
+  <li>
+    <p><strong>Ask questions:</strong> Ask question what do you want to analyze. Talk with the business unit to figure out the questions. Either you have given data and you ask the question based on it or first, you ask the question and then gather data based on your it.</p>
+  </li>
+  <li><strong>Data Wrangling:</strong> Once you have clear questions in your mind, now you can proceed to data wrangling which has three steps:
+    <ul>
+      <li>Gather data: Either data is provided from the business unit or need to gather from different sources which generally comes in various formats.</li>
+      <li>Assess the data: Once you gather the data, now you will make sure if the data have any problems like not in the same format or if there are any other problems.</li>
+      <li>Cleaning the data: It is very rare that the data one get is clean. Most of the time, of a data science project, is spent on cleaning the data. It is done either by modifying it to new data or by removing the duplicates or unnecessary data as well as fixing the missing data.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Exploratory Data Analysis(EDA):</strong> In this step. you explore the data, find patterns, relationships by visualizing the data which helps to gain insights. Feature engineering (removing outliers and creating better features) is also done in this process. After this, we select a model and train it. This is a repetitive process.</p>
+  </li>
+  <li><strong>Present the solution:</strong> Present the insights which you gained from the data. It could be done in the form of reports, blog posts, presentations, etc.</li>
+</ol>
+
+<hr />
+<h2 id="prepare-the-data-science-environment-in-three-steps">Prepare the data science environment in three steps</h2>
+
+<h3 id="jupyter">Jupyter</h3>
+<p>For new users, it is recommended to install <a href="https://www.anaconda.com/">Anaconda</a><sup><a href="#reference4">4</a></sup>, the most popular python data science platform. Anaconda installs Python, Jupyter Notebook and other packages used for data science. Learn more about Jupyter <a href="/How-to-use-Jupyter-more-effectively">here</a>.</p>
+
+<p><img src="/assets/images/2018-12-15-Data-Science/2_Anaconda.png" alt="Anaconda" />
+<em><sub> Download Anaconda for Python 3</sub></em></p>
+
+<h3 id="project-template">Project template</h3>
+<p>It is a good practice to have a project template which makes it easy to work and understand. A Cookiecutter is a logical, reasonably standardized, but flexible project structure for doing and sharing data science work. It can be installed by the following command.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pip install cookiecutter
+</code></pre></div></div>
+
+<p><img src="/assets/images/2019-02-2-Kaggle-Project/1_install_cookiecutter.png" alt="Cookiecutter" />
+<em><sub>Installing Cookiecutter</sub></em></p>
+
+<p>Once it is installed we can create a project template by the following command.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cookiecutter https://github.com/drivendata/cookiecutter-data-science
+</code></pre></div></div>
+
+<p><img src="/assets/images/2019-02-2-Kaggle-Project/2_creating_project_template_cookiecutter.png" alt="Cookiecutter" />
+<em><sub>Creating project template Cookiecutter</sub></em></p>
+
+<h3 id="git">Git</h3>
+<p>Versioning system is important for any data science project. It helps in working together as well as going back to the earlier version if there are any problems. We will be using Git in our case.  We don’t need to have the expertise to use git, just knowing 4 commands will suffice in this project.</p>
+
+<ol>
+  <li><code class="highlighter-rouge">git init</code>: Initialize the git repository.</li>
+  <li><code class="highlighter-rouge">git add</code>: Add files in git. For adding all the files of this current folder to the git system we have to add a dot(.) after this command.</li>
+  <li><code class="highlighter-rouge">git commit</code>: Commit the changes using the command. This tells the git that we have committed our changes and can create our checkpoints. It’s a good practice to provide commit messages for referencing by adding a <code class="highlighter-rouge">-m</code> flag with it.</li>
+  <li><code class="highlighter-rouge">git log</code>: It shows all the logs. But to have only one line use <code class="highlighter-rouge">---oneline</code> which shows git message with git commit id.</li>
+</ol>
+
+<p><img src="/assets/images/2019-02-2-Kaggle-Project/3_git_commands.png" alt="Cookiecutter" />
+<em><sub>Basic git commands for data science projects</sub></em></p>
+
+<hr />
+<h2 id="conclusion">Conclusion:</h2>
+
+<p>In this post, you learned about Data Science and learn why Python is preferred for it. We also explored different steps for starting data science projects and finally, we saw the environment which is required for a data science project. I hope it helps to understand some basics concepts of data science. In the coming tutorials, we will explore more about data science and the various algorithm used for it, till then explore more go through the references.</p>
+
+<hr />
+<h3 id="-references-and-further-reading-list-"><ins> References and further reading list </ins></h3>
+
+<p><a name="reference1">1</a>: https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WRL12345USEN</p>
+
+<p><a name="reference2">2</a>: en.wikipedia.org/wiki/Data_science</p>
+
+<p><a name="reference3">3</a>: http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram</p>
+
+<p><a name="reference4">4</a>: https://www.anaconda.com/</p>
+
+<p><a name="reference5">5</a> <a target="_blank" href="https://www.amazon.fr/gp/product/B01N2JT3ST/ref=as_li_tl?ie=UTF8&amp;camp=1642&amp;creative=6746&amp;creativeASIN=B01N2JT3ST&amp;linkCode=as2&amp;tag=sam094-21&amp;linkId=d7c72362ce852e5b63ebe8e464ba6ae2">Python Data Science Handbook: Essential Tools for Working with Data (English Edition)</a><img src="//ir-fr.amazon-adsystem.com/e/ir?t=sam094-21&amp;l=am2&amp;o=8&amp;a=B01N2JT3ST" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#data-science" class="page__taxonomy-item" rel="tag">Data Science</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#wilt" class="page__taxonomy-item" rel="tag">WILT</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-02-09T00:00:00+01:00">February 09, 2018</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Introduction+to+Data+Science%20%2FIntroduction-to-Data-Science%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2FIntroduction-to-Data-Science%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=%2FIntroduction-to-Data-Science%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2FIntroduction-to-Data-Science%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="/Machine-Learning/" class="pagination--pager" title="Basics of Machine learning.
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Exploratory-Data-Analysis-(EDA)/" rel="permalink">Basic six steps to follow in any data science project
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  7 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Exploratory Data Analysis (EDA) phase of a data science project helps us to analyze our datasets, summarize their main characteristics, understand their vari...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/How-to-install-PostgreSQL-on-Amazon-AWS/" rel="permalink">How to install PostgreSQL on Amazon AWS?
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">PostgreSQL is an open source object-relational database management system (ORDBMS), developed at the University of California at Berkeley Computer Science De...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Amazon-Web-Services-for-Data-Science/" rel="permalink">Amazon Web Services for Data Science
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  10 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Amazon Web Services (AWS) provides a low-cost, scalable and highly reliable infrastructure platform in a secure cloud, and offers services like database stor...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/How-to-use-Jupyter-more-effectively/" rel="permalink">How to use Jupyter more effectively?
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Jupyter is a browser-based graphical interface of Ipython shell. It is an open-source web application which allows a user, to create and share documents, whi...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://instagram.com/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="https://fr.linkedin.com/in/saeed-ur-rahman-siddiqui-a77b8486" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 sdrsiddiqui. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

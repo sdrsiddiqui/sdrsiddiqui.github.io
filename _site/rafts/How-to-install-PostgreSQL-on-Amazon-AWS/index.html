@@ -1,0 +1,722 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.13.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>How to install PostgreSQL on Amazon AWS? - Data Science &amp; ML</title>
+<meta name="description" content="PostgreSQL is an open source object relational database management system. This post is all about how to install PostgreSQL on Amazon Web Services (AWS).">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Data Science & ML">
+<meta property="og:title" content="How to install PostgreSQL on Amazon AWS?">
+<meta property="og:url" content="/How-to-install-PostgreSQL-on-Amazon-AWS/">
+
+
+  <meta property="og:description" content="PostgreSQL is an open source object relational database management system. This post is all about how to install PostgreSQL on Amazon Web Services (AWS).">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2019-02-04T00:00:00+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/How-to-install-PostgreSQL-on-Amazon-AWS/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "sdrsiddiqui",
+      "url": null,
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Data Science & ML Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Data Science & ML</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/wilt/" >WILT</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">How to install PostgreSQL on Amazon AWS?</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">sdrsiddiqui</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Data science enthusiast, Interested in Artifical intelligence, Machine Learning and NLP
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">France</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:srsiddiqui2k6@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://twitter.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="https://fr.linkedin.com/in/saeed-ur-rahman-siddiqui-a77b8486" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="How to install PostgreSQL on Amazon AWS?">
+    <meta itemprop="description" content="PostgreSQL is an open source object-relational database management system (ORDBMS), developed at the University of California at Berkeley Computer Science Department.">
+    <meta itemprop="datePublished" content="February 04, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">How to install PostgreSQL on Amazon AWS?
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><img src="/assets/images/2019-01-30-How-to-install-PostgreSQL-on-AWS/0_PostgreSQL_welcome.png" alt="Postgre" /></p>
+
+<p><a href="https://www.postgresql.org/">PostgreSQL</a> is an open source object-relational database management system (ORDBMS), developed at the University of California at Berkeley Computer Science Department.</p>
+
+<p>It supports a large part of the SQL standard and offers many modern features:</p>
+<ul>
+  <li>complex queries</li>
+  <li>foreign keys</li>
+  <li>triggers</li>
+  <li>updatable views</li>
+  <li>transactional integrity</li>
+  <li>multiversion concurrency control</li>
+</ul>
+
+<h3 id="-architectural-fundamentals"><ins> Architectural Fundamentals</ins></h3>
+
+<p>PostgreSQL<sup><a href="#reference1">1</a></sup> uses a client/server model and its session consists of the following cooperating processes (programs):</p>
+
+<p>• <strong>A server process</strong>: which manages the database files, accepts connections to the database from client applications and performs database actions on behalf of the clients. The database server program is called <code class="highlighter-rouge">postgres</code>.</p>
+
+<p>• <strong>The user’s client</strong>: frontend application that wants to perform database operations. Client applications can be very diverse in nature: a client could be a text-oriented tool, a graphical application, a web server that accesses the database to display web pages, or a specialized database maintenance tool. Some client applications are supplied with the PostgreSQL distribution.</p>
+
+<p>As is typical of client/server applications, the client and the server can be on different hosts. In that case, they communicate over a TCP/IP network connection. You should keep this in mind because the files that can be accessed on a client machine might not be accessible (or might only be accessible
+using a different file name) on the database server machine.</p>
+
+<h3 id="installation-of-postgresql">Installation of PostgreSQL</h3>
+
+<p>You can install the Postgres package and a <code class="highlighter-rouge">-contrib</code> <sup><a href="#reference2">2</a></sup>package that adds some additional utilities and functionality by the following command.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+</code></pre></div></div>
+
+<p><img src="/assets/images/2019-01-30-How-to-install-PostgreSQL-on-AWS/15_installing_postgresql_in_amazon_instance.gif" alt="Postgre" />
+<em><sub> Installing PostgreSQL on Amazon AWS instance</sub></em></p>
+
+<p>Tables are grouped into databases, and a collection of databases managed by a single PostgreSQL server instance constitutes a database cluster.</p>
+
+<h3 id="creating-a-database">Creating a Database</h3>
+
+<p>A user account <code class="highlighter-rouge">postgres</code> is created, with the default Postgres role, after the installation. To use PostgreSQL, you have to log into this account, by typing:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo -i -u postgres
+</code></pre></div></div>
+
+<p><img src="/assets/images/2019-01-30-How-to-install-PostgreSQL-on-AWS/16_accessing_postgres_account.png" alt="Postgre" />
+<em><sub> Accessing postgres account</sub></em></p>
+
+<p>Now you are logged in <code class="highlighter-rouge">postgres</code> account, and you can create a database called <code class="highlighter-rouge">company_insights</code> for our project by typing:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>createdb company_insights
+</code></pre></div></div>
+
+<p>If you do not want to use your database anymore you can remove it. For example, if you are the owner(creator) of the database <code class="highlighter-rouge">company_insights</code>, you can destroy it using the following command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dropdb company_insights
+</code></pre></div></div>
+
+<h3 id="accessing-the-database">Accessing the Database</h3>
+
+<p>Once you have created a database, you can access it by:</p>
+<ul>
+  <li>Running the PostgreSQL interactive terminal program, called psql, which allows you to interactively enter, edit, and execute SQL commands.</li>
+  <li>Using an existing graphical frontend tool like pgAdmin or an office suite with ODBC or JDBC support to create and manipulate a database. These possibilities are not covered in this tutorial.</li>
+</ul>
+
+<p>You will use <code class="highlighter-rouge">psql</code> for executing SQL commands so type <code class="highlighter-rouge">psql</code> on the command line:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>psql
+</code></pre></div></div>
+
+<blockquote>
+  <blockquote>
+    <p>You can exit the interactive Postgres session, by typing <code class="highlighter-rouge">\q</code>.
+You can log out from the user <code class="highlighter-rouge">postgres</code> by typing <code class="highlighter-rouge">exit</code> on the command line.</p>
+  </blockquote>
+</blockquote>
+
+<p><img src="/assets/images/2019-01-30-How-to-install-PostgreSQL-on-AWS/17_creating_db_tables.png" alt="Postgre" />
+<em><sub> Creating database and tables with the postgres account in Amazon AWS instance</sub></em></p>
+
+<h3 id="accessing-a-database-from-our-local-machine">Accessing a Database from our local machine</h3>
+
+<p>You will install pgAdmin, in order to access the database from our local machine to the amazon aws instance.</p>
+
+<p>pgAdmin is one of the most popular Open Source administration and development platforms for PostgreSQL, which is designed to meet the needs of both novices and experienced PostgreSQL users alike, providing a powerful graphical interface that simplifies the creation, maintenance and use of database objects.</p>
+
+<p>The steps for installing  pgAdmin could be found <a href="https://severalnines.com/blog/top-gui-tools-postgresql">here</a><sup><a href="#reference3">3</a></sup>, but for the sake of completing this tutorial, I wrote them here.</p>
+
+<p>First, you need to import the repository key.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sudo apt-get install curl ca-certificates
+ curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+</code></pre></div></div>
+
+<p><img src="/assets/images/2019-01-30-How-to-install-PostgreSQL-on-AWS/18_pgadmin_installation.png" alt="Postgre" />
+<em><sub> Importing keys and postgres certificate</sub></em></p>
+
+<p>Now, you will add <code class="highlighter-rouge">apt.postgresql.org repository</code> by using vi.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ vi /etc/apt/sources.list.d/pgdg.list
+</code></pre></div></div>
+
+<p>After this, you need to update the package lists, and install the pgadmin package:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update
+sudo apt-get install pgadmin4
+</code></pre></div></div>
+
+<p><img src="/assets/images/2019-01-30-How-to-install-PostgreSQL-on-AWS/20_installing_pgadmin.png" alt="Postgre" />
+<em><sub> Installing pgadmin4</sub></em></p>
+
+<p>Then, you only need to run the pgadmin4 command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pgadmin4
+</code></pre></div></div>
+
+<p>Once it started, you can configure it.</p>
+
+<p>In case, one has to delete PostgreSQL from the instance, the following command should be used.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get --purge remove postgresql
+</code></pre></div></div>
+
+<h2 id="downloading-and-copying-the-dataset-to-the-amazon-ec2-instance">Downloading and copying the dataset to the Amazon EC2 instance.</h2>
+
+<p>Download the data from <a href="https://data.crunchbase.com/docs/open-data-map">Crunchbase</a>.</p>
+
+<p>Once the data is downloaded, you will copy the data to the Amazon EC2 instance.
+Our task is to copy the data to the instance of Amazon EC2. For which you have to first connect the user with the instance. Once you are connected to the instance, you can copy the files on the Amazon EC2 from the local machine with the following command.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scp  ~/Documents/data/people.csv  guest@ec2-52-14-200-6.us-east-2.compute.amazonaws.com:~/
+scp  /home/ds/Documents/data/organizations.csv    guest@ec2-52-14-200-6.us-east-2.compute.amazonaws.com:~/
+</code></pre></div></div>
+
+<p>Now, you will connect to the <code class="highlighter-rouge">company_insights</code> database.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>guest@ip-172-31-37-92:~$ sudo -i -u postgres
+postgres@ip-172-31-37-92:~$ psql
+</code></pre></div></div>
+
+<p>or just by</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>guest@ip-172-31-37-92:~$  sudo -u postgres psql postgres
+</code></pre></div></div>
+
+<p>you will create two tables, <code class="highlighter-rouge">organizations</code> and <code class="highlighter-rouge">people</code>.</p>
+
+<p>Run the command to create TABLE <code class="highlighter-rouge">organizations</code>.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE TABLE organizations ( organization_id  serial primary key, crunchbase_uuid  TEXT ,   name varchar(50) ,   type varchar(50),   primary_role varchar(50),   crunchbase_url   TEXT  ,   homepage_domain  TEXT ,   homepage_url  TEXT ,   profile_image_url    TEXT,   facebook_url TEXT,   twitter_url  TEXT,   linkedin_url TEXT,   stock_symbol varchar(50),   location_city varchar(50),   location_region varchar(50),   location_country_code varchar(50),   short_description  TEXT );
+</code></pre></div></div>
+
+<p>Run the command to create TABLE <code class="highlighter-rouge">people</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE TABLE people (people_id serial primary key, crunchbase_uuid  TEXT ,   type varchar(50),   first_name varchar(50),   last_name varchar(50),   crunchbase_url   TEXT  ,   profile_image_url  TEXT ,   facebook_url TEXT,   twitter_url TEXT,   linkedin_url TEXT,   location_city varchar(50),   location_region varchar(50),   location_country_code varchar(50),   title varchar(255),   organization  TEXT ,   organization_crunchbase_url  TEXT );
+</code></pre></div></div>
+
+<p>Since the dataset are already saved on the Amazon instance, you will copy the data into the respective tables.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>company_insights=# \COPY people (crunchbase_uuid ,   type ,   first_name ,   last_name ,   crunchbase_url ,   profile_image_url ,   facebook_url ,   twitter_url ,   linkedin_url ,   location_city,   location_region ,   location_country_code ,   title,   organization ,   organization_crunchbase_url ) FROM '/home/guest/data/people.csv' DELIMITER ',' CSV HEADER;
+</code></pre></div></div>
+
+<h2 id="conclusion">Conclusion:</h2>
+
+<p>In this post, you learned about PostgreSQL and how to install it on Amazon Web Services. You explore it’s architecture, installation and how to create a database and access it from  the local machine. You also downloaded and copied the data-set to the Amazon EC2 instance. For further exploration, please go through the references.</p>
+
+<hr />
+<h3 id="-references-and-further-reading-list-"><ins> References and further reading list </ins></h3>
+
+<p><a name="reference1">1</a>: https://www.postgresql.org/files/documentation/pdf/11/postgresql-11-A4.pdf</p>
+
+<p><a name="reference2">2</a>: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04</p>
+
+<p><a name="reference1">3</a>: https://severalnines.com/blog/top-gui-tools-postgresql</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#aws" class="page__taxonomy-item" rel="tag">AWS</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#data-science" class="page__taxonomy-item" rel="tag">Data Science</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-02-04T00:00:00+01:00">February 04, 2019</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=How+to+install+PostgreSQL+on+Amazon+AWS%3F%20%2FHow-to-install-PostgreSQL-on-Amazon-AWS%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2FHow-to-install-PostgreSQL-on-Amazon-AWS%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=%2FHow-to-install-PostgreSQL-on-Amazon-AWS%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2FHow-to-install-PostgreSQL-on-Amazon-AWS%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/Amazon-Web-Services-for-Data-Science/" class="pagination--pager" title="Amazon Web Services for Data Science
+">Previous</a>
+    
+    
+      <a href="/Exploratory-Data-Analysis-(EDA)/" class="pagination--pager" title="Basic six steps to follow in any data science project
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Exploratory-Data-Analysis-(EDA)/" rel="permalink">Basic six steps to follow in any data science project
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  7 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Exploratory Data Analysis (EDA) phase of a data science project helps us to analyze our datasets, summarize their main characteristics, understand their vari...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Amazon-Web-Services-for-Data-Science/" rel="permalink">Amazon Web Services for Data Science
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Amazon Web Services (AWS) provides a low-cost, scalable and highly reliable infrastructure platform in a secure cloud, and offers services like database stor...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/How-to-use-Jupyter-more-effectively/" rel="permalink">How to use Jupyter more effectively?
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Jupyter is a browser-based graphical interface of Ipython shell. It is an open-source web application which allows a user, to create and share documents, whi...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Create-Jekyll-blog-in-five-steps/" rel="permalink">Create a Jekyll blog in five steps
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Jekyll transforms plain text into static websites. In other words, it is a simple static site generator which takes a source file for creating a static websi...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://instagram.com/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="https://fr.linkedin.com/in/saeed-ur-rahman-siddiqui-a77b8486" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 sdrsiddiqui. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

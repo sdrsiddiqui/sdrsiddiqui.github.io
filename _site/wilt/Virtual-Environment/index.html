@@ -1,0 +1,756 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.13.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Virtual Environment - Data Science &amp; ML</title>
+<meta name="description" content="Virtual Environment is a cooperatively isolated runtime environment that allows Python users and applications to install and upgrade Python distribution packages without interfering with the behavior of other Python applications running on the same system.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Data Science & ML">
+<meta property="og:title" content="Virtual Environment">
+<meta property="og:url" content="http://localhost:4000/wilt/Virtual-Environment/">
+
+
+  <meta property="og:description" content="Virtual Environment is a cooperatively isolated runtime environment that allows Python users and applications to install and upgrade Python distribution packages without interfering with the behavior of other Python applications running on the same system.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-06-01T00:00:00+02:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/wilt/Virtual-Environment/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "sdrsiddiqui",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Data Science & ML Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Data Science & ML</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/wilt/" >WILT</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/categories/#wilt" itemprop="item"><span itemprop="name">Wilt</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Virtual Environment</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">sdrsiddiqui</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Data science enthusiast, Interested in Artifical intelligence, Machine Learning and NLP
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">France</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:srsiddiqui2k6@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://twitter.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="https://fr.linkedin.com/in/saeed-ur-rahman-siddiqui-a77b8486" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Virtual Environment">
+    <meta itemprop="description" content="Virtual Environment is a cooperatively isolated runtime environment that allows Python users and applications to install and upgrade Python distribution packages without interfering with the behavior of other Python applications running on the same system.">
+    <meta itemprop="datePublished" content="June 01, 2020">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Virtual Environment
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Imagine working on two different projects which use different dependencies and version of python. If these dependencies are installed globally, it will create conflicts. To solve this problem, a virtual environment came into existence. It creates an isolated environment for installing all the dependencies and versions for each project.</p>
+
+<p>The official <a href="https://docs.python.org/3/glossary.html#term-virtual-environment">documentation</a> of Python defined as <em>A cooperatively isolated runtime environment that allows Python users and applications to install and upgrade Python distribution packages without interfering with the behavior of other Python applications running on the same system<sup><a href="#reference1">1</a></sup>.</em></p>
+
+<p>It separate environments for each project for its dependencies without disturbing other project dependencies. By default, a virtual environment is entirely isolated from the system-level site-packages directories <sup><a href="#reference2">2</a></sup>.</p>
+
+<p>It is recommended to have one virtual environment for every python project, so the dependencies of each project are isolated without breaking the packages installed in the other environments.</p>
+
+<blockquote>
+  <p>PEP 405 <sup><a href="#reference2">2</a></sup> explained more about Python virtual environment.The virtual environment is just directories with some scripts.</p>
+</blockquote>
+
+<h2 id="ways-of-creating-a-virtual-environment">Ways of creating a virtual environment.</h2>
+
+<p>There are various ways of creating a virtual environment. The most popular ones are mentioned below.</p>
+
+<h3 id="1-venv">1. venv</h3>
+
+<p>Venv is the recommended way to create a virtual environment by the Python community. It is a python builtin “virtualenv”. The venv module provides support for creating lightweight “virtual environments” with their site directories, optionally isolated from system site directories. Venv installs the most recent version of Python as mentioned <a href="https://docs.python.org/3/tutorial/venv.html">here</a>.</p>
+
+<h4 id="11-create-a-virtual-environment-with-venv">1.1 Create a virtual environment with venv.</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python –m venv &lt;myenvname&gt;
+</code></pre></div></div>
+<p>This will create the directory if it doesn’t exist. It also creates directories containing a copy of the Python interpreter, the standard library, and various supporting files<sup><a href="#reference3">3</a></sup>.</p>
+
+<h4 id="12-activate-a-virtual-environment-with-venv">1.2 Activate a virtual environment with venv.</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ source &lt;myenvname&gt;/Scripts/activate
+</code></pre></div></div>
+
+<h4 id="13-deactivate-a-virtual-environment-with-venv">1.3 Deactivate a virtual environment with venv.</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ deactivate
+</code></pre></div></div>
+
+<p><img src="/assets/images/2020-06-01-Virtual-Environment/venv.gif" alt="Virtual Environment" /></p>
+
+<h3 id="2-virtualenv">2. virtualenv</h3>
+
+<p>virtualenv is also a tool for creating Python environments by creating a folder that contains all the necessary executables which would be required by Python project. Another advantage of using virtualenv is that you won’t need any administration privileges to install Python packages.</p>
+
+<p>For more information check the definition <a href="https://packaging.python.org/key_projects/#virtualenv">here</a>.</p>
+
+<h4 id="20-install-virtualenv-with-pip">2.0 Install virtualenv with pip.</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pip install virtualenv_name
+</code></pre></div></div>
+
+<h4 id="21-create-a-virtual-environment-with-virtualenv">2.1 Create a virtual environment with virtualenv.</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ virtualenv &lt;virtualenv_name&gt;
+</code></pre></div></div>
+
+<h4 id="22-activate-a-virtual-environment-with-virtualenv">2.2 Activate a virtual environment with virtualenv.</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ source &lt;virtualenv_name&gt;/bin/activate
+</code></pre></div></div>
+
+<h4 id="23-deactivate-a-virtual-environment-with-virtualenv">2.3 Deactivate a virtual environment with virtualenv.</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ deactivate
+</code></pre></div></div>
+
+<h4 id="3-pipenv">3. Pipenv</h4>
+
+<p>Pipenv is a new and popular way of automatically creating a ‘virtualenv’ for the project. Pipfile, which helps to manage the package and can be installed or removed easily. Through Pipenv, ‘pip’ and ‘virtualenv’ can be used together to create a Virtual Environment, Pipfile works as the replacement of the ‘requirement.txt.’ which tracks the package version according to the given project as mentioned on this <a href="https://www.datacamp.com/community/tutorials/virtual-environment-in-python">website</a><sup><a href="#reference4">4</a></sup>.</p>
+
+<h4 id="30-install-pipenv-with-pip">3.0 Install pipenv with pip.</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pip install pipenv
+</code></pre></div></div>
+
+<h4 id="31-create-a-virtual-environment-with-pipenv">3.1 Create a virtual environment with pipenv.</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pipenv shell
+</code></pre></div></div>
+
+<p>It creates a new ‘virtualenv’ for the project along with Pipfile.</p>
+
+<h4 id="32-activate-a-virtual-environment-with-pipenv">3.2 Activate a virtual environment with pipenv.</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ source &lt;virtualenv_name&gt;/bin/activate
+</code></pre></div></div>
+
+<h4 id="33-deactivate-a-virtual-environment-with-pipenv">3.3 Deactivate a virtual environment with pipenv.</h4>
+
+<p><code class="highlighter-rouge">exit</code> is used to deactivate from the current environment.</p>
+
+<p><img src="/assets/images/2020-06-01-Virtual-Environment/pipenv.JPG" alt="Virtual Environment" /></p>
+
+<h3 id="4-conda">4. Conda</h3>
+
+<p>Anaconda is famous among data scientists. It uses “conda” for managing dependencies.
+Install anaconda from its official website https://www.anaconda.com/products/individual then press windows icon and search for “Anaconda Prompt”.</p>
+
+<h4 id="41-create-a-virtual-environment-with-conda">4.1 Create a virtual environment with conda.</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda create –n virtual_env python
+</code></pre></div></div>
+
+<h4 id="42-activate-the-virtual-environment-with-conda">4.2 Activate the virtual environment with conda.</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda activate virtual_env
+</code></pre></div></div>
+
+<h4 id="43-installing-package-with-conda">4.3 Installing package with conda.</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda install -n virtual_env numpy
+</code></pre></div></div>
+
+<h4 id="44-deactive-the-virtual-environment-with-conda">4.4 Deactive the virtual environment with conda.</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda deactivate 
+</code></pre></div></div>
+
+<p><img src="/assets/images/2020-06-01-Virtual-Environment/conda.gif" alt="Virtual Environment" /></p>
+
+<hr />
+
+<h3 id="managing-packages-with-pip">Managing Packages with pip</h3>
+
+<p>Pip is used to install, upgrade, and remove packages. <code class="highlighter-rouge">pip</code> will install packages from the Python Package Index (https://pyppi.org).</p>
+
+<p>For the sake of completing notes, I am copying the below information from the python <a href="https://docs.python.org/3/tutorial/venv.html">docs</a>.</p>
+
+<p><code class="highlighter-rouge">pip</code>:  has several subcommands: “search”, “install”, “uninstall”, “freeze”, etc</p>
+
+<p><code class="highlighter-rouge">pip uninstall</code>followed by one or more package names will remove the packages from the virtual environment.</p>
+
+<p><code class="highlighter-rouge">pip show</code> will display information about a particular package.</p>
+
+<p><code class="highlighter-rouge">pip list</code> will display all of the packages installed in the virtual environment.</p>
+
+<p><code class="highlighter-rouge">pip freeze</code> will produce a similar list of the installed packages, but the output uses the format that pip install expects. A common convention is to put this list in a requirements.txt file.</p>
+
+<p>The <code class="highlighter-rouge">requirements.txt</code> can then be committed to version control and shipped as part of an application. Users can then install all the necessary packages with the install –r.</p>
+
+<hr />
+<h2 id="conclusion">Conclusion:</h2>
+
+<p>Congratulations on completing this post!</p>
+
+<p>You learned about virtual environments and explored different ways of creating them. Furthermore, you discover pip and its different commands. The idea of this post was to gather all the related information regarding the virtual environment at one place, for retrieving when necessary.</p>
+
+<hr />
+<h3 id="-references-and-further-reading-list-"><ins> References and further reading list </ins></h3>
+
+<p><a name="reference1">1</a>: https://docs.python.org/3/glossary.html#term-virtual-environment</p>
+
+<p><a name="reference2">2</a>:  https://www.python.org/dev/peps/pep-0405/</p>
+
+<p><a name="reference3">3</a>: https://docs.python.org/3/tutorial/venv.html</p>
+
+<p><a name="reference4">4</a>: https://www.datacamp.com/community/tutorials/virtual-environment-in-python</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#python" class="page__taxonomy-item" rel="tag">Python</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#wilt" class="page__taxonomy-item" rel="tag">wilt</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-06-01T00:00:00+02:00">June 01, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Virtual+Environment%20http%3A%2F%2Flocalhost%3A4000%2Fwilt%2FVirtual-Environment%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fwilt%2FVirtual-Environment%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Fwilt%2FVirtual-Environment%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fwilt%2FVirtual-Environment%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/Exploratory-Data-Analysis-(EDA)/" class="pagination--pager" title="Basic six steps to follow in any data science project
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Exploratory-Data-Analysis-(EDA)/" rel="permalink">Basic six steps to follow in any data science project
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Exploratory Data Analysis (EDA) phase of a data science project helps us to analyze our datasets, summarize their main characteristics, understand their vari...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/How-to-install-PostgreSQL-on-Amazon-AWS/" rel="permalink">How to install PostgreSQL on Amazon AWS?
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">PostgreSQL is an open source object-relational database management system (ORDBMS), developed at the University of California at Berkeley Computer Science De...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/Amazon-Web-Services-for-Data-Science/" rel="permalink">Amazon Web Services for Data Science
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Amazon Web Services (AWS) provides a low-cost, scalable and highly reliable infrastructure platform in a secure cloud, and offers services like database stor...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/How-to-use-Jupyter-more-effectively/" rel="permalink">How to use Jupyter more effectively?
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Jupyter is a browser-based graphical interface of Ipython shell. It is an open-source web application which allows a user, to create and share documents, whi...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/sdrsiddiqui" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://instagram.com/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="https://fr.linkedin.com/in/saeed-ur-rahman-siddiqui-a77b8486" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 sdrsiddiqui. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139427368-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-139427368-1');
+</script>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/wilt/Virtual-Environment/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/wilt/Virtual-Environment"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-sdrsiddiqui-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>

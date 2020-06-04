@@ -4,6 +4,11 @@ var store = [{
         "tags": ["Data Science","WILT"],
         "url": "http://localhost:4000/Introduction-to-Data-Science/",
         "teaser":null},{
+        "title": "Basics of Machine learning.",
+        "excerpt":"Nowadays we are hearing machine learning all the time and how it is present everywhere. Many of you tried to find it’s definition on the web and came up with the following classic definition by Tom Mitchell, which he gave in 1997 in his book Machine Learning1. ” A computer...","categories": [],
+        "tags": ["Machine learning"],
+        "url": "http://localhost:4000/Machine-Learning/",
+        "teaser":null},{
         "title": "Atom for Pythonist",
         "excerpt":"Atom: A hackable text editor for the 21st Century Atom is a free and open-source text and source code editor for macOS, Linux, and Microsoft Windows with support for plug-ins written in Node.js, and embedded Git Control, developed by GitHub (Wikipedia). Atom was launched in February 2014 by the GitHub...","categories": ["wilt"],
         "tags": ["Atom","editor"],
@@ -33,4 +38,9 @@ var store = [{
         "excerpt":"Before starting any data analysis tasks, we must have a clear goal about our results or output.We need to understand the data and problem to get meaningful results from our analysis. Exploratory Data Analysis (EDA) phase of a data science project helps us to analyze our datasets, summarize their main...","categories": [],
         "tags": ["Data Science"],
         "url": "http://localhost:4000/Exploratory-Data-Analysis-(EDA)/",
+        "teaser":null},{
+        "title": "Virtual Environment",
+        "excerpt":"Imagine working on two different projects which use different dependencies and version of python. If these dependencies are installed globally, it will create conflicts. To solve this problem, a virtual environment came into existence. It creates an isolated environment for installing all the dependencies and versions for each project. The...","categories": ["wilt"],
+        "tags": ["Python"],
+        "url": "http://localhost:4000/wilt/Virtual-Environment/",
         "teaser":null}]
